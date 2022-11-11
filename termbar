@@ -1,0 +1,9 @@
+#!/bin/bash
+
+while true; do
+  BAT_STATUS=$(cat /sys/class/power_supply/BAT0/status)
+  BAT=$(cat /sys/class/power_supply/BAT0/capacity)
+  DATE=$(date)
+  echo -en "  BAT: $BAT - $BAT_STATUS | $DATE\r"
+  sleep 1
+done 
