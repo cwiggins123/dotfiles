@@ -29,6 +29,7 @@ if has("syntax")
   let g:everforest_background = 'soft'
   let g:everforest_better_performance = 1
   colorscheme everforest
+  hi Normal guibg=NONE ctermbg=NONE
 endif
 
 if v:version >= 800
