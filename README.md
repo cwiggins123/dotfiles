@@ -18,6 +18,7 @@ The software and hardware I use:
 * Microsoft Surface pro 4 and 7 (popOS and linux kernel for the surface)
 * Many, Many thinkpads (t430, w520, w500, x200t, ~~w530~~), running
   either slackware or OpenBSD
+* HP z220 with nvidia gtx 1050 TI small form factor, running popOS
 * OS: Slackware, OpenBSD, popOS, trueNAS
 * Window Manager: OpenBSD's CalmWM
 * editor: Vi, the only correct answer
