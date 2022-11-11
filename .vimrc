@@ -17,7 +17,7 @@ set shiftwidth=2
 set smartindent
 set smarttab
 set t_Co=256
-set term=st-256color
+set term=rxvt-unicode
 
 if has("termguicolors")
   set termguicolors
