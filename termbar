@@ -1,14 +1,14 @@
 #!/bin/bash
 
 while true; do
-  BAT_STATUS=$(cat /sys/class/power_supply/BAT0/status)
-  BAT=$(cat /sys/class/power_supply/BAT0/capacity)
+  BAT=$(acpi | sed s/'Battery 0'/'BAT'/ | cut --complement -d " " -f2)
   DATE=$(date)
+  BCKLT=$(xbacklight | cut -d "." -f1)
   if $(pamixer --get-mute); then
     VOL="MUTE"
   else
     VOL=$(pamixer --get-volume)
   fi
-  echo -en "  VOL: $VOL | BAT: $BAT - $BAT_STATUS | $DATE\r"
+  echo -en "  $DATE | VOL: $VOL | $BAT | LIGHT: $BCKLT\r"
   sleep 1
 done 
