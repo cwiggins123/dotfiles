@@ -15,8 +15,10 @@ hobby, and an aspiring ~~dissident~~ homesteader.
 The software and hardware I use:
 
 * Home Server: TrueNAS scale (for now) on an HP Z820 workstation
-* Many, Many thinkpads (t430, w520, w500, x200t, ~~w530~~)
-* OS: Slackware and OpenBSD
+* Microsoft Surface pro 4 and 7 (popOS and linux kernel for the surface)
+* Many, Many thinkpads (t430, w520, w500, x200t, ~~w530~~), running
+  either slackware or OpenBSD
+* OS: Slackware, OpenBSD, popOS, trueNAS
 * Window Manager: OpenBSD's CalmWM
 * editor: Vi, the only correct answer
 * terminal: st, xterm, and urxvt

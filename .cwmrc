@@ -2,7 +2,7 @@
 sticky yes
 
 # set default to terminus
-fontname "Terminus:size=18"
+fontname "Terminus:size=20:style=bold"
 
 autogroup 0     "termbar,termbar"
 ignore termbar
