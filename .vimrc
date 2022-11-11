@@ -33,29 +33,32 @@ if has("syntax")
 endif
 
 if v:version >= 800
+  " don't mess with files that it shouldn't
 	set nofixendofline
+
+  " better ascii chars
 	set listchars=space:*,trail:*,nbsp:*,extends:>,precedes:<,tab:\|>
+
+  " no auto folding
 	set foldmethod=manual
 	set nofoldenable
 endif
 
 set textwidth=72
-
 set expandtab
 set nobackup
 set noswapfile
 set nowritebackup
 set noundofile
-
 set icon
-
 set hlsearch
 set incsearch
 set linebreak
-
 set wrapscan
-
 set ttyfast
+
+" may help with performance
+set ttimeoutlen=0
 
 filetype plugin on 
 
