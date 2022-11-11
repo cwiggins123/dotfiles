@@ -19,6 +19,10 @@ The software and hardware I use:
 * Many, Many thinkpads (t430, w520, w500, x200t, ~~w530~~), running
   either slackware or OpenBSD
 * HP z220 with nvidia gtx 1050 TI small form factor, running popOS
+* Razer Blade Stealth late 2016 running popOS
+* Keyboards: ZSA Moonlander split ergo keyboard with halo trues, unicomp sun unix
+  keyboard (with very nice buckling spring switches)
+* Mice: logitech M575 wireless trackball, X-Keys L-trac trackball
 * OS: Slackware, OpenBSD, popOS, trueNAS
 * Window Manager: OpenBSD's CalmWM
 * editor: Vi, the only correct answer
