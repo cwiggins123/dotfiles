@@ -18,6 +18,8 @@ unbind-key CM-Return
 bind-key CM-Return      "urxvt -e tmux -2"
 
 # window tiling
+unbind-key M-right
+unbind-key M-left
 bind-key CM-z window-vtile
 bind-key CMS-z window-htile
 bind-key XF86AudioRaiseVolume "pamixer -i 10"
