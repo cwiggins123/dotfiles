@@ -20,3 +20,4 @@ The software and hardware I use:
 * Window Manager: OpenBSD's CalmWM
 * editor: Vi, the only correct answer
 * terminal: st, xterm, and urxvt
+* TMUX, the single most important software I use probably
