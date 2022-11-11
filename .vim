@@ -1,0 +1,1 @@
+/home/christopher/.config/slackwareconfig/.vim

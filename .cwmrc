@@ -1,0 +1,27 @@
+# sticky-group mode on
+sticky yes
+
+# set default to terminus
+fontname "Terminus:size=18"
+
+autogroup 0     "termbar,termbar"
+ignore termbar
+
+gap 22 0 0 0
+
+# window tiling screen real-estate is set to 50%
+htile 50
+vtile 50
+
+# set default terminal bind to spawn xterm in a new tmux session
+unbind-key CM-Return
+bind-key CM-Return      "xterm -e tmux -2"
+
+# window tiling
+bind-key CM-z window-vtile
+bind-key CMS-z window-htile
+bind-key XF86AudioRaiseVolume "pamixer -i 10"
+bind-key XF86AudioLowerVolume "pamixer -d 10"
+bind-key XF86AudioMute        "pamixer -t"
+bind-key M-F9                 "xbacklight -dec 10"
+bind-key M-F10                "xbacklight -inc 10"
