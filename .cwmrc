@@ -22,8 +22,8 @@ unbind-key M-right
 unbind-key M-left
 bind-key CM-z window-vtile
 bind-key CMS-z window-htile
-bind-key XF86AudioRaiseVolume "pamixer -i 10"
-bind-key XF86AudioLowerVolume "pamixer -d 10"
+bind-key XF86AudioRaiseVolume "pamixer --allow-boost -i 10"
+bind-key XF86AudioLowerVolume "pamixer --allow-boost -d 10"
 bind-key XF86AudioMute        "pamixer -t"
 bind-key M-F9                 "xbacklight -dec 10"
 bind-key M-F10                "xbacklight -inc 10"
