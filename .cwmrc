@@ -16,7 +16,7 @@ vtile 50
 # set default terminal bind to spawn xterm in a new tmux session
 unbind-key CM-Return
 bind-key CM-Return      "urxvt -e tmux -2"
-
+bind-key CMS-Return     "bash ~/.local/share/bin/spawnterm"
 # window tiling
 unbind-key M-right
 unbind-key M-left
