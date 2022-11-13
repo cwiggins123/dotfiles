@@ -5,10 +5,15 @@ case $- in
   *) return ;;
 esac
 
+export TERM=xterm-256color
+
+# aliases
 alias dot="cd ~/.config/dotfiles"
 
+# vi keys 
 set -o vi
 
+# smart prompt
 PROMPT_LONG=20
 PROMPT_MAX=95
 PROMPT_AT=@
