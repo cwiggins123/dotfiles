@@ -11,6 +11,8 @@ export TERM=xterm-256color
 
 # aliases
 alias dot="cd ~/.config/dotfiles"
+alias l="ls"
+alias la="ls -al"
 
 # vi keys 
 set -o vi

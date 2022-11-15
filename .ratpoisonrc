@@ -25,6 +25,9 @@ bind C-c exec urxvt -e tmux
 bind c exec urxvt -e tmux
 bind b exec notify-send "$(acpi)"
 bind d exec notify-send "$(date)"
+unbind v
+bind v exec notify-send "VOL: $(pamixer --get-volume)" 
+bind M-l exec xlock
 
 set border 0
 set padding 0 0 0 0
@@ -32,6 +35,9 @@ set barborder 0 0 0 0
 set fgcolor #d8caac
 set bgcolor #323d43
 set font Terminus:size=18
+set wingravity center
+set transgravity center
+set bargravity center
 
 # special keys without escape key
 definekey top XF86_AudioMute exec pamixer -t && notify-send "MUTE: $(pamixer --get-mute)"
