@@ -24,7 +24,7 @@ The software and hardware I use:
   keyboard (with very nice buckling spring switches)
 * Mice: logitech M575 wireless trackball, X-Keys L-trac trackball
 * OS: Slackware, OpenBSD, popOS, trueNAS
-* Window Manager: OpenBSD's CalmWM
+* Window Manager: ratpoison
 * editor: Vi, the only correct answer
 * terminal: st, xterm, and urxvt
 * TMUX, the single most important software I use probably

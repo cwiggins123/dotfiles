@@ -2,7 +2,7 @@
 URxvt.font: xft:Terminus:size=20
 URxvt.scrollBar: false
 
-dzen2.font: Terminus:size=14
+dzen2.font: -*-fixed-*-*-*-*-*-*-*-*-*-*-*-*
 dzen2.foreground: #d8caac
 dzen2.background: #323d43
 

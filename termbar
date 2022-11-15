@@ -1,15 +1,20 @@
 #!/bin/bash
 
-while true; do
+while true ; do
   BAT=$(acpi | sed s/'Battery 0'/'BAT'/ | sed s/,// | sed s/,// | cut --complement -d " " -f2)
   DATE=$(date)
   BCKLT=$(xbacklight | cut -d "." -f1)
   TEMP=$(acpi -t | cut -d " " -f 4,6)
+
   if $(pamixer --get-mute); then
     VOL="MUTE"
   else
     VOL=$(pamixer --get-volume)
   fi
-  echo -en "  $DATE | VOL: $VOL | $BAT | TEMP: $TEMP | LIGHT: $BCKLT\r"
+
+    echo "$DATE | VOL: $VOL | $BAT | TEMP: $TEMP | LIGHT: $BCKLT"
   sleep 1
 done 
+
+# this is current config for dzen2. for termbar proper, add \r behind
+# $BCKLT

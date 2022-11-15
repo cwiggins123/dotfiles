@@ -2,10 +2,12 @@
 escape C-s
 
 # make the mouse cursor a real pointer
-exec xsetroot -cursor-name left_pointer
+exec rpws init 4 -k
+exec xsetroot -cursor-name Left_pointer
 exec xwallpaper --zoom ~/Pictures/m.jpg
 exec xrdb ~/.Xresources
 exec dunst
+exec sh ~/.config/dotfiles/termbar | dzen2
 
 unbind C-c
 unbind c
@@ -28,13 +30,24 @@ bind d exec notify-send "$(date)"
 unbind v
 bind v exec notify-send "VOL: $(pamixer --get-volume)" 
 bind M-l exec xlock
+unbind C-s
+unbind s
+unbind C-S
+unbind S
+bind z split
+bind C-z split
+bind Z hsplit
+bind C-Z hsplit
+bind w exec firefox
+bind C-w exec firefox
 
 set border 0
-set padding 0 0 0 0
-set barborder 0 0 0 0
+set padding 0 20 0 0
+set barborder 3
+set barpadding 0 0 0 0
 set fgcolor #d8caac
 set bgcolor #323d43
-set font Terminus:size=18
+set font Terminus:size=20
 set wingravity center
 set transgravity center
 set bargravity center
@@ -43,5 +56,9 @@ set bargravity center
 definekey top XF86_AudioMute exec pamixer -t && notify-send "MUTE: $(pamixer --get-mute)"
 definekey top XF86_AudioRaiseVolume exec pamixer -i 5 && notify-send "VOL: $(pamixer --get-volume)"
 definekey top XF86_AudioLowerVolume exec pamixer -d 5 && notify-send "VOL: $(pamixer --get-volume)"
-definekey top M-F9 exec xbacklight -dec 10
-definekey top M-F10 exec xbacklight -inc 10
+definekey top C-F9 exec xbacklight -dec 10
+definekey top C-F10 exec xbacklight -inc 10
+definekey top C-1 exec rpws 1
+definekey top C-2 exec rpws 2
+definekey top C-3 exec rpws 3
+definekey top C-4 exec rpws 4
