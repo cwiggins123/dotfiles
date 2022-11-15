@@ -7,7 +7,7 @@ URxvt.scrollBar: false
 *.background:   #323d43
 *.cursorColor:  #d8caac
 URxvt*depth:    32
-URxvt.background: [93]#323d43
+URxvt.background: [80]#323d43
 
 ! black
 *.color0:       #868d80

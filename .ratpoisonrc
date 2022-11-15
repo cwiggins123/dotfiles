@@ -1,0 +1,41 @@
+# my super cool ratpoison config
+escape C-s
+
+# make the mouse cursor a real pointer
+exec xsetroot -cursor-name left_pointer
+exec xwallpaper --zoom ~/Pictures/m.jpg
+exec xrdb ~/.Xresources
+exec dunst
+
+unbind C-c
+unbind c
+# vim keys
+unbind k
+bind j focusdown
+bind k focusup
+bind h focusleft
+bind l focusright
+bind J exchangedown
+bind K exchangeup
+bind H exchangeleft
+bind L exchangeright
+bind C-k delete
+# other stuff
+bind C-c exec urxvt -e tmux
+bind c exec urxvt -e tmux
+bind b exec notify-send "$(acpi)"
+bind d exec notify-send "$(date)"
+
+set border 0
+set padding 0 0 0 0
+set barborder 0 0 0 0
+set fgcolor #d8caac
+set bgcolor #323d43
+set font Terminus:size=18
+
+# special keys without escape key
+definekey top XF86_AudioMute exec pamixer -t && notify-send "MUTE: $(pamixer --get-mute)"
+definekey top XF86_AudioRaiseVolume exec pamixer -i 5 && notify-send "VOL: $(pamixer --get-volume)"
+definekey top XF86_AudioLowerVolume exec pamixer -d 5 && notify-send "VOL: $(pamixer --get-volume)"
+definekey top M-F9 exec xbacklight -dec 10
+definekey top M-F10 exec xbacklight -inc 10

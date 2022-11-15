@@ -1,10 +1,12 @@
 #!/usr/bin/bash
 
+# check for interactive tty
 case $- in
   *i*) ;; # interactive
   *) return ;;
 esac
 
+# better compatibility and portability
 export TERM=xterm-256color
 
 # aliases
@@ -13,7 +15,7 @@ alias dot="cd ~/.config/dotfiles"
 # vi keys 
 set -o vi
 
-# smart prompt
+# smart prompt that I totally didn't steal from Rob Muhlstein
 PROMPT_LONG=20
 PROMPT_MAX=95
 PROMPT_AT=@
@@ -49,3 +51,5 @@ _ps1() {
 }
 
 PROMPT_COMMAND="_ps1"
+
+#neofetch # for the memes
