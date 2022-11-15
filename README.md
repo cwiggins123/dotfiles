@@ -20,8 +20,8 @@ The software and hardware I use:
   either slackware or OpenBSD
 * HP z220 with nvidia gtx 1050 TI small form factor, running popOS
 * Razer Blade Stealth late 2016 running popOS
-* Keyboards: ZSA Moonlander split ergo keyboard with halo trues, unicomp sun unix
-  keyboard (with very nice buckling spring switches)
+* Keyboards: ZSA Moonlander split ergo keyboard with halo trues, unicomp sun unix keyboard,
+vortex core 40% keyboard
 * Mice: logitech M575 wireless trackball, X-Keys L-trac trackball
 * OS: Slackware, OpenBSD, popOS, trueNAS
 * Window Manager: ratpoison
