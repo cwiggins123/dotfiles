@@ -7,40 +7,110 @@ dzen2.foreground: #d8caac
 dzen2.background: #323d43
 
 ! special
-*.foreground:   #d8caac
-*.background:   #323d43
-*.cursorColor:  #d8caac
-URxvt*depth:    32
-URxvt.background: [80]#323d43
+!!*.foreground:   #d8caac
+!*.background:   #323d43
+!*.cursorColor:  #d8caac
+!URxvt*depth:    32
+!URxvt.background: [80]#323d43
 
 ! black
-*.color0:       #868d80
-*.color8:       #868d80
+!*.color0:       #868d80
+!*.color8:       #868d80
 
 ! red
-*.color1:       #e68183
-*.color9:       #e68183
+!*.color1:       #e68183
+!*.color9:       #e68183
 
 ! green
-*.color2:       #a7c080
-*.color10:      #a7c080
+!*.color2:       #a7c080
+!*.color10:      #a7c080
 
 ! yellow
-*.color3:       #d9bb80
-*.color11:      #d9bb80
+!*.color3:       #d9bb80
+!*.color11:      #d9bb80
 
 ! blue
-*.color4:       #89beba
-*.color12:      #89beba
+!*.color4:       #89beba
+!*.color12:      #89beba
 
 ! magenta
-*.color5:       #d3a0bc
-*.color13:      #d3a0bc
+!*.color5:       #d3a0bc
+!*.color13:      #d3a0bc
 
-! cyan
-*.color6:       #87c095
-*.color14:      #87c095
+!! cyan
+!*.color6:       #87c095
+!*.color14:      #87c095
 
 ! white
-*.color7:       #d8caac
-*.color15:      #d8caac
+!*.color7:       #d8caac
+!*.color15:      #d8caac
+
+!! Default colors
+! Normal
+*background: #3f3f3f
+URxvt*depth:  32
+URxvt.background: [85]#3f3f3f
+! Normal
+*foreground: #dcdccc
+! Cursor
+*cursorColor: #8faf9f
+
+!! Black color
+! Visual
+*color0: #2f2f2f
+! Normal
+!*color0: #3f3f3f
+! NonText
+*color8: #5b605e
+! Ignore
+!*color8: #545a4f
+
+!! Red color
+! PreCondit
+*color1: #dfaf8f
+! Define, Macro, ModeMsg, PreProc
+*color9: #ffcfaf
+
+!! Green color
+! Comment
+*color2: #7f9f7f
+! SpecialKey
+*color10: #9ece9e
+
+!! Brown / yellow color
+! Structure -20
+*color3: #cfcf8f
+! Function -20
+!*color3: #cfcf6f
+! Structure
+*color11: #efefaf
+! Function
+!*color11: #efef8f
+
+!! Blue color
+! Float -20
+*color4: #a09eb1
+! Float
+*color12: #c0bed1
+
+!! Magenta color
+! Boolean, Character, Constant, SpecialChar -20
+*color5: #bc8383
+! String
+!*color5: #cc9393
+! String
+!*color13: #cc9393
+! Boolean, Character, Constant, SpecialChar
+*color13: #dca3a3
+
+!! Cyan color
+! Number -20
+*color6: #6cb0b3
+! Number
+*color14: #8cd0d3
+
+!! White color
+! Normal, Underlined
+*color7: #dcdccc
+! MoreMsg, Question
+*color15: #ffffff

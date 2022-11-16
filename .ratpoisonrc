@@ -3,7 +3,7 @@ escape C-s
 
 # make the mouse cursor a real pointer
 exec rpws init 4 -k
-exec xsetroot -cursor-name Left_pointer
+exec xsetroot -cursor-name left_pointer
 exec xwallpaper --zoom ~/Pictures/wallpapers/n.jpg
 exec xrdb ~/.Xresources
 exec dunst

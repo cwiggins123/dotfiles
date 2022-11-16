@@ -24,13 +24,12 @@ endif
 if has("syntax")
   syntax enable
   set background=dark
-  let g:everforest_background = 'soft'
-  let g:everforest_better_performance = 0
-  colorscheme everforest
+  "let g:everforest_background = 'soft'
+  "let g:everforest_better_performance = 0
+  colorscheme zenburn
   hi Normal guibg=NONE ctermbg=NONE 
   hi EndOfBuffer ctermfg=NONE guifg=NONE
 endif
-
 
 if v:version >= 800
   " don't mess with files that it shouldn't
