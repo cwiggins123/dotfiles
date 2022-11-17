@@ -47,7 +47,7 @@ set barborder 3
 set barpadding 0 0 0 0
 set fgcolor #d8caac
 set bgcolor #323d43
-set font Terminus:size=20
+set font IBM Plex Mono:size=18
 set wingravity center
 set transgravity center
 set bargravity center

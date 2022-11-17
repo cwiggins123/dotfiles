@@ -1,11 +1,8 @@
-*.faceName: Terminus:size=20
-URxvt.font: xft:Terminus:size=20
+*.faceName: IBM Plex Mono:size=18
+URxvt.font: xft:IBM Plex Mono:size=18
 URxvt.scrollBar: false
-
-dzen2.font:
-dzen2.foreground: #d8caac
-dzen2.background: #323d43
-
+!
+! everforest colors
 ! special
 !!*.foreground:   #d8caac
 !*.background:   #323d43
@@ -45,6 +42,7 @@ dzen2.background: #323d43
 !*.color7:       #d8caac
 !*.color15:      #d8caac
 
+!zenburn
 !! Default colors
 ! Normal
 *background: #3f3f3f
