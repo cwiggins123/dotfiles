@@ -4,7 +4,8 @@ escape C-s
 # make the mouse cursor a real pointer
 exec rpws init 4 -k
 exec xsetroot -cursor-name left_pointer
-exec xwallpaper --zoom ~/Pictures/wallpapers/n.jpg
+exec xcompmgr
+exec xwallpaper --zoom ~/Pictures/wallpapers/m.jpg
 exec xrdb ~/.Xresources
 exec dunst
 exec sh ~/.config/dotfiles/termbar | dzen2 

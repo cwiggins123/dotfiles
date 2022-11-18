@@ -13,7 +13,7 @@ export TERM=xterm-256color
 alias dot="cd ~/.config/dotfiles"
 alias l="ls"
 alias la="ls -al"
-alias erat="vim .ratpoisonrc"
+alias erat="vim ~/.ratpoisonrc"
 
 # vi keys 
 set -o vi
