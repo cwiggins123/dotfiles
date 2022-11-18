@@ -3,11 +3,11 @@ escape C-s
 
 # make the mouse cursor a real pointer
 exec rpws init 4 -k
-exec xsetroot -cursor-name left_pointer
 exec xcompmgr
 exec xwallpaper --zoom ~/Pictures/wallpapers/m.jpg
 exec xrdb ~/.Xresources
 exec dunst
+exec tmux
 exec sh ~/.config/dotfiles/termbar | dzen2 
 
 unbind C-c
@@ -24,8 +24,8 @@ bind H exchangeleft
 bind L exchangeright
 bind C-k delete
 # other stuff
-bind C-c exec urxvt -e tmux
-bind c exec urxvt -e tmux
+bind C-c exec urxvt -e tmux attach
+bind c exec urxvt -e tmux attach
 bind b exec notify-send "$(acpi)"
 bind d exec notify-send "$(date)"
 unbind v

@@ -29,7 +29,7 @@ if has("syntax")
   set background=dark
   colorscheme zenburn
   hi Normal guibg=NONE ctermbg=NONE 
-  hi EndOfBuffer ctermfg=NONE guifg=NONE
+  " hi EndOfBuffer ctermfg=NONE guifg=NONE
 endif
 
 if v:version >= 800

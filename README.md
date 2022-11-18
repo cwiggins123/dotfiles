@@ -10,7 +10,7 @@ TODO:
 ## About Me:
 
 I'm Chris Wiggins, an *NIX and FOSS admin and enthusiast by trade and
-hobby, and an aspiring ~~dissident~~ homesteader.
+hobby, and an aspiring homesteader.
 
 The software and hardware I use:
 
