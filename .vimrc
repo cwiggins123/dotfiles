@@ -3,6 +3,7 @@ if has("eval")
   let skip_defaults_vim = 1
 endif
 
+" some basic tweaks
 set nocompatible
 set autoindent 
 set autowrite
@@ -17,15 +18,15 @@ set shiftwidth=2
 set smartindent
 set smarttab
 
+" set termguicolors
 if has("termguicolors")
   set termguicolors
 endif
 
+" again, check for vim-tiny
 if has("syntax")
   syntax enable
   set background=dark
-  "let g:everforest_background = 'soft'
-  "let g:everforest_better_performance = 0
   colorscheme zenburn
   hi Normal guibg=NONE ctermbg=NONE 
   hi EndOfBuffer ctermfg=NONE guifg=NONE
