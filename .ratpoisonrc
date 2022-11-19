@@ -1,14 +1,14 @@
 # my super cool ratpoison config
 escape C-s
 
-# make the mouse cursor a real pointer
-exec rpws init 4 -k
-exec xcompmgr
-exec xwallpaper --zoom ~/Pictures/wallpapers/m.jpg
+exec rpws init 3 -k
+#exec xcompmgr
+#exec xwallpaper --zoom ~/Pictures/wallpapers/m.jpg
 exec xrdb ~/.Xresources
 exec dunst
 exec tmux
-exec sh ~/.config/dotfiles/termbar | dzen2 
+# can get info from dunst pop ups
+# exec sh ~/.config/dotfiles/termbar | dzen2 
 
 unbind C-c
 unbind c
@@ -24,10 +24,9 @@ bind H exchangeleft
 bind L exchangeright
 bind C-k delete
 # other stuff
-bind C-c exec urxvt -e tmux attach
-bind c exec urxvt -e tmux attach
+bind C-c exec xterm -e tmux attach
+bind c exec xterm -e tmux attach
 bind b exec notify-send "$(acpi)"
-bind d exec notify-send "$(date)"
 unbind v
 bind v exec notify-send "VOL: $(pamixer --get-volume)" 
 bind M-l exec xlock
@@ -35,6 +34,8 @@ unbind C-s
 unbind s
 unbind C-S
 unbind S
+bind r restart
+bind R quit
 bind z split
 bind C-z split
 bind Z hsplit
@@ -43,7 +44,7 @@ bind w exec firefox
 bind C-w exec firefox
 
 set border 0
-set padding 0 18 0 0
+set padding 0 0 0 0
 set barborder 3
 set barpadding 0 0 0 0
 set fgcolor #d8caac
@@ -62,4 +63,3 @@ definekey top C-F10 exec xbacklight -inc 10
 definekey top C-1 exec rpws 1
 definekey top C-2 exec rpws 2
 definekey top C-3 exec rpws 3
-definekey top C-4 exec rpws 4

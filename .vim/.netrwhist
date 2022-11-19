@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =4
+let g:netrw_dirhistcnt =5
+let g:netrw_dirhist_5='/home/christopher/.config/dotfiles/.vim/colors'
 let g:netrw_dirhist_4='/home/christopher/Projects/perl/tutorial'
 let g:netrw_dirhist_3='/home/christopher/.config/slackwareconfig/.config/st'
 let g:netrw_dirhist_2='/home/christopher/Projects/perl/tutorial'

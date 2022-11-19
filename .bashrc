@@ -7,7 +7,7 @@ case $- in
 esac
 
 # better compatibility and portability
-export TERM=xterm-256color
+export MC_SKIN=dark
 
 # aliases
 alias dot="cd ~/.config/dotfiles"
@@ -54,5 +54,4 @@ _ps1() {
 }
 
 PROMPT_COMMAND="_ps1"
-
 #neofetch # for the memes

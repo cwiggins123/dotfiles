@@ -12,7 +12,7 @@ set relativenumber
 set ruler
 set showmode
 set tabstop=2
-set t_vb=
+set t_vb=""
 set softtabstop=2
 set shiftwidth=2
 set smartindent
@@ -26,9 +26,9 @@ endif
 " again, check for vim-tiny
 if has("syntax")
   syntax enable
+  set t_Co=256
   set background=dark
-  colorscheme zenburn
-  hi Normal guibg=NONE ctermbg=NONE 
+  " hi Normal guibg=NONE ctermbg=NONE 
   " hi EndOfBuffer ctermfg=NONE guifg=NONE
 endif
 
@@ -44,7 +44,8 @@ if v:version >= 800
 	set nofoldenable
 endif
 
-set textwidth=72
+set textwidth=80
+set colorcolumn=81
 set expandtab
 set nobackup
 set noswapfile

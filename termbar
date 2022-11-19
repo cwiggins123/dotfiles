@@ -4,7 +4,11 @@ while true ; do
   BAT=$(acpi | sed s/'Battery 0'/'BAT'/ | sed s/,// | sed s/,// | cut --complement -d " " -f2)
   DATE=$(date)
   #BCKLT=$(xbacklight | cut -d "." -f1)
-  TEMP=$(acpi -t | cut -d " " -f 4,6)
+  TEMP=$(acpi -t | cut -d " " -f 4)
+
+  # doesn't work, I'm only trying it because of my vehement hatred of
+  # if statements. It totally would if bash had logical xor
+  # VOL=$(pamixer --get-volume) || ($(pamixer --get-mute) && VOL="MUTE") 
 
   if $(pamixer --get-mute); then
     VOL="MUTE"
@@ -17,4 +21,4 @@ while true ; do
 done 
 
 # this is current config for dzen2. for termbar proper, add \r behind
-# $BCKLT
+# $BCKLT and echo -en
