@@ -1,0 +1,35 @@
+font:
+  normal:
+    family: Terminus
+    size: 20
+
+colors:
+  primary:
+    background: '#323d43'
+    foreground: '#d8caac'
+  cursor:
+    text: '#323d43'
+    cursor: '#d8caac'
+
+  normal:
+    black:   '#868d80'
+    red:     '#e68183'
+    green:   '#a7c080'
+    yellow:  '#d9bb80'
+    blue:    '#89beba'
+    magenta: '#d3a0bc'
+    cyan:    '#87c095'
+    white:   '#d8caac'
+
+  bright:
+    black:   '#868d80'
+    red:     '#e68183'
+    green:   '#a7c080'
+    yellow:  '#d9bb80'
+    blue:    '#89beba'
+    magenta: '#d3a0bc'
+    cyan:    '#87c095'
+    white:   '#d8caac'
+
+window:
+  opacity: 0.9

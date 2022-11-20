@@ -1,7 +1,7 @@
 #!/bin/bash
 
 while true ; do
-  BAT=$(acpi | sed s/'Battery 0'/'BAT'/ | cut -c="," | cut --complement -d " " -f2)
+  BAT=$(acpi | sed s/'Battery 0'/'BAT'/ | sed s/,// | sed s/,// | cut --complement -d " " -f2)
   DATE=$(date)
   #BCKLT=$(xbacklight | cut -d "." -f1)
   TEMP=$(acpi -t | cut -d " " -f 4)
@@ -16,7 +16,7 @@ while true ; do
     VOL=$(pamixer --get-volume)
   fi
 
-    echo "VOL: $VOL | $BAT | $DATE | TEMP: $TEMP"
+    echo "VOL: $BAT | $DATE"
   sleep 1
 done 
 
