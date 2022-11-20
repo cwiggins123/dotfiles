@@ -1,6 +1,6 @@
 #
 
-export TERM='xterm-256color'
+export TERM='rxvt-unicode'
 
 if [ -n "$BASH_VERSION" ]; then
   if [ -f "$HOME/.bashrc" ]; then

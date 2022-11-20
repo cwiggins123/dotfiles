@@ -1,7 +1,8 @@
 font:
   normal:
-    family: Terminus
-    size: 20
+    family: Source Code Pro
+    style: Regular
+    size: 14
 
 colors:
   primary:
