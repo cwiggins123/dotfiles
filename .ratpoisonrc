@@ -24,8 +24,8 @@ bind H exchangeleft
 bind L exchangeright
 bind C-k delete
 # other stuff
-bind C-c exec xterm -e tmux attach
-bind c exec xterm -e tmux attach
+bind C-c exec urxvt -e tmux attach
+bind c exec urxvt -e tmux attach
 bind b exec notify-send "$(acpi)"
 unbind v
 bind v exec notify-send "VOL: $(pamixer --get-volume)" 

@@ -18,7 +18,6 @@ set shiftwidth=2
 set smartindent
 set smarttab
 
-" set termguicolors
 if has("termguicolors")
   set termguicolors
 endif
@@ -28,8 +27,12 @@ if has("syntax")
   syntax enable
   set t_Co=256
   set background=dark
-  " hi Normal guibg=NONE ctermbg=NONE 
-  " hi EndOfBuffer ctermfg=NONE guifg=NONE
+  colorscheme 256_noir
+  hi Normal guibg=NONE ctermbg=NONE 
+  hi Comment ctermfg=darkgrey guifg=darkgrey
+  hi CursorLine cterm=NONE ctermfg=NONE ctermbg=233 guifg=NONE guibg=#121212
+  autocmd InsertEnter * highlight CursorLine cterm=NONE ctermfg=NONE ctermbg=234 guifg=NONE guibg=#1c1c1c
+  autocmd InsertLeave * highlight CursorLine cterm=NONE ctermfg=NONE ctermbg=233 guifg=NONE guibg=#121212
 endif
 
 if v:version >= 800
@@ -45,7 +48,7 @@ if v:version >= 800
 endif
 
 set textwidth=80
-set colorcolumn=81
+"set colorcolumn=81
 set expandtab
 set nobackup
 set noswapfile
