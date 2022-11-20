@@ -2,8 +2,8 @@
 escape C-s
 
 exec rpws init 3 -k
-#exec xcompmgr
-#exec xwallpaper --zoom ~/Pictures/wallpapers/m.jpg
+exec xcompmgr
+exec xwallpaper --zoom ~/Pictures/wallpapers/s.jpg
 exec xrdb ~/.Xresources
 exec dunst
 exec tmux
