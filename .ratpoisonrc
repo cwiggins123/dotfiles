@@ -13,6 +13,8 @@ exec tmux
 unbind C-c
 unbind c
 # vim keys
+unbind P
+bind P exec dmenu_run
 unbind k
 bind j focusdown
 bind k focusup
