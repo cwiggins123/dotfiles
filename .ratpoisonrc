@@ -1,5 +1,5 @@
 # my super cool ratpoison config
-escape C-s
+# escape C-s
 
 exec rpws init 3 -k
 exec xcompmgr
@@ -14,8 +14,6 @@ exec urxvt -e tmux attach
 unbind C-c
 unbind c
 # vim keys
-unbind P
-bind P exec dmenu_run
 unbind k
 bind j focusdown
 bind k focusup
@@ -25,7 +23,8 @@ bind J exchangedown
 bind K exchangeup
 bind H exchangeleft
 bind L exchangeright
-bind C-x delete
+bind C-d delete
+bind D xkill
 bind g abort
 # other stuff
 bind C-c exec urxvt -e tmux attach
@@ -34,16 +33,8 @@ bind b exec notify-send "$(acpi)"
 unbind v
 bind v exec notify-send "VOL: $(pamixer --get-volume)" 
 bind M-l exec xlock
-unbind C-s
-unbind s
-unbind C-S
-unbind S
 bind r restart
-bind R quit
-bind z split
-bind C-z split
-bind Z hsplit
-bind C-Z hsplit
+bind C-q quit
 bind w exec firefox
 bind C-w exec firefox
 unbind C-K
@@ -66,6 +57,3 @@ definekey top XF86_AudioRaiseVolume exec pamixer -i 5 && notify-send "VOL: $(pam
 definekey top XF86_AudioLowerVolume exec pamixer -d 5 && notify-send "VOL: $(pamixer --get-volume)"
 definekey top C-F9 exec xbacklight -dec 10
 definekey top C-F10 exec xbacklight -inc 10
-definekey top C-1 exec rpws 1
-definekey top C-2 exec rpws 2
-definekey top C-3 exec rpws 3

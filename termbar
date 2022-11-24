@@ -4,19 +4,20 @@ while true ; do
   BAT=$(acpi | sed s/'Battery 0'/'BAT'/ | sed s/,// | sed s/,// | cut --complement -d " " -f2)
   DATE=$(date)
   #BCKLT=$(xbacklight | cut -d "." -f1)
-  TEMP=$(acpi -t | cut -d " " -f 4)
+  #TEMP=$(acpi -t | cut -d " " -f 4)
 
   # doesn't work, I'm only trying it because of my vehement hatred of
-  # if statements. It totally would if bash had logical xor
+  # if statements. It totally would if bash had logical xor.
+  # just looked it up, perl doesn't really have it either :(
   # VOL=$(pamixer --get-volume) || ($(pamixer --get-mute) && VOL="MUTE") 
 
-  if $(pamixer --get-mute); then
-    VOL="MUTE"
-  else
-    VOL=$(pamixer --get-volume)
-  fi
+  #if $(pamixer --get-mute); then
+  #  VOL="MUTE"
+  #else
+  #  VOL=$(pamixer --get-volume)
+  #fi
 
-  echo "VOL: $VOL $BAT $(hostname -s) $(date +"%H:%M %m/%d")"
+  echo "$BAT | $(hostname -s) | $(date +"%H:%M %m/%d")"
   sleep 1
 done 
 
