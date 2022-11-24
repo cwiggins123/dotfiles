@@ -1,5 +1,4 @@
 #
-
 export TERM='rxvt-unicode'
 
 if [ -n "$BASH_VERSION" ]; then

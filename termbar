@@ -16,9 +16,9 @@ while true ; do
     VOL=$(pamixer --get-volume)
   fi
 
-    echo "VOL: $BAT | $DATE"
+  echo "VOL: $VOL $BAT $(hostname -s) $(date +"%H:%M %m/%d")"
   sleep 1
 done 
 
-# this is current config for dzen2. for termbar proper, add \r behind
+# this is current config tmux status. for termbar proper, add \r behind
 # $BCKLT and echo -en

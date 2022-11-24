@@ -8,7 +8,8 @@ exec xrdb ~/.Xresources
 exec dunst
 exec tmux
 # can get info from dunst pop ups
- exec sh ~/.config/dotfiles/termbar | dzen2 
+#exec sh ~/.config/dotfiles/termbar | dzen2 
+exec urxvt -e tmux attach 
 
 unbind C-c
 unbind c
@@ -27,8 +28,8 @@ bind L exchangeright
 bind C-x delete
 bind g abort
 # other stuff
-bind C-c exec alacritty -e tmux attach
-bind c exec alacritty -e tmux attach
+bind C-c exec urxvt -e tmux attach
+bind c exec urxvt -e tmux attach
 bind b exec notify-send "$(acpi)"
 unbind v
 bind v exec notify-send "VOL: $(pamixer --get-volume)" 
@@ -49,12 +50,12 @@ unbind C-K
 unbind C-k
 
 set border 0
-set padding 0 18 0 0
+set padding 0 0 0 0
 set barborder 3
 set barpadding 0 0 0 0
 set fgcolor #d8caac
 set bgcolor #323d43
-set font Terminus:size=18
+set font Source Code Pro:size=18
 set wingravity center
 set transgravity center
 set bargravity center
