@@ -1,6 +1,6 @@
-*.faceName: Terminus:size=20
+*.faceName: Hermit:size=18
 URxvt.scrollBar: false
-URxvt.font: xft:Terminus:size=20
+URxvt.font: xft:Hermit:size=18
 
 
 ! special

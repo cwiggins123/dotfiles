@@ -1,58 +1,40 @@
 # my super cool ratpoison config
-# escape C-s
-
 exec xrdb ~/.Xresources
-exec xcompmgr
+exec picom
 exec xwallpaper --zoom ~/Pictures/wallpapers/a.jpg
 exec dunst
 exec tmux
 exec xmodmap ~/.xmodmap
 # can get info from dunst pop ups
-exec sh ~/.config/dotfiles/termbar | dzen2 
+# exec sh ~/.config/dotfiles/termbar | dzen2 
 exec urxvt -e tmux attach 
 
+# change from xterm to urxvt
 unbind C-c
 unbind c
-# vim keys
-unbind k
-bind j focusdown
-bind k focusup
-bind h focusleft
-bind l focusright
-bind J exchangedown
-bind K exchangeup
-bind H exchangeleft
-bind L exchangeright
-bind C-d delete
-bind D xkill
-bind g abort
-# other stuff
 bind C-c exec urxvt -e tmux attach
 bind c exec urxvt -e tmux attach
-bind b exec notify-send "$(acpi)"
-unbind v
-bind v exec notify-send "VOL: $(pamixer --get-volume)" 
 bind M-l exec xlock
-bind r restart
-bind C-q quit
+unbind C-v
+unbind v
+bind C-v notify-send "VOL: $(pamixer --get-volume)"
+bind v notify-send "VOL: $(pamixer --get-volume)"
+#bind r restart
+#bind C-q quit
 bind w exec firefox
 bind C-w exec firefox
-unbind C-K
-unbind C-k
 
-set border 0
-set padding 0 18 0 0
+set padding 0 0 0 0
 set barborder 3
-set barpadding 0 0 0 0
 set fgcolor #d8caac
 set bgcolor #323d43
-set font Source Code Pro:size=18
+set font Hermit:size=18
 set wingravity center
 set transgravity center
 set bargravity center
 
 # special keys without escape key
-definekey top XF86_AudioMute exec pamixer -t && notify-send "MUTE: $(pamixer --get-mute)"
+definekey top XF86_AudioMute exec pamixer -t 
 definekey top XF86_AudioRaiseVolume exec pamixer -i 5 && notify-send "VOL: $(pamixer --get-volume)"
 definekey top XF86_AudioLowerVolume exec pamixer -d 5 && notify-send "VOL: $(pamixer --get-volume)"
 definekey top C-F9 exec xbacklight -dec 10
