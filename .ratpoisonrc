@@ -4,7 +4,6 @@ exec picom
 exec xwallpaper --zoom ~/Pictures/wallpapers/a.jpg
 exec dunst
 exec tmux
-exec xmodmap ~/.xmodmap
 # can get info from dunst pop ups
 # exec sh ~/.config/dotfiles/termbar | dzen2 
 exec urxvt -e tmux attach 
