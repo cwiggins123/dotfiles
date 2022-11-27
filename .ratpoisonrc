@@ -3,11 +3,12 @@
 
 exec xrdb ~/.Xresources
 exec xcompmgr
-exec xwallpaper --zoom ~/Pictures/wallpapers/s.jpg
+exec xwallpaper --zoom ~/Pictures/wallpapers/a.jpg
 exec dunst
 exec tmux
+exec xmodmap ~/.xmodmap
 # can get info from dunst pop ups
-#exec sh ~/.config/dotfiles/termbar | dzen2 
+exec sh ~/.config/dotfiles/termbar | dzen2 
 exec urxvt -e tmux attach 
 
 unbind C-c
@@ -40,7 +41,7 @@ unbind C-K
 unbind C-k
 
 set border 0
-set padding 0 0 0 0
+set padding 0 18 0 0
 set barborder 3
 set barpadding 0 0 0 0
 set fgcolor #d8caac

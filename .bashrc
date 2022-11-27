@@ -8,7 +8,7 @@ esac
 
 # better compatibility and portability
 export MC_SKIN=dark
-export PATH=$PATH:/home/christopher/.local/bin/
+export PATH=$PATH:/sbin/:/usr/sbin:/home/christopher/.local/bin/
 
 # aliases
 alias dot="cd ~/.config/dotfiles"
