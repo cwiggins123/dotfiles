@@ -1,7 +1,7 @@
 #!/bin/bash
 
 while true ; do
-  BAT=$(acpi | sed s/'Battery 0'/'BAT'/ | sed s/,// | sed s/,// | cut --complement -d " " -f2)
+  BAT=$(acpi | grep 'Battery 0' | sed s/'Battery 0'/'BAT'/ | sed s/,// | sed s/,// | cut --complement -d " " -f2)
   DATE=$(date)
   #BCKLT=$(xbacklight | cut -d "." -f1)
   #TEMP=$(acpi -t | cut -d " " -f 4)
@@ -9,15 +9,15 @@ while true ; do
   # doesn't work, I'm only trying it because of my vehement hatred of
   # if statements. It totally would if bash had logical xor.
   # just looked it up, perl doesn't really have it either :(
-  # VOL=$(pamixer --get-volume) || ($(pamixer --get-mute) && VOL="MUTE") 
+  #($(pamixer --get-mute) && VOL="MUTE") && !(VOL=$(pamixer --get-volume)) 
 
-  if $(pamixer --get-mute); then
-    VOL="MUTE"
-  else
-    VOL=$(pamixer --get-volume)
-  fi
+  #if $(pamixer --get-mute); then
+  #  VOL="MUTE"
+  #else
+  #  VOL=$(pamixer --get-volume)
+  #fi
 
-  echo "$BAT | VOL: $VOL | $(date +"%H:%M %m/%d")" #$(hostname -s) for tmux status maybe
+  echo "| $BAT | $(hostname -s) | $(date +"%H:%M %m/%d") |" #$(hostname -s) for tmux status maybe
   sleep 1
 done 
 

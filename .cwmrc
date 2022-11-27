@@ -1,14 +1,19 @@
 # sticky-group mode on
 sticky yes
 
-# set default to terminus
-fontname "Terminus:size=20:style=bold"
+# window stuff
+borderwidth 0
+
+# set default to Hermit
+fontname "Hermit:size=20:style=bold"
 
 autogroup 0     "termbar,termbar"
 ignore termbar
 
-gap 22 0 0 0
+gap 0 0 0 0
 
+menubg "#080808"
+menufc "#bcbcbc"
 # window tiling screen real-estate is set to 50%
 htile 50
 vtile 50
@@ -16,7 +21,7 @@ vtile 50
 # set default terminal bind to spawn xterm in a new tmux session
 unbind-key CM-Return
 bind-key CM-Return      "urxvt  -e tmux -2"
-bind-key CMS-Return     "urxvt  -e tmux -2 && xdotool key ctrl+alt+m"
+#bind-key CMS-Return     "urxvt  -e tmux -2 && xdotool key ctrl+alt+m"
 
 # window tiling
 unbind-key M-right
@@ -31,3 +36,4 @@ bind-key XF86AudioMute        "pamixer -t"
 bind-key M-F9                 "xbacklight -dec 10"
 bind-key M-F10                "xbacklight -inc 10"
 bind-key CM-delete            "xlock"
+bind-key CM-b                 "notify-send $(acpi)"

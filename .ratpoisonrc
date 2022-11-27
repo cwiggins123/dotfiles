@@ -1,9 +1,10 @@
 # my super cool ratpoison config
 exec xrdb ~/.Xresources
 exec picom
-exec xwallpaper --zoom ~/Pictures/wallpapers/a.jpg
 exec dunst
 exec tmux
+exec xmodmap ~/.xmodmap
+exec xwallpaper --zoom ~/Pictures/wallpapers/d.jpg
 # can get info from dunst pop ups
 # exec sh ~/.config/dotfiles/termbar | dzen2 
 exec urxvt -e tmux attach 
@@ -16,8 +17,9 @@ bind c exec urxvt -e tmux attach
 bind M-l exec xlock
 unbind C-v
 unbind v
-bind C-v notify-send "VOL: $(pamixer --get-volume)"
-bind v notify-send "VOL: $(pamixer --get-volume)"
+bind C-v echo  "VOL: $(pamixer --get-volume)"
+bind v echo "VOL: $(pamixer --get-volume)"
+bind b echo "$(acpi)"
 #bind r restart
 #bind C-q quit
 bind w exec firefox
@@ -25,8 +27,8 @@ bind C-w exec firefox
 
 set padding 0 0 0 0
 set barborder 3
-set fgcolor #d8caac
-set bgcolor #323d43
+set fgcolor #b2b2b2
+set bgcolor #080808
 set font Hermit:size=18
 set wingravity center
 set transgravity center
