@@ -23,6 +23,7 @@ unbind v
 bind C-v echo  "VOL: $(pamixer --get-volume)"
 bind v exec notify-send  "VOL: $(pamixer --get-volume)"
 bind b exec notify-send "$(acpi)"
+bind C-g abort
 #bind r restart
 #bind C-q quit
 bind w exec firefox

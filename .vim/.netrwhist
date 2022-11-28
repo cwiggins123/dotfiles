@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =7
+let g:netrw_dirhistcnt =8
+let g:netrw_dirhist_8='/home/christopher/.config'
 let g:netrw_dirhist_7='/home/christopher/.config/neofetch'
 let g:netrw_dirhist_6='/home/christopher/.config/test'
 let g:netrw_dirhist_5='/home/christopher/.config/dotfiles/.vim/colors'

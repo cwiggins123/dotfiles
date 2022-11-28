@@ -12,6 +12,7 @@ URxvt.background: [33]#080808
 URxvt.foreground: #b2b2b2
 URxvt.urlLauncher:  firefox
 URxvt.urlButton: 1
+URxvt.cursorBlink:  true
 
 ! black
 *.color0:       #323437
