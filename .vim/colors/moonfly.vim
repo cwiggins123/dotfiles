@@ -11,7 +11,7 @@ endif
 let g:colors_name='moonfly'
 
 " By default do not color the cursor.
-let g:moonflyCursorColor = get(g:, 'moonflyCursorColor', v:true)
+let g:moonflyCursorColor = get(g:, 'moonflyCursorColor', v:false)
 
 " By default do use italics in GUI versions of Vim.
 let g:moonflyItalics = get(g:, 'moonflyItalics', v:true)

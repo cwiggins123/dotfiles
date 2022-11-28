@@ -6,11 +6,12 @@ URxvt.font: xft:Hermit:size=18
 !! special
 !*.foreground:   #b2b2b2
 !*.background:   #080808
-URxvt.cursorColor:  #ff5189
+URxvt.cursorColor:  #d183e8
 URxvt.depth:  32
-URxvt.background: [00]#080808
+URxvt.background: [33]#080808
 URxvt.foreground: #b2b2b2
 URxvt.urlLauncher:  firefox
+URxvt.urlButton: 1
 
 ! black
 *.color0:       #323437

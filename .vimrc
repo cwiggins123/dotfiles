@@ -27,8 +27,9 @@ if has("syntax")
   syntax enable
   set t_Co=256
   set background=dark
+  let g:moonflyCursorColor = v:true
+  let g:moonflyItalics = v:true
   colorscheme moonfly
-  "let g:moonflyCursorColor = v:true
   hi Normal guibg=NONE ctermbg=NONE 
   hi LineNr ctermbg=NONE guibg=NONE
   " hi Comment ctermfg=darkgrey guifg=darkgrey
