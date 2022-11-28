@@ -1,13 +1,16 @@
-*.faceName: Hermit:size=18
+!*.faceName: Hermit:size=18
 URxvt.scrollBar: false
 URxvt.font: xft:Hermit:size=18
 
-!! moonfly theme ! special
-*.foreground:   #b2b2b2
-*.background:   #080808
-*.cursorColor:  #9e9e9e
+!! moonfly theme 
+!! special
+!*.foreground:   #b2b2b2
+!*.background:   #080808
+URxvt.cursorColor:  #ff5189
 URxvt.depth:  32
-URxvt.background: [25]#080808
+URxvt.background: [00]#080808
+URxvt.foreground: #b2b2b2
+URxvt.urlLauncher:  firefox
 
 ! black
 *.color0:       #323437

@@ -2,12 +2,14 @@
 exec xrdb ~/.Xresources
 exec picom
 exec dunst
-exec tmux
+# don't launch if tmux is running, avoids nested sessions
+exec !(pidof tmux) && tmux
 exec xmodmap ~/.xmodmap
-exec xwallpaper --zoom ~/Pictures/wallpapers/d.jpg
+exec xwallpaper --zoom ~/Pictures/d.jpg
 # can get info from dunst pop ups
 # exec sh ~/.config/dotfiles/termbar | dzen2 
-exec urxvt -e tmux attach 
+# don't launch if terminal is already running
+exec !(pidof urxvt) && urxvt -e tmux attach 
 
 # change from xterm to urxvt
 unbind C-c
@@ -18,8 +20,8 @@ bind M-l exec xlock
 unbind C-v
 unbind v
 bind C-v echo  "VOL: $(pamixer --get-volume)"
-bind v echo "VOL: $(pamixer --get-volume)"
-bind b echo "$(acpi)"
+bind v exec notify-send  "VOL: $(pamixer --get-volume)"
+bind b exec notify-send "$(acpi)"
 #bind r restart
 #bind C-q quit
 bind w exec firefox

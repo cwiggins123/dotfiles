@@ -30,8 +30,9 @@ if has("syntax")
   colorscheme moonfly
   "let g:moonflyCursorColor = v:true
   hi Normal guibg=NONE ctermbg=NONE 
+  hi LineNr ctermbg=NONE guibg=NONE
   " hi Comment ctermfg=darkgrey guifg=darkgrey
-  " hi CursorLine cterm=NONE ctermfg=NONE ctermbg=233 guifg=NONE guibg=#121212
+  "hi CursorLine cterm=NONE ctermfg=NONE ctermbg=233 guifg=NONE guibg=#121212
   "autocmd InsertEnter * highlight CursorLine cterm=NONE ctermfg=NONE ctermbg=234 guifg=NONE guibg=#1c1c1c
   "autocmd InsertLeave * highlight CursorLine cterm=NONE ctermfg=NONE ctermbg=233 guifg=NONE guibg=#121212
 endif
