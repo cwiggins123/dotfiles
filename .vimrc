@@ -26,9 +26,10 @@ endif
 if has("syntax")
   syntax enable
   set t_Co=256
-  set background=dark
+  set background=light
   let g:moonflyCursorColor = v:true
   let g:moonflyItalics = v:true
+  let g:solarized_termcolors=256
   colorscheme moonfly
   hi Normal guibg=NONE ctermbg=NONE 
   hi LineNr ctermbg=NONE guibg=NONE

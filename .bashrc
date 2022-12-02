@@ -55,4 +55,3 @@ _ps1() {
 }
 
 PROMPT_COMMAND="_ps1"
-#neofetch # for the memes

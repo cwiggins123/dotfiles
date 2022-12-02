@@ -1,15 +1,16 @@
 # my super cool ratpoison config
 exec xrdb ~/.Xresources
-exec xcompmgr
+#exec xcompmgr
+exec picom --experimental-backends
 exec dunst
 # don't launch if tmux is running, avoids nested sessions
 exec !(pidof tmux) && tmux
 exec xmodmap ~/.xmodmap
-exec xwallpaper --zoom ~/Pictures/d.jpg
+exec xwallpaper --zoom ~/Pictures/t.jpg
 # can get info from dunst pop ups
 # exec sh ~/.config/dotfiles/termbar | dzen2 
 # don't launch if terminal is already running
-exec !(pidof urxvtd) && urxvtd -q
+exec urxvtd -q
 exec urxvtc -e tmux attach 
 
 # change from xterm to urxvt
@@ -23,13 +24,13 @@ unbind v
 bind C-v echo  "VOL: $(pamixer --get-volume)"
 bind v exec notify-send  "VOL: $(pamixer --get-volume)"
 bind b exec notify-send "$(acpi)"
-bind C-g abort
+bind g abort
 #bind r restart
 #bind C-q quit
 bind w exec firefox
 bind C-w exec firefox
 
-set padding 0 0 0 0
+set padding 12 12 12 12 
 set barborder 3
 set fgcolor #b2b2b2
 set bgcolor #080808
