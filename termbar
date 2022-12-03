@@ -3,7 +3,7 @@
 # and \r behind the last var
 
 while true ; do
-  BAT=$(acpi | grep 'Battery 0' | sed s/'Battery 0'/'BAT'/ | sed s/,// | sed s/,// | cut --complement -d " " -f2)
+  #BAT=$(acpi | grep 'Battery 0' | sed s/'Battery 0'/'BAT'/ | sed s/,// | sed s/,// | cut --complement -d " " -f2)
   DATE=$(date)
   # scripts for backlight and cpu temp, if I want it
   #BCKLT=$(xbacklight | cut -d "." -f1)
@@ -16,6 +16,6 @@ while true ; do
   #  VOL=$(pamixer --get-volume)
   #fi
 
-  echo "| $BAT | $(hostname -s) | $(date +"%H:%M %m/%d") |"
+  echo "$(hostname -s) $(date +"%H:%M %m/%d")"
   sleep 1
 done 

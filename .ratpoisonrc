@@ -1,23 +1,17 @@
 # my super cool ratpoison config
-exec xrdb ~/.Xresources
-#exec xcompmgr
+#exec xrdb ~/.Xresources
+exec rpws init 3 -k
 exec picom --experimental-backends
 exec dunst
-# don't launch if tmux is running, avoids nested sessions
-exec !(pidof tmux) && tmux
-exec xmodmap ~/.xmodmap
-exec xwallpaper --zoom ~/Pictures/t.jpg
-# can get info from dunst pop ups
-# exec sh ~/.config/dotfiles/termbar | dzen2 
-# don't launch if terminal is already running
-exec urxvtd -q
-exec urxvtc -e tmux attach 
+#exec xmodmap ~/.xmodmap
+exec xwallpaper --zoom ~/Pictures/c.jpg
+exec alacritty -o font.size=14
 
-# change from xterm to urxvt
+# change from xterm to alacritty
 unbind C-c
 unbind c
-bind C-c exec urxvtc -e tmux attach
-bind c exec urxvtc -e tmux attach
+bind C-c exec alacritty -o font.size=14
+bind c exec alacritty -o font.size=14
 bind M-l exec xlock
 unbind C-v
 unbind v
@@ -25,12 +19,10 @@ bind C-v echo  "VOL: $(pamixer --get-volume)"
 bind v exec notify-send  "VOL: $(pamixer --get-volume)"
 bind b exec notify-send "$(acpi)"
 bind g abort
-#bind r restart
-#bind C-q quit
 bind w exec firefox
 bind C-w exec firefox
 
-set padding 12 12 12 12 
+set padding 0 20 0 0
 set barborder 3
 set fgcolor #b2b2b2
 set bgcolor #080808
@@ -45,3 +37,6 @@ definekey top XF86_AudioRaiseVolume exec pamixer -i 5 && notify-send "VOL: $(pam
 definekey top XF86_AudioLowerVolume exec pamixer -d 5 && notify-send "VOL: $(pamixer --get-volume)"
 definekey top C-F9 exec xbacklight -dec 10
 definekey top C-F10 exec xbacklight -inc 10
+definekey top C-1 exec rpws 1
+definekey top C-2 exec rpws 2
+definekey top C-3 exec rpws 3
