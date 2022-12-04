@@ -25,18 +25,12 @@ endif
 " again, check for vim-tiny
 if has("syntax")
   syntax enable
+  " 256 color terminal, for tmux mostly
   set t_Co=256
-  set background=light
-  let g:moonflyCursorColor = v:true
-  let g:moonflyItalics = v:true
-  let g:solarized_termcolors=256
-  colorscheme moonfly
+  set background=dark
+  colorscheme purify
   hi Normal guibg=NONE ctermbg=NONE 
   hi LineNr ctermbg=NONE guibg=NONE
-  " hi Comment ctermfg=darkgrey guifg=darkgrey
-  "hi CursorLine cterm=NONE ctermfg=NONE ctermbg=233 guifg=NONE guibg=#121212
-  "autocmd InsertEnter * highlight CursorLine cterm=NONE ctermfg=NONE ctermbg=234 guifg=NONE guibg=#1c1c1c
-  "autocmd InsertLeave * highlight CursorLine cterm=NONE ctermfg=NONE ctermbg=233 guifg=NONE guibg=#121212
 endif
 
 if v:version >= 800
@@ -79,6 +73,7 @@ if has("eval")
   endfun
 endif
 
+set path+=**
 set wildmenu
 set omnifunc=syntaxcomplete#Complete
 
