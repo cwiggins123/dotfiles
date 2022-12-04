@@ -4,15 +4,15 @@ exec rpws init 3 -k
 exec picom --experimental-backends
 exec dunst
 #exec xmodmap ~/.xmodmap
-exec xwallpaper --zoom ~/Pictures/Firefox_wallpaper.png
+exec xwallpaper --zoom ~/Pictures/f.png
 exec alacritty -o font.size=14 -e tmux attach
 unmanage dzen2
 
 # change from xterm to alacritty
 unbind C-c
 unbind c
-bind C-c exec alacritty -o font.size=14 -e tmux attach
-bind c exec alacritty -o font.size=14 -e tmux attach
+bind C-c exec alacritty -o font.size=14 
+bind c exec alacritty -o font.size=14 
 bind M-l exec xlock
 unbind C-v
 unbind v

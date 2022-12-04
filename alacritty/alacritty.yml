@@ -5,7 +5,7 @@ font:
     style: Regular
 
 window:
-  opacity: 0.45
+  opacity: 0.25
 
 draw_bold_text_with_bright_colors: true
 
