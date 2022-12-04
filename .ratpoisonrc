@@ -1,20 +1,19 @@
 # my super cool ratpoison config
-#exec xrdb ~/.Xresources
+exec xrdb ~/.Xresources
 exec rpws init 3 -k
 exec picom
 exec dunst
 #exec xmodmap ~/.xmodmap
 exec xwallpaper --zoom ~/Pictures/a.png
+exec !(pidof tmux) && tmux
 exec urxvtd -q
-exec urxvtc -e tmux attach
-unmanage dzen2
 
 # change from xterm to alacritty
 unbind C-c
 unbind c
 bind C-c exec urxvtc -e tmux attach 
 bind c exec urxvtc -e tmux attach 
-bind M-l exec xlock
+bind M-l exec slock
 unbind C-v
 unbind v
 bind C-v echo  "VOL: $(pamixer --get-volume)"

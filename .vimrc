@@ -24,8 +24,8 @@ if has ("termguicolors")
 endif
 
 if has("syntax")
-  syntax enable
-  colorscheme blue
+  syntax on
+  colorscheme darkblue
   hi Normal guibg=NONE ctermbg=NONE 
   hi LineNr ctermbg=NONE guibg=NONE
 endif
