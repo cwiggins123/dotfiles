@@ -18,17 +18,17 @@ set shiftwidth=2
 set smartindent
 set smarttab
 
-if has("termguicolors")
+if has ("termguicolors")
   set termguicolors
 endif
 
 " again, check for vim-tiny
 if has("syntax")
   syntax enable
-  " 256 color terminal, for tmux mostly
   set t_Co=256
-  set background=dark
-  colorscheme purify
+  let g:moonflyCursorColor = v:true
+  let g:moonflyItalics = v:true
+  colorscheme moonfly
   hi Normal guibg=NONE ctermbg=NONE 
   hi LineNr ctermbg=NONE guibg=NONE
 endif
@@ -36,10 +36,8 @@ endif
 if v:version >= 800
   " don't mess with files that it shouldn't
 	set nofixendofline
-
   " better ascii chars
 	set listchars=space:*,trail:*,nbsp:*,extends:>,precedes:<,tab:\|>
-
   " no auto folding
 	set foldmethod=manual
 	set nofoldenable
@@ -73,7 +71,6 @@ if has("eval")
   endfun
 endif
 
-set path+=**
 set wildmenu
 set omnifunc=syntaxcomplete#Complete
 

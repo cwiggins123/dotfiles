@@ -1,11 +1,11 @@
 # my super cool ratpoison config
 #exec xrdb ~/.Xresources
 exec rpws init 3 -k
-exec picom --experimental-backends
+exec picom
 exec dunst
 #exec xmodmap ~/.xmodmap
-exec xwallpaper --zoom ~/Pictures/f.png
-exec alacritty -o font.size=14 -e tmux attach
+exec xwallpaper --zoom ~/Pictures/a.png
+exec alacritty -o font.size=14
 unmanage dzen2
 
 # change from xterm to alacritty
@@ -20,10 +20,10 @@ bind C-v echo  "VOL: $(pamixer --get-volume)"
 bind v exec notify-send  "VOL: $(pamixer --get-volume)"
 bind b exec notify-send "$(acpi)"
 bind g abort
-bind w exec firefox
-bind C-w exec firefox
+bind w exec chromium
+bind C-w exec chromium
 
-set padding 0 20 0 0
+set padding 0 0 0 0
 set barborder 3
 set fgcolor #b2b2b2
 set bgcolor #080808
@@ -36,8 +36,11 @@ set bargravity center
 definekey top XF86_AudioMute exec pamixer -t 
 definekey top XF86_AudioRaiseVolume exec pamixer -i 5 && notify-send "VOL: $(pamixer --get-volume)"
 definekey top XF86_AudioLowerVolume exec pamixer -d 5 && notify-send "VOL: $(pamixer --get-volume)"
-definekey top C-F9 exec xbacklight -dec 10
-definekey top C-F10 exec xbacklight -inc 10
+#definekey top C-F9 exec xbacklight -dec 10
+#definekey top C-F10 exec xbacklight -inc 10
+#definekey top C-F10 exec pamixer --inc 10
+#definekey top C-F9 exec pamixer --dec 10
+#definekey top C-F8 exec pamixer -t
 definekey top C-1 exec rpws 1
 definekey top C-2 exec rpws 2
 definekey top C-3 exec rpws 3
