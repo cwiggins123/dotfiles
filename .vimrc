@@ -25,7 +25,7 @@ endif
 
 if has("syntax")
   syntax on
-  colorscheme blue
+  colorscheme ron
 endif
 
 if v:version >=  800

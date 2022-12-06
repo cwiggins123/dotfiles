@@ -21,7 +21,7 @@ bind w exec chromium
 bind C-w exec chromium
 
 rudeness 13
-set barborder 3
+set barborder 1
 set wingravity center
 set transgravity center 
 set bargravity center
