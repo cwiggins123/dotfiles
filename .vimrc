@@ -25,7 +25,7 @@ endif
 
 if has("syntax")
   syntax on
-  colorscheme darkblue
+  colorscheme desert
   hi Normal guibg=NONE ctermbg=NONE 
   hi LineNr ctermbg=NONE guibg=NONE
 endif

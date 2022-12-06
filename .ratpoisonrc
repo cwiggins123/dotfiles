@@ -4,7 +4,7 @@ exec rpws init 3 -k
 exec picom
 exec dunst
 #exec xmodmap ~/.xmodmap
-exec xwallpaper --zoom ~/Pictures/a.png
+exec xwallpaper --center ~/Pictures/album.jpg
 exec !(pidof tmux) && tmux
 exec urxvtd -q
 

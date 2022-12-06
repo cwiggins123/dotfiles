@@ -1,0 +1,83 @@
+\documentclass{article}
+
+\usepackage{titling}
+\usepackage{titlesec}
+\usepackage[margin=1in]{geometry}
+\usepackage{setspace}
+
+\titleformat{\section}
+{\bfseries\huge}
+{}
+{0em}
+{}[\titlerule]
+
+\titleformat{\subsection}
+{\bfseries\large}
+{$\bullet$}
+{1em}
+{}
+ 
+\renewcommand{\maketitle}{
+    \begin{center}
+    {\huge\bfseries\theauthor}
+    \vspace{.25em}
+
+
+    104 Catherine Dr, Luling, LA 70070 --- cwiggins0217@protonmail.com --- (985) 224-9012 --- https://github.com/cwiggins123
+    \end{center}
+}
+
+\begin{document}
+
+\title{Resume}
+\author{Christopher Wiggins}
+\maketitle
+
+\section{Education}
+\subsection{University of Louisiana at Lafayette}
+
+\begin{itemize}
+    \item B.S. Informatics/Systems Administration
+    \item Graduated: May 2021
+\end{itemize}
+
+\section{Experience}
+\subsection{Professional Experience}
+\begin{enumerate}
+  \item IT Technician --- T. Baker Smith, LLC. May 26, 2022 - November 17, 2022
+    \begin{itemize}
+	    \item General help desk/desktop support for the firm. First-tier help with all tickets, office 365, hardware and networking troubleshooting, including Autocad. Active directory administration.
+    \end{itemize}
+\item Desktop Support Technician --- TEKSystems July 2021 - February 2022
+    \begin{itemize}
+        \item Desktop Support for LCMC Health. Supported users with on-field device and networking troubleshooting, constructed medical carts for UMC Hospital New Orleans, moved executives into new offices downtown.
+		\item IS Analyst for Ochsner Health. Responsible for on-field end-user ipad troubleshooting for language translation. Assisted with Learnsoft and Microsoft Active Directory tech support tickets.
+    \end{itemize}
+\end{enumerate}
+\subsection{Personal Projects}
+\begin{enumerate}
+    \item Home Server --- TrueNAS
+        \begin{itemize}
+            \item TrueNAS scale running on an HP z820 workstation, hardware customized by myself,
+                running services like nextcloud, etc. in docker containers, and virtualized debian
+                server for minecraft.
+        \end{itemize}
+    \item Workstation --- Linux and BSD
+        \begin{itemize}
+            \item Fedora linux workstation with custom linux kernel for microsoft surface pro 4
+            \item customized Slackware linux on thinkpad t430
+            \item customized Fedora server on thinkpad w520
+        \end{itemize}
+\end{enumerate}
+
+\section{Skills}
+
+\subsection{Programming}
+
+Java, Python, SQL, BASH, Powershell
+\subsection{Networking and Systems Administration}
+
+TCP/IP, Debian/Ubuntu, Red Hat, Windows 10, Ansible, Microsoft Office 365, Active Directory
+%compTIA: A+, Networking+, Security+, CCNA
+
+\end{document}
