@@ -9,6 +9,7 @@ esac
 # better compatibility and portability
 export MC_SKIN=dark
 export PATH=$PATH:/sbin/:/usr/sbin:/home/christopher/.local/bin/
+export EDITOR="vim"
 
 # aliases
 alias dot="cd ~/.config/dotfiles"
@@ -26,7 +27,7 @@ PROMPT_AT=@
 
 _ps1() {
   local P='$' dir="${PWD##*/}" B countme short long double\
-    r='\[\e[31m\]' g='\[\e[30m\]' h='\[\e[32m\]' \
+    r='\[\e[31m\]' g='\[\e[31m\]' h='\[\e[32m\]' \
     u='\[\e[33m\]' p='\[\e[32m\]' w='\[\e[35m\]' \
     b='\[\e[36m\]' x='\[\e[0m\]'
 
