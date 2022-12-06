@@ -1,34 +1,36 @@
 # my super cool ratpoison config
-exec xrdb ~/.Xresources
 exec rpws init 3 -k
-exec picom
+exec xcompmgr
 exec dunst
+# for keyboards other than the moonlander
 #exec xmodmap ~/.xmodmap
-exec xwallpaper --center ~/Pictures/album.jpg
 exec !(pidof tmux) && tmux
-exec urxvtd -q
 
-# change from xterm to alacritty
 unbind C-c
 unbind c
-bind C-c exec urxvtc -e tmux attach 
-bind c exec urxvtc -e tmux attach 
+bind C-c exec xterm -e tmux attach 
+bind c exec xterm -e tmux attach 
 bind M-l exec slock
 unbind C-v
 unbind v
 bind C-v echo  "VOL: $(pamixer --get-volume)"
 bind v exec notify-send  "VOL: $(pamixer --get-volume)"
-bind b exec notify-send "$(acpi)"
+# battery info for laptops
+#bind b exec notify-send "$(acpi)"
 bind g abort
 bind w exec chromium
 bind C-w exec chromium
 
-set padding 0 0 0 0
+rudeness 13
 set barborder 3
+set wingravity center
+set transgravity center 
+set bargravity center
+set border 2
+set winname title
 set fgcolor #b2b2b2
 set bgcolor #080808
 set font Hermit:size=18
-set wingravity center
 set transgravity center
 set bargravity center
 
@@ -36,11 +38,17 @@ set bargravity center
 definekey top XF86_AudioMute exec pamixer -t 
 definekey top XF86_AudioRaiseVolume exec pamixer -i 5 && notify-send "VOL: $(pamixer --get-volume)"
 definekey top XF86_AudioLowerVolume exec pamixer -d 5 && notify-send "VOL: $(pamixer --get-volume)"
+
+# for laptops
 #definekey top C-F9 exec xbacklight -dec 10
 #definekey top C-F10 exec xbacklight -inc 10
+
+# for keyboards with no media buttons
 #definekey top C-F10 exec pamixer --inc 10
 #definekey top C-F9 exec pamixer --dec 10
 #definekey top C-F8 exec pamixer -t
+
+# workspaces
 definekey top C-1 exec rpws 1
 definekey top C-2 exec rpws 2
 definekey top C-3 exec rpws 3

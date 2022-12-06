@@ -25,9 +25,7 @@ endif
 
 if has("syntax")
   syntax on
-  colorscheme desert
-  hi Normal guibg=NONE ctermbg=NONE 
-  hi LineNr ctermbg=NONE guibg=NONE
+  colorscheme blue
 endif
 
 if v:version >=  800

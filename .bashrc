@@ -26,8 +26,8 @@ PROMPT_AT=@
 
 _ps1() {
   local P='$' dir="${PWD##*/}" B countme short long double\
-    r='\[\e[31m\]' g='\[\e[30m\]' h='\[\e[34m\]' \
-    u='\[\e[33m\]' p='\[\e[34m\]' w='\[\e[35m\]' \
+    r='\[\e[31m\]' g='\[\e[30m\]' h='\[\e[32m\]' \
+    u='\[\e[33m\]' p='\[\e[32m\]' w='\[\e[35m\]' \
     b='\[\e[36m\]' x='\[\e[0m\]'
 
   [[ $EUID == 0 ]] && P='#' && u=$r && p=$u # root

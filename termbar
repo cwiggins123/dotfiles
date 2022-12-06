@@ -5,17 +5,16 @@
 while true ; do
   #BAT=$(acpi | grep 'Battery 0' | sed s/'Battery 0'/'BAT'/ | sed s/,// | sed s/,// | cut --complement -d " " -f2)
   DATE=$(date)
-  # scripts for backlight and cpu temp, if I want it
+  #scripts for backlight and cpu temp, if I want it
   #BCKLT=$(xbacklight | cut -d "." -f1)
   #TEMP=$(acpi -t | cut -d " " -f 4)
-
   # script for volume, if I want it
-  #if $(pamixer --get-mute); then
-  #  VOL="MUTE"
-  #else
-  #  VOL=$(pamixer --get-volume)
-  #fi
+  if $(pamixer --get-mute); then
+    VOL="MUTE"
+  else
+    VOL=$(pamixer --get-volume)
+  fi
 
-  echo "$(hostname -s) $(date +"%H:%M %m/%d")"
+  echo -en "  DATE | VOL: $VOL\r"
   sleep 1
 done 
