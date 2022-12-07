@@ -7,9 +7,9 @@ case $- in
 esac
 
 # better compatibility and portability
-export MC_SKIN=dark
+export MC_SKIN=modarin256
 export PATH=$PATH:/sbin/:/usr/sbin:/home/christopher/.local/bin/
-export EDITOR="vim"
+export EDITOR=vim
 
 # aliases
 alias dot="cd ~/.config/dotfiles"
@@ -56,3 +56,4 @@ _ps1() {
 }
 
 PROMPT_COMMAND="_ps1"
+neofetch
