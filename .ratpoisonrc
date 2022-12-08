@@ -3,13 +3,14 @@ exec xcompmgr
 exec dunst
 # for keyboards other than the moonlander
 #exec xmodmap ~/.xmodmap
+exec xwallpaper --zoom ~/Pictures/a.jpg
 exec !(pidof tmux) && tmux
 
 unbind C-c
 unbind c
 bind C-c exec uxterm -e tmux attach 
 bind c exec uxterm -e tmux attach 
-bind M-l exec slock
+bind M-l exec xlock
 unbind C-v
 unbind v
 bind C-v echo  "VOL: $(pamixer --get-volume)"

@@ -1,4 +1,3 @@
-#
 export TERM="xterm-256color"
 
 if [ -n "$BASH_VERSION" ]; then
@@ -6,4 +5,3 @@ if [ -n "$BASH_VERSION" ]; then
     . "$HOME/.bashrc"
   fi
 fi
-

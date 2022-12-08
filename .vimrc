@@ -25,7 +25,7 @@ endif
 
 if has("syntax")
   syntax on
-  colorscheme elflord
+  colorscheme industry
 endif
 
 if v:version >=  800
