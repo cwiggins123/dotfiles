@@ -8,8 +8,8 @@ exec !(pidof tmux) && tmux
 
 unbind C-c
 unbind c
-bind C-c exec urxvt -e tmux attach 
-bind c exec urxvt -e tmux attach 
+bind C-c exec st -e tmux attach 
+bind c exec st -e tmux attach 
 bind M-l exec xlock
 unbind C-v
 unbind v
