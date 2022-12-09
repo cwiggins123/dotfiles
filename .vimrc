@@ -25,7 +25,9 @@ endif
 
 if has("syntax")
   syntax on
-  colorscheme industry
+  set background=dark
+  colorscheme everforest
+  hi Normal guibg=NONE ctermbg=NONE
 endif
 
 if v:version >=  800
