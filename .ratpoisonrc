@@ -1,15 +1,20 @@
 # my super cool ratpoison config
-exec xcompmgr
+exec xsetroot -cursor_name left_ptr
+startup_message off
+exec /usr/bin/rpws init 3 -k
+exec xcompmgr -fcD 5
 exec dunst
 # for keyboards other than the moonlander
 #exec xmodmap ~/.xmodmap
-exec xwallpaper --zoom ~/Pictures/a.jpg
+exec xwallpaper --zoom ~/Pictures/c.jpg
+# autostart tmux, don't start it if it's already running.
 exec !(pidof tmux) && tmux
+exec alacritty -e tmux attach
 
 unbind C-c
 unbind c
-bind C-c exec st -e tmux attach 
-bind c exec st -e tmux attach 
+bind C-c exec alacritty -e tmux attach 
+bind c exec alacritty -e tmux attach 
 bind M-l exec xlock
 unbind C-v
 unbind v
@@ -29,7 +34,7 @@ set bargravity center
 set winname title
 set fgcolor #b2b2b2
 set bgcolor #080808
-set font Terminus:size=18
+set font Hermit:size=18
 set transgravity center
 set bargravity center
 
@@ -37,6 +42,10 @@ set bargravity center
 definekey top XF86_AudioMute exec pamixer -t 
 definekey top XF86_AudioRaiseVolume exec pamixer -i 5 && notify-send "VOL: $(pamixer --get-volume)"
 definekey top XF86_AudioLowerVolume exec pamixer -d 5 && notify-send "VOL: $(pamixer --get-volume)"
+
+definekey top C-1 exec rpws 1
+definekey top C-2 exec rpws 2
+definekey top C-3 exec rpws 3
 
 # for laptops
 #definekey top C-F9 exec xbacklight -dec 10

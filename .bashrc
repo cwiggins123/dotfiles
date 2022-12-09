@@ -7,7 +7,7 @@ case $- in
 esac
 
 # better compatibility and portability
-export MC_SKIN=modarcon16-defbg
+export MC_SKIN=yadt256-defbg
 export PATH=$PATH:/sbin/:/usr/sbin:/home/christopher/.local/bin/
 export EDITOR=vim
 

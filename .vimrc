@@ -26,7 +26,7 @@ endif
 if has("syntax")
   syntax on
   set background=dark
-  colorscheme everforest
+  colorscheme snazzy
   hi Normal guibg=NONE ctermbg=NONE
 endif
 
@@ -38,7 +38,7 @@ if v:version >=  800
 endif
 
 set textwidth=80
-set colorcolumn=81
+"set colorcolumn=81
 set expandtab
 set nobackup
 set noswapfile
