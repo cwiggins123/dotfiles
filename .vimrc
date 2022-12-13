@@ -26,7 +26,7 @@ endif
 if has("syntax")
   syntax on
   set background=dark
-  colorscheme snazzy
+  colorscheme habamax
   hi Normal guibg=NONE ctermbg=NONE
 endif
 

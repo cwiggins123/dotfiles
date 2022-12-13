@@ -6,7 +6,7 @@ exec xcompmgr -fcD 5
 exec dunst
 # for keyboards other than the moonlander
 #exec xmodmap ~/.xmodmap
-exec xwallpaper --zoom ~/Pictures/c.jpg
+exec xwallpaper --zoom ~/Pictures/h.jpg
 # autostart tmux, don't start it if it's already running.
 exec !(pidof tmux) && tmux
 exec alacritty -e tmux attach
