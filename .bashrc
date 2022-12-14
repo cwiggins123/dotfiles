@@ -7,8 +7,8 @@ case $- in
 esac
 
 # better compatibility and portability
-export MC_SKIN=yadt256-defbg
-export PATH=$PATH:/sbin/:/usr/sbin:/home/christopher/.local/bin/
+export MC_SKIN=modarin256root-defbg
+export PATH=$PATH:/sbin/:~/go/bin/:/usr/sbin:/home/christopher/.local/bin/
 export EDITOR=vim
 
 # aliases
@@ -16,6 +16,7 @@ alias dot="cd ~/.config/dotfiles"
 alias l="ls"
 alias la="ls -al"
 alias erat="vim ~/.ratpoisonrc"
+alias gotop="gotop -c monokai"
 
 # vi keys 
 set -o vi

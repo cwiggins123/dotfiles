@@ -4,17 +4,16 @@ startup_message off
 exec /usr/bin/rpws init 3 -k
 exec xcompmgr -fcD 5
 exec dunst
-# for keyboards other than the moonlander
 #exec xmodmap ~/.xmodmap
-exec xwallpaper --zoom ~/Pictures/h.jpg
-# autostart tmux, don't start it if it's already running.
-exec !(pidof tmux) && tmux
-exec alacritty -e tmux attach
+exec xwallpaper --zoom ~/Pictures/library2
+exec xrdb .Xresources
+exec !(pidof tmux) && tmux -2
+exec uxterm -e tmux attach
 
 unbind C-c
 unbind c
-bind C-c exec alacritty -e tmux attach 
-bind c exec alacritty -e tmux attach 
+bind C-c exec uxterm -e tmux attach 
+bind c exec uxterm -e tmux attach 
 bind M-l exec xlock
 unbind C-v
 unbind v

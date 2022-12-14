@@ -26,8 +26,7 @@ endif
 if has("syntax")
   syntax on
   set background=dark
-  colorscheme habamax
-  hi Normal guibg=NONE ctermbg=NONE
+  colorscheme monokai
 endif
 
 if v:version >=  800
