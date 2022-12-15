@@ -4,21 +4,27 @@ startup_message off
 exec /usr/bin/rpws init 3 -k
 exec xcompmgr -fcD 5
 exec dunst
+exec mpd
+exec source .profile
 #exec xmodmap ~/.xmodmap
 exec xwallpaper --zoom ~/Pictures/library2
-exec xrdb .Xresources
-exec !(pidof tmux) && tmux -2
-exec uxterm -e tmux attach
+exec xrdb ~/.Xresources
+exec tmux -u2
 
 unbind C-c
 unbind c
 bind C-c exec uxterm -e tmux attach 
-bind c exec uxterm -e tmux attach 
+bind c exec uxterm
 bind M-l exec xlock
 unbind C-v
 unbind v
 bind C-v echo  "VOL: $(pamixer --get-volume)"
 bind v exec notify-send  "VOL: $(pamixer --get-volume)"
+unbind m 
+bind m exec uxterm -e ncmpcpp
+unbind space
+unbind C-space
+bind space exec uxterm -e mc
 # battery info for laptops
 #bind b exec notify-send "$(acpi)"
 bind g abort

@@ -1,8 +1,7 @@
-*.faceName: xft:Hermit:size=14
+*.faceName: xft:Terminus:size=16
 XTerm*selectToClipboard: true
 XTerm*vt100.scrollBar: false
 XTerm*scrollTtyOutput: false
-XTerm*selectToClipboard: true
 XTerm*highlightSelection: true
 XTerm*trimSelection: true
 

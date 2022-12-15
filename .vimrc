@@ -1,8 +1,16 @@
-" if has("eval") always checks for vim-tiny (vi)
+" checks for vim-tiny (vi)
 if has("eval")
   let skip_defaults_vim = 1
 endif
 
+if filereadable(expand("~/.vim/autoload/plug.vim"))
+  call plug#begin('~/.vim/plugins')
+  Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
+  Plug 'tpope/vim-fugitive'
+  call plug#end()
+else
+  autocmd vimleavepre *.go !gofmt -w % 
+endif
 " some basic tweaks
 set nocompatible
 set autoindent 
@@ -19,7 +27,7 @@ set smartindent
 set smarttab
 
 " colors
-if has ("termguicolors")
+if has("termguicolors")
   set termguicolors
 endif
 
@@ -37,7 +45,7 @@ if v:version >=  800
 endif
 
 set textwidth=80
-"set colorcolumn=81
+set colorcolumn=81
 set expandtab
 set nobackup
 set noswapfile
