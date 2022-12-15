@@ -1,5 +1,10 @@
 *.faceName: xft:Hermit:size=14
 XTerm*selectToClipboard: true
+XTerm*vt100.scrollBar: false
+XTerm*scrollTtyOutput: false
+XTerm*selectToClipboard: true
+XTerm*highlightSelection: true
+XTerm*trimSelection: true
 
 ! Base16 Monokai
 ! Scheme: Wimer Hazenberg (http://www.monokai.nl)
