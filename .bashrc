@@ -7,16 +7,17 @@ case $- in
 esac
 
 # better compatibility and portability
-export MC_SKIN=modarin256root-defbg
+export MC_SKIN=modarin256-defbg
 export PATH=$PATH:/sbin/:~/go/bin/:/usr/sbin:/home/christopher/.local/bin/
 export EDITOR=vim
+export TERM="xterm-256color"
 
 # aliases
 alias dot="cd ~/.config/dotfiles"
 alias l="ls"
 alias la="ls -al"
 alias erat="vim ~/.ratpoisonrc"
-alias gotop="gotop -c monokai"
+alias gotop="gotop -c default-dark"
 
 # vi keys 
 set -o vi
@@ -57,4 +58,3 @@ _ps1() {
 }
 
 PROMPT_COMMAND="_ps1"
-neofetch
