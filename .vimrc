@@ -36,7 +36,7 @@ endif
 if has("syntax")
   syntax on
   set background=dark
-  colorscheme zenburn
+  colorscheme habamax
 endif
 
 if v:version >=  800
@@ -47,7 +47,7 @@ if v:version >=  800
 endif
 
 set textwidth=80
-set colorcolumn=81
+"set colorcolumn=81
 set expandtab
 set nobackup
 set noswapfile
