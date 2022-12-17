@@ -1,6 +1,5 @@
 # my super cool ratpoison config
 exec xsetroot -cursor_name left_ptr
-startup_message off
 exec /usr/bin/rpws init 3 -k
 exec xcompmgr -fcD 5
 exec dunst
@@ -9,7 +8,7 @@ exec source .profile
 #exec xmodmap ~/.xmodmap
 exec xwallpaper --zoom ~/Pictures/library2
 exec xrdb ~/.Xresources
-exec tmux -u2
+startup_message off
 
 unbind C-c
 unbind c
@@ -30,18 +29,24 @@ bind space exec uxterm -e mc
 bind g abort
 bind w exec chromium
 bind C-w exec chromium
+bind M-p exec passmenu
+bind M-w exec uxterm -e curl wttr.in
 
 rudeness 13
 set barborder 1
+set border 2
 set wingravity center
 set transgravity center 
 set bargravity center
 set winname title
+set padding 25 25 25 25
 set fgcolor #b2b2b2
 set bgcolor #080808
 set font Hermit:size=18
 set transgravity center
 set bargravity center
+addhook switchwin banish
+addhook swithframe banish
 
 # special keys without escape key
 definekey top XF86_AudioMute exec pamixer -t 

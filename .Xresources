@@ -5,39 +5,40 @@ XTerm*scrollTtyOutput: false
 XTerm*highlightSelection: true
 XTerm*trimSelection: true
 
-! special
-*.foreground:   #dfaf8f
-*.background:   #3f3f3f
-*.cursorColor:  #dfaf8f
+! Zenburn color-scheme
+*.background              :#3f3f3f
+*.foreground              :#dcdccc
 
-! black
-*.color0:       #3f3f3f
-*.color8:       #4f4f4f
+! black + red
+!URxvt.color0                 :#3f3f3f
+*.color0                  :#1f1f1f
+*.color1                  :#705050
 
-! red
-*.color1:       #e37170
-*.color9:       #cc9393
+! green + yellow
+*.color2                  :#60b48a
+*.color3                  :#dfaf8f
 
-! green
-*.color2:       #688060
-*.color10:      #ccd990
+! blue + purple
+*.color4                  :#506070
+*.color5                  :#dc8cc3
 
-! yellow
-*.color3:       #bc6c4c
-*.color11:      #e3ceab
+! cyan + white
+*.color6                  :#8cd0d3
+*.color7                  :#dcdccc
 
-! blue
-*.color4:       #6c6c9c
-*.color12:      #8c8cbc
+! bright-black + bright-red
+*.color8                  :#709080
+*.color9                  :#dca3a3
 
-! magenta
-*.color5:       #bc6c9c
-*.color13:      #bc8cbc
+! bright-green + bright-yellow
+*.color10                 :#c3bf9f
+*.color11                 :#f0dfaf
 
-! cyan
-*.color6:       #709080
-*.color14:      #9fafaf
+! bright-blue + bright-purple
+*.color12                 :#94bff3
+*.color13                 :#ec93d3
 
-! white
-*.color7:       #5b605e
-*.color15:      #dfaf8f
+! bright-cyan + bright-white
+*.color14                 :#93e0e3
+*.color15                 :#ffffff
+

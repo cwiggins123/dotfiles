@@ -17,7 +17,8 @@ alias dot="cd ~/.config/dotfiles"
 alias l="ls"
 alias la="ls -al"
 alias erat="vim ~/.ratpoisonrc"
-alias gotop="gotop -c default-dark"
+alias gotop="gotop -c monokai"
+alias tmux="tmux -u2"
 
 # vi keys 
 set -o vi
