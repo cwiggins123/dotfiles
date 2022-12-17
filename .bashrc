@@ -8,9 +8,10 @@ esac
 
 # better compatibility and portability
 export MC_SKIN=modarin256-defbg
-export PATH=$PATH:/sbin/:~/go/bin/:/usr/sbin:/home/christopher/.local/bin/
+export PATH=$PATH:/sbin/:~/go/bin/:/usr/sbin:/home/cwiggins/.local/bin/
 export EDITOR=vim
 export TERM="xterm-256color"
+export WLR_NO_HARDWARE_CURSOR=1
 
 # aliases
 alias dot="cd ~/.config/dotfiles"
