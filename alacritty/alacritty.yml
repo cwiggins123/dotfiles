@@ -8,7 +8,9 @@ font:
   italic:
     family: Hermit
     style: Italic
-  size: 12.0
+  size: 14.0
+
+window.opacity: 0.90
 
 colors:
   primary:

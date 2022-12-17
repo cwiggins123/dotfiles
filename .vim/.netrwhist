@@ -1,4 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =2
+let g:netrw_dirhistcnt =3
+let g:netrw_dirhist_3='/home/cwiggins/.local/bin'
 let g:netrw_dirhist_2='/home/cwiggins/.config/dotfiles'
 let g:netrw_dirhist_1='/home/cwiggins/.config'
