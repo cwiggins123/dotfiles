@@ -1,15 +1,5 @@
 # my super cool ratpoison config
-exec xsetroot -cursor_name left_ptr
-exec /usr/bin/rpws init 3 -k
-exec xcompmgr -fcD 5
-exec dunst
-exec mpd
-exec source .profile
-#exec xmodmap ~/.xmodmap
-exec xwallpaper --zoom ~/Pictures/library2
-exec xrdb ~/.Xresources
-startup_message off
-
+set sloppy
 unbind C-c
 unbind c
 bind C-c exec alacritty -e tmux attach 
@@ -17,8 +7,8 @@ bind c exec alacritty
 bind M-l exec xlock
 unbind C-v
 unbind v
-bind C-v echo  "VOL: $(pamixer --get-volume)"
-bind v exec notify-send  "VOL: $(pamixer --get-volume)"
+bind C-v exec ratpoison -c "echo VOL: $(pactl get-sink-volume 0 | awk {'print $5'})"
+bind v exec ratpoison -c "echo VOL: $(pactl get-sink-volume 0 | awk {'print $5'})"
 unbind m 
 bind m exec alacritty -e ncmpcpp
 unbind space
@@ -26,9 +16,9 @@ unbind C-space
 bind space exec alacritty -e mc
 # battery info for laptops
 #bind b exec notify-send "$(acpi)"
-bind g abort
-bind w exec chromium
-bind C-w exec chromium
+bind Escape abort
+bind w exec firefox
+bind C-w exec firefox
 bind M-p exec passmenu
 bind M-w exec alacritty -e curl wttr.in
 
@@ -47,11 +37,13 @@ set transgravity center
 set bargravity center
 addhook switchwin banish
 addhook swithframe banish
+addhook nextscreen banish
+addhook prevscreen banish
 
 # special keys without escape key
-definekey top XF86_AudioMute exec pamixer -t 
-definekey top XF86_AudioRaiseVolume exec pamixer -i 5 && notify-send "VOL: $(pamixer --get-volume)"
-definekey top XF86_AudioLowerVolume exec pamixer -d 5 && notify-send "VOL: $(pamixer --get-volume)"
+definekey top XF86_AudioMute exec pactl set-sink-mute 0 toggle && ratpoison -c "echo VOL: $(pactl get-sink-mute 0)" 
+definekey top XF86_AudioRaiseVolume exec pactl set-sink-volume 0 +5% && ratpoison -c "echo VOL: $(pactl get-sink-volume 0 | awk {'print $5'})"
+definekey top XF86_AudioLowerVolume exec pactl set-sink-volume 0 -5% && ratpoison -c "echo VOL: $(pactl get-sink-volume 0 | awk {'print $5'})"
 
 definekey top C-1 exec rpws 1
 definekey top C-2 exec rpws 2
@@ -64,4 +56,13 @@ definekey top C-3 exec rpws 3
 # for keyboards with no media buttons
 #definekey top C-F10 exec pamixer --inc 10
 #definekey top C-F9 exec pamixer --dec 10
-#definekey top C-F8 exec pamixer -t
+
+# startup
+#exec xsetroot -cursor_name left_ptr
+startup_message off
+exec /usr/bin/rpws init 3 -k
+#exec xcompmgr -fcD 5
+exec feh --bg-fill ~/Pictures/a.jpg
+exec dunst
+exec mpd
+#exec xmodmap ~/.xmodmap

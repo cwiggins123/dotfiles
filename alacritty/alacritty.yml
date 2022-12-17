@@ -10,7 +10,7 @@ font:
     style: Italic
   size: 14.0
 
-window.opacity: 0.90
+window.opacity: 0.66
 
 colors:
   primary:
