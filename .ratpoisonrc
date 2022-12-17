@@ -39,7 +39,7 @@ set wingravity center
 set transgravity center 
 set bargravity center
 set winname title
-set padding 25 25 25 25
+set padding 0 0 0 0
 set fgcolor #b2b2b2
 set bgcolor #080808
 set font Hermit:size=18
