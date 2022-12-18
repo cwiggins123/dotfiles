@@ -1,44 +1,45 @@
-*.faceName: xft:Hermit:size=14
+*.faceName: Terminus:size=16
 XTerm*selectToClipboard: true
 XTerm*vt100.scrollBar: false
 XTerm*scrollTtyOutput: false
 XTerm*highlightSelection: true
 XTerm*trimSelection: true
+XTerm.scrollBar:false
 
 ! Zenburn color-scheme
-*.background              :#3f3f3f
-*.foreground              :#dcdccc
+*.background              :#1c1c1c
+*.foreground              :#bcbcbc
 
 ! black + red
 !URxvt.color0                 :#3f3f3f
-*.color0                  :#1f1f1f
-*.color1                  :#705050
+*.color0                  :#1c1c1c
+*.color1                  :#d75f5f
 
 ! green + yellow
-*.color2                  :#60b48a
-*.color3                  :#dfaf8f
+*.color2                  :#87af87
+*.color3                  :#afaf87
 
 ! blue + purple
-*.color4                  :#506070
-*.color5                  :#dc8cc3
+*.color4                  :#5f8787
+*.color5                  :#af87af
 
 ! cyan + white
-*.color6                  :#8cd0d3
-*.color7                  :#dcdccc
+*.color6                  :#5f8787
+*.color7                  :#9e9e9e
 
 ! bright-black + bright-red
-*.color8                  :#709080
-*.color9                  :#dca3a3
+*.color8                  :#767676
+*.color9                  :#d7875f
 
 ! bright-green + bright-yellow
-*.color10                 :#c3bf9f
-*.color11                 :#f0dfaf
+*.color10                 :#afd787
+*.color11                 :#d7d787
 
 ! bright-blue + bright-purple
-*.color12                 :#94bff3
-*.color13                 :#ec93d3
+*.color12                 :#87afd7
+*.color13                 :#d7afd7
 
 ! bright-cyan + bright-white
-*.color14                 :#93e0e3
-*.color15                 :#ffffff
+*.color14                 :#87afaf
+*.color15                 :#bcbcbc
 

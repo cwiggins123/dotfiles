@@ -2,29 +2,31 @@
 set sloppy
 unbind C-c
 unbind c
-bind C-c exec alacritty -e tmux attach 
-bind c exec alacritty
+bind C-c exec uxterm -e tmux attach 
+bind c exec uxterm
 bind M-l exec xlock
 unbind C-v
 unbind v
 bind C-v exec ratpoison -c "echo VOL: $(pactl get-sink-volume 0 | awk {'print $5'})"
 bind v exec ratpoison -c "echo VOL: $(pactl get-sink-volume 0 | awk {'print $5'})"
 unbind m 
-bind m exec alacritty -e ncmpcpp
+bind m exec uxterm -e ncmpcpp
 unbind space
 unbind C-space
-bind space exec alacritty -e mc
+bind space exec uxterm -e mc
 # battery info for laptops
 #bind b exec notify-send "$(acpi)"
 bind Escape abort
 bind w exec firefox
 bind C-w exec firefox
 bind M-p exec passmenu
-bind M-w exec alacritty -e curl wttr.in
+bind M-w exec uxterm -e curl wttr.in
 
 rudeness 13
 set barborder 1
 set border 2
+set bwcolor black
+set fwcolor blue
 set wingravity center
 set transgravity center 
 set bargravity center
@@ -58,11 +60,11 @@ definekey top C-3 exec rpws 3
 #definekey top C-F9 exec pamixer --dec 10
 
 # startup
-#exec xsetroot -cursor_name left_ptr
+exec xsetroot -cursor_name left_ptr
 startup_message off
 exec /usr/bin/rpws init 3 -k
-#exec xcompmgr -fcD 5
-exec feh --bg-fill ~/Pictures/a.jpg
+exec xcompmgr -fcD 5
+exec xrdb .Xresources
 exec dunst
 exec mpd
 #exec xmodmap ~/.xmodmap
