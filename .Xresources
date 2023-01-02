@@ -5,16 +5,16 @@ Xft.hinting: true
 Xft.hintstyle: hintfull
 URxvt*font:xft:Terminus:pixelsize=24
 XTerm*selectToClipboard: true
-XTerm*vt100.scrollBar: false
+XTerm*vt100.scrollBar: true
 URxvt*scrollBar:  false
-XTerm*scrollTtyOutput: false
+XTerm*scrollTtyOutput: true
 XTerm*highlightSelection: true
 XTerm*trimSelection: true
-XTerm*scrollBar:false
+XTerm*scrollBar: true
 URxvt.cursorBlink: true
 URxvt.cursorColor: magenta
 URxvt*depth: 32
-URxvt*background: [85]black
+URxvt*background: [75]black
 URxvt*foreground: grey
 ! this is only needed in ratpoison, as xterm/urxvt doesnt draw their shape correctly
 *internalBorder: 8 
