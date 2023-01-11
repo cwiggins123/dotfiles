@@ -26,17 +26,16 @@ set shiftwidth=2
 set smartindent
 set smarttab
 
-" colors
-"if has("termguicolors")
-"  set termguicolors
-"endif
+"colors
+if has("termguicolors")
+  set termguicolors
+endif
 
 if has("syntax")
   syntax on
+  let g:one_allow_italics = 1
   set background=light
-  colorscheme solarized
-  hi Normal guibg=NONE ctermbg=NONE
-  hi LineNr guibg=NONE ctermbg=NONE
+  colorscheme one
 endif
 
 " misc stuff, makes vim less annoying

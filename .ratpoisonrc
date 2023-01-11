@@ -31,7 +31,7 @@ set winname class
 set barborder 3
 set border 3
 set bwcolor black
-set fwcolor green
+set fwcolor #268bd2
 set wingravity center
 set transgravity center 
 set bargravity center
@@ -58,7 +58,7 @@ startup_message off
 exec /usr/bin/rpws init 3 -k
 #exec xcompmgr -fcD 5
 exec mpd
-#exec xwallpaper --zoom ~/Pictures/m.jpg
+exec xwallpaper --zoom ~/Pictures/k.jpg
 exec urxvtd 
 exec redshift -l 30.00:-90.00 -t 6500:3500 -m randr
 exec xsetroot -cursor_name left_ptr
