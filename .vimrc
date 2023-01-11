@@ -27,17 +27,19 @@ set smartindent
 set smarttab
 
 " colors
-if has("termguicolors")
-  set termguicolors
-endif
+"if has("termguicolors")
+"  set termguicolors
+"endif
 
 if has("syntax")
   syntax on
-  set background=dark
-  colorscheme habamax
+  set background=light
+  colorscheme solarized
   hi Normal guibg=NONE ctermbg=NONE
+  hi LineNr guibg=NONE ctermbg=NONE
 endif
 
+" misc stuff, makes vim less annoying
 if v:version >=  800
   set nofixendofline
   set listchars=space:*,trail:*,nbsp:*,extends:>,precedes:<,tab:\|>
@@ -45,6 +47,7 @@ if v:version >=  800
   set nofoldenable
 endif
 
+" more misc stuff
 set textwidth=80
 "set colorcolumn=81
 set expandtab
