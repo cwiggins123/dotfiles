@@ -28,17 +28,17 @@ bind 9 restart
 
 rudeness 13
 set winname class
-set barborder 3
-set border 3
+set barborder 0
+set border 0
 set bwcolor black
 set fwcolor #268bd2
 set wingravity center
 set transgravity center 
 set bargravity center
 set winname title
-set padding 0 0 0 0
-set fgcolor #383A42
-set bgcolor #F9F9F9
+set padding 20 20 20 20
+set fgcolor #657b83
+set bgcolor #fdf6e3
 set font Hack:size=12
 
 # special keys without escape key

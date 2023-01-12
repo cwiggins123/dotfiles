@@ -1,0 +1,11 @@
+sticky yes
+
+snapdist 4
+
+gap 20 20 20 20
+
+fontname "Hack:size=16:antialias=true"
+
+unbind-key CM-Return
+bind-key C-Return urxvtc
+bind-key CM-n urxvtc -e ncmpcpp
