@@ -27,15 +27,14 @@ set smartindent
 set smarttab
 
 "colors
-if has("termguicolors")
-  set termguicolors
-endif
+"if has("termguicolors")
+"  set termguicolors
+"endif
 
 if has("syntax")
   syntax on
-  let g:one_allow_italics = 1
   set background=light
-  colorscheme one
+  colorscheme solarized
 endif
 
 " misc stuff, makes vim less annoying
