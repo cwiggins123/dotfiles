@@ -3,7 +3,7 @@ Xft.antialias: true
 Xft.rgba: rgb
 Xft.hinting: true
 Xft.hintstyle: hintfull
-URxvt*font: xft:Hermit:pixelsize=20:antialias=true
+URxvt*font: xft:Hack:pixelsize=20:antialias=true
 XTerm*selectToClipboard: true
 XTerm*vt100.scrollBar: true
 URxvt*scrollBar:  false
@@ -16,8 +16,13 @@ XTerm.vt100.translations:
 URxvt.cursorBlink: true
 URxvt*depth: 32
 URxvt.keysym.M-v: eval:paste_clipboard
+*.scrollBar.minimumThumb: 50
+*.scrollbar.width: 10
+URxvt.scrollBar_right: true
+XTerm.rightScrollBar: true
 ! this is only needed in ratpoison (no EMWH compliance), as xterm/urxvt doesnt draw their shape correctly
-*internalBorder: 6 
+XTerm.allowSendEvents: true
+*.internalBorder: 6 
 
 ! Custom
 ! Original theme https://github.com/nathanbuchar/atom-one-dark-terminal

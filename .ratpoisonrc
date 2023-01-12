@@ -10,10 +10,10 @@ unbind v
 bind C-v exec ratpoison -c "echo VOL: $(pactl get-sink-volume 0 | awk {'print $5'})"
 bind v exec ratpoison -c "echo VOL: $(pactl get-sink-volume 0 | awk {'print $5'})"
 unbind m 
-bind m exec urxvt -e ncmpcpp
+bind m exec urxvtc -e ncmpcpp
 unbind space
 unbind C-space
-bind space exec urxvt -e mc
+bind space exec urxvtc -e mc
 # battery info for laptops
 #bind b exec notify-send "$(acpi)"
 bind Escape abort
@@ -37,9 +37,9 @@ set transgravity center
 set bargravity center
 set winname title
 set padding 0 0 0 0
-set fgcolor #444444
-set bgcolor #eae5ce
-set font Hermit:size=12
+set fgcolor #383A42
+set bgcolor #F9F9F9
+set font Hack:size=12
 
 # special keys without escape key
 definekey top XF86_AudioMute exec pactl set-sink-mute 0 toggle && ratpoison -c "echo VOL: $(pactl get-sink-mute 0)" 
@@ -58,7 +58,9 @@ startup_message off
 exec /usr/bin/rpws init 3 -k
 #exec xcompmgr -fcD 5
 exec mpd
-exec xwallpaper --zoom ~/Pictures/k.jpg
+#exec xwallpaper --zoom ~/Pictures/k.jpg
 exec urxvtd 
 exec redshift -l 30.00:-90.00 -t 6500:3500 -m randr
+exec picom -b
+exec hsetroot -solid "#a3ccbd"
 exec xsetroot -cursor_name left_ptr
