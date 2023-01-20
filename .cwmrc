@@ -1,11 +1,20 @@
 sticky yes
-
-snapdist 4
-
-gap 20 20 20 20
-
+snapdist 20
+gap 40 10 10 10 
 fontname "Hack:size=16:antialias=true"
+borderwidth 3
+color activeborder "#00a3cc"
+color inactiveborder "#e33400"
 
 unbind-key CM-Return
 bind-key C-Return urxvtc
-bind-key CM-n urxvtc -e ncmpcpp
+bind-key CM-n "urxvtc -e ncmpcpp"
+bind-key M-p passmenu
+bind-key XF86_AudioMute "pactl set-sink-mute 0 toggle"
+bind-key XF86_AudioRaiseVolume "pactl set-sink-volume 0 +5%" 
+bind-key XF86_AudioLowerVolume "pactl set-sink-volume 0 -5%" 
+bind-key CM-space window-htile
+bind-key CMS-space window-vtile
+
+ignore "termbar"
+autogroup 0 "termbar,termbar"

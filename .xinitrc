@@ -16,7 +16,10 @@ mpd &
 urxvtd &
 redshift -l 30.00:-90.00 -t 6500:3500 -m randr &
 picom -b &
-hsetroot -solid "#a3ccbd" &
+xwallpaper --zoom ~/Pictures/n.jpg &
+dunst &
+
+xterm -geometry 155x1+20+10 -fa "Hack:size=12" -bg "#1f1f1f" -fg "#dcdccc" -fs 11 -name termbar -class termbar -T termbar -e ~/.config/dotfiles/termbar.sh &
 
 if [ -z "$DESKTOP_SESSION" -a -x /usr/bin/ck-launch-session ]; then
   ck-launch-session dbus-launch --exit-with-session cwm

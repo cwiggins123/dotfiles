@@ -1,16 +1,17 @@
 " checks for vim-tiny (vi)
 if has("eval")
-  let skip_defaults_vim = 1
-endif
 
 if filereadable(expand("~/.vim/autoload/plug.vim"))
   call plug#begin('~/.vim/plugins')
   Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
   Plug 'tpope/vim-fugitive'
+  Plug 'jimenezrick/vimerl'
+  Plug 'edkolev/erlang-motions.vim'
   call plug#end()
 else
   autocmd vimleavepre *.go !gofmt -w % 
 endif
+
 " some basic tweaks
 set nocompatible
 set autoindent 
@@ -27,14 +28,16 @@ set smartindent
 set smarttab
 
 "colors
-"if has("termguicolors")
-"  set termguicolors
-"endif
+if has("termguicolors")
+  set termguicolors
+endif
 
 if has("syntax")
   syntax on
-  set background=light
-  colorscheme solarized
+  set background=dark
+  colorscheme habamax
+  hi Normal guibg=NONE ctermbg=NONE
+  hi LineNr guibg=NONE ctermbg=NONE
 endif
 
 " misc stuff, makes vim less annoying
@@ -63,3 +66,6 @@ set ttimeoutlen=0
 filetype plugin on 
 set wildmenu
 set omnifunc=syntaxcomplete#Complete
+
+autocmd BufRead,BufNewFile *.erl,*.es,*.hrl,*.yaws,*.xrl set expandtab
+au BufNewFile,BufRead *.erl,*.es,*.hrl,*.yaws,*.xrl setf erlang
