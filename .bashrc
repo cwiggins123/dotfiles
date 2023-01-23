@@ -7,7 +7,7 @@ case $- in
 esac
 
 # better compatibility and portability
-export MC_SKIN=modarcon16root-defbg
+export MC_SKIN=modarcon16-defbg
 export PATH=$PATH:/sbin/:/home/cwiggins/.cache/rebar3/bin/:~/erlang/bin/:~/go/bin/:/usr/sbin:/home/cwiggins/.local/bin/
 export EDITOR=vim
 export TERM="xterm-256color"

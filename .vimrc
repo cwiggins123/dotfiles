@@ -1,5 +1,7 @@
 " checks for vim-tiny (vi)
 if has("eval")
+   let skip_defaults_vim = 1
+endif
 
 if filereadable(expand("~/.vim/autoload/plug.vim"))
   call plug#begin('~/.vim/plugins')
@@ -7,6 +9,7 @@ if filereadable(expand("~/.vim/autoload/plug.vim"))
   Plug 'tpope/vim-fugitive'
   Plug 'jimenezrick/vimerl'
   Plug 'edkolev/erlang-motions.vim'
+  Plug 'elixir-editors/vim-elixir'
   call plug#end()
 else
   autocmd vimleavepre *.go !gofmt -w % 
@@ -63,7 +66,7 @@ set linebreak
 set wrapscan
 set ttyfast
 set ttimeoutlen=0
-filetype plugin on 
+filetype plugin indent on 
 set wildmenu
 set omnifunc=syntaxcomplete#Complete
 
