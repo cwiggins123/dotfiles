@@ -10,6 +10,8 @@ if filereadable(expand("~/.vim/autoload/plug.vim"))
   Plug 'jimenezrick/vimerl'
   Plug 'edkolev/erlang-motions.vim'
   Plug 'elixir-editors/vim-elixir'
+  Plug 'zah/nim.vim'
+  Plug 'arcticicestudio/nord-vim'
   call plug#end()
 else
   autocmd vimleavepre *.go !gofmt -w % 
@@ -37,10 +39,9 @@ endif
 
 if has("syntax")
   syntax on
-  set background=dark
-  colorscheme habamax
-  hi Normal guibg=NONE ctermbg=NONE
-  hi LineNr guibg=NONE ctermbg=NONE
+  colorscheme nord
+  "hi Normal guibg=NONE ctermbg=NONE
+  "hi LineNr guibg=NONE ctermbg=NONE
 endif
 
 " misc stuff, makes vim less annoying
@@ -70,5 +71,16 @@ filetype plugin indent on
 set wildmenu
 set omnifunc=syntaxcomplete#Complete
 
-autocmd BufRead,BufNewFile *.erl,*.es,*.hrl,*.yaws,*.xrl set expandtab
+autocmd BufRead,BufNewFile *.erl,*.es,*.hrl,*.yaws,*.xrl setlocal expandtab noautoindent
 au BufNewFile,BufRead *.erl,*.es,*.hrl,*.yaws,*.xrl setf erlang
+
+fun! JumpToDef()
+  if exists("*GotoDefinition_" . &filetype)
+    call GotoDefinition_{&filetype}()
+  else
+    exe "norm! \<C-]>"
+  endif
+endf
+
+nn <M-g> :call JumpToDef()<cr>
+ino <M-g> <esc>:call JumpToDef()<cr>i

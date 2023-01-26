@@ -36,10 +36,10 @@ set wingravity center
 set transgravity center 
 set bargravity center
 set winname title
-set padding 20 20 20 20
-set fgcolor #657b83
-set bgcolor #fdf6e3
-set font Hack:size=12
+set padding 0 0 0 0
+set fgcolor white
+set bgcolor black
+set font Hack:size=14
 
 # special keys without escape key
 definekey top XF86_AudioMute exec pactl set-sink-mute 0 toggle && ratpoison -c "echo VOL: $(pactl get-sink-mute 0)" 
@@ -58,9 +58,8 @@ startup_message off
 exec /usr/bin/rpws init 3 -k
 #exec xcompmgr -fcD 5
 exec mpd
-#exec xwallpaper --zoom ~/Pictures/k.jpg
+exec xwallpaper --zoom ~/Pictures/d.png
 exec urxvtd 
 exec redshift -l 30.00:-90.00 -t 6500:3500 -m randr
 exec picom -b
-exec hsetroot -solid "#a3ccbd"
 exec xsetroot -cursor_name left_ptr
