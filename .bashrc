@@ -16,8 +16,6 @@ export TERM="xterm-256color"
 alias dot="cd ~/.config/dotfiles"
 alias l="ls"
 alias la="ls -al"
-alias erat="vim ~/.ratpoisonrc"
-alias gotop="gotop -c monokai"
 alias tmux="tmux -u2"
 
 # vi keys 

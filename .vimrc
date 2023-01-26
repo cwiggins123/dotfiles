@@ -40,8 +40,8 @@ endif
 if has("syntax")
   syntax on
   colorscheme nord
-  "hi Normal guibg=NONE ctermbg=NONE
-  "hi LineNr guibg=NONE ctermbg=NONE
+  hi Normal guibg=NONE ctermbg=NONE
+  hi LineNr guibg=NONE ctermbg=NONE
 endif
 
 " misc stuff, makes vim less annoying
