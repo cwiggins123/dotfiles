@@ -5,13 +5,9 @@ endif
 
 if filereadable(expand("~/.vim/autoload/plug.vim"))
   call plug#begin('~/.vim/plugins')
-  Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
   Plug 'tpope/vim-fugitive'
-  Plug 'jimenezrick/vimerl'
-  Plug 'edkolev/erlang-motions.vim'
-  Plug 'elixir-editors/vim-elixir'
-  Plug 'zah/nim.vim'
-  Plug 'arcticicestudio/nord-vim'
+  Plug 'sheerun/vim-polyglot'
+  Plug 'romainl/Apprentice'
   call plug#end()
 else
   autocmd vimleavepre *.go !gofmt -w % 
@@ -39,7 +35,7 @@ endif
 
 if has("syntax")
   syntax on
-  colorscheme nord
+  colorscheme apprentice
   hi Normal guibg=NONE ctermbg=NONE
   hi LineNr guibg=NONE ctermbg=NONE
 endif

@@ -14,17 +14,17 @@ hobby, and an aspiring homesteader.
 
 The software and hardware I use:
 
-* Home Server: TrueNAS scale (for now) on an HP Z820 workstation
-* Microsoft Surface pro 4 and 7 (popOS and linux kernel for the surface)
+* Home Server: Fedora (for now) on an HP Z820 workstation
+* Microsoft Surface pro 4 and 7 (Fedora and linux kernel for the surface)
 * Many, Many thinkpads (t430, w520, w500, x200t, ~~w530~~), running
-  either fedora or OpenBSD
-* HP z220 with nvidia gtx 1050 TI small form factor, running popOS
+  either Slackware or OpenBSD
+* HP z220 with nvidia gtx 1050 TI small form factor, running Slackware
 * Razer Blade Stealth late 2016 running popOS
 * Keyboards: ZSA Moonlander split ergo keyboard with halo trues, unicomp sun unix keyboard,
 vortex core 40% keyboard
 * Mice: logitech M575 wireless trackball, X-Keys L-trac trackball
-* OS: Fedora, OpenBSD, popOS, trueNAS
-* Window Manager: ratpoison
+* OS: Fedora, OpenBSD, Slackware
+* Window Manager: formerly Ratpoison, now DWM
 * editor: Vi, the only correct answer
 * terminal: st, xterm, and urxvt
 * TMUX, the single most important software I use probably
