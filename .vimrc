@@ -7,7 +7,6 @@ if filereadable(expand("~/.vim/autoload/plug.vim"))
   call plug#begin('~/.vim/plugins')
   Plug 'tpope/vim-fugitive'
   Plug 'sheerun/vim-polyglot'
-  Plug 'romainl/Apprentice'
   call plug#end()
 else
   autocmd vimleavepre *.go !gofmt -w % 
@@ -35,9 +34,7 @@ endif
 
 if has("syntax")
   syntax on
-  colorscheme apprentice
-  hi Normal guibg=NONE ctermbg=NONE
-  hi LineNr guibg=NONE ctermbg=NONE
+  colorscheme industry 
 endif
 
 " misc stuff, makes vim less annoying
@@ -66,9 +63,6 @@ set ttimeoutlen=0
 filetype plugin indent on 
 set wildmenu
 set omnifunc=syntaxcomplete#Complete
-
-autocmd BufRead,BufNewFile *.erl,*.es,*.hrl,*.yaws,*.xrl setlocal expandtab noautoindent
-au BufNewFile,BufRead *.erl,*.es,*.hrl,*.yaws,*.xrl setf erlang
 
 fun! JumpToDef()
   if exists("*GotoDefinition_" . &filetype)
