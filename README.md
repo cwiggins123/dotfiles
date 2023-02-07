@@ -2,7 +2,7 @@
 
 the repo with all of my dotfiles
 
-TODO:
+## TODO:
 * add scripts to config various distros and systems
 * experiment with other software
 * automate all the things
