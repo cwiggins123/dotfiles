@@ -1,13 +1,14 @@
 *.faceName: Hack:pixelsize=20:antialias=true
-!URxvt.font: Symbola,xft:Hack:pixelsize=20:antialias=true
+URxvt.font: xft:Hack:pixelsize=20:antialias=true
 XTerm.selectToClipboard: true
-!URxvt.scrollBar:  false
+URxvt.scrollBar:  false
 XTerm.highlightSelection: true
 XTerm.trimSelection: true
 !XTerm.vt100.translations:
 !  Meta <KeyPress> V: insert-selection(CLIPBOARD, PRIMARY, CUT_BUFFER0)  
-!URxvt.cursorBlink: true
-!URxvt.keysym.M-v: eval:paste_clipboard
-!URxvt.depth: 32
+URxvt.cursorBlink: true
+URxvt.keysym.M-v: eval:paste_clipboard
+URxvt.depth: 32
 *.background: black
+URxvt.background: [85]black
 *.foreground: grey
