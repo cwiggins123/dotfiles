@@ -1,5 +1,4 @@
 # my super cool ratpoison config
-escape C-f
 unbind C-c
 unbind c
 bind C-c exec alacritty -e tmux attach 
@@ -37,8 +36,8 @@ set transgravity center
 set bargravity center
 set winname title
 set padding 0 0 0 0
-set fgcolor grey
-set bgcolor black
+set fgcolor #fce8c3
+set bgcolor #1c1b19
 set font Hack:size=14
 
 # special keys without escape key
