@@ -7,7 +7,7 @@ if filereadable(expand("~/.vim/autoload/plug.vim"))
   call plug#begin('~/.vim/plugins')
   Plug 'tpope/vim-fugitive'
   Plug 'sheerun/vim-polyglot'
-  Plug 'karoliskoncevicius/sacredforest-vim'
+  Plug 'srcery-colors/srcery-vim'
   Plug 'itchyny/lightline.vim'
   call plug#end()
 else
@@ -39,7 +39,10 @@ endif
 
 if has("syntax")
   syntax on
-  colorscheme sacredforest
+  let g:srcery_italic = 1
+  let g:srcery_underline = 1
+  let g:srcery_italic_types = 1
+  colorscheme srcery
   hi Normal guibg=NONE ctermbg=NONE
 endif
 
@@ -86,7 +89,7 @@ set laststatus=2
 "endif
 
 let g:lightline = {
-\  'colorscheme': 'sacredforest',
+\  'colorscheme': 'srcery',
 \}
 
 nn <M-g> :call JumpToDef()<cr>

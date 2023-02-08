@@ -2,18 +2,18 @@
 escape C-f
 unbind C-c
 unbind c
-bind C-c exec urxvtc -e tmux attach 
-bind c exec urxvtc
+bind C-c exec alacritty -e tmux attach 
+bind c exec alacritty
 bind M-l exec xlock
 unbind C-v
 unbind v
 bind C-v exec ratpoison -c "echo VOL: $(pactl get-sink-volume 0 | awk {'print $5'})"
 bind v exec ratpoison -c "echo VOL: $(pactl get-sink-volume 0 | awk {'print $5'})"
 unbind m 
-bind m exec urxvtc -e ncmpcpp
+bind m exec alacritty -e ncmpcpp
 unbind space
 unbind C-space
-bind space exec urxvtc -e mc
+bind space exec alacritty -e mc
 # battery info for laptops
 #bind b exec notify-send "$(acpi)"
 bind Escape abort
@@ -29,7 +29,7 @@ bind 9 restart
 rudeness 13
 set winname class
 set barborder 0
-set border 0
+set border 2
 set bwcolor black
 set fwcolor #268bd2
 set wingravity center
@@ -37,7 +37,7 @@ set transgravity center
 set bargravity center
 set winname title
 set padding 0 0 0 0
-set fgcolor white
+set fgcolor grey
 set bgcolor black
 set font Hack:size=14
 
@@ -56,10 +56,8 @@ definekey top C-3 exec rpws 3
 # startup
 startup_message off
 exec /usr/bin/rpws init 3 -k
-#exec xcompmgr -fcD 5
+exec xcompmgr -fcD 5
 exec mpd
-exec xwallpaper --zoom ~/Pictures/d.png
-exec urxvtd 
+exec xwallpaper --zoom ~/Pictures/k.png
 exec redshift -l 30.00:-90.00 -t 6500:3500 -m randr
-exec picom -b
 exec xsetroot -cursor_name left_ptr

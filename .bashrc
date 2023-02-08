@@ -12,8 +12,6 @@ export PATH=$PATH:/sbin/:/usr/sbin:~/go/bin/:/usr/sbin:~/.local/bin/:/home/chris
 export EDITOR=vim
 export TERM="xterm-256color"
 
-eval `dircolors ~/.dir_colors`
-
 # aliases
 alias dot="cd ~/.config/dotfiles"
 alias l="ls"
