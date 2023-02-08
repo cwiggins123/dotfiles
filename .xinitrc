@@ -12,7 +12,7 @@ sysmodmap=/etc/X11/xinit/.Xmodmap
 [ -f $userresources ] && xrdb -merge $userresources
 [ -f $usermodmap ] && xmodmap $usermodmap
 
-xwallpaper --zoom ~/Pictures/p.jpg &
+xwallpaper --zoom ~/Pictures/k.jpg &
 xcompmgr &
 dwmblocks &
 mpd &
