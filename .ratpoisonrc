@@ -4,6 +4,8 @@ unbind c
 bind C-c exec alacritty -e tmux attach 
 bind c exec alacritty
 bind M-l exec xlock
+bind C-e exec emacs
+bind e exec emacs
 unbind C-v
 unbind v
 bind C-v exec ratpoison -c "echo VOL: $(pactl get-sink-volume 0 | awk {'print $5'})"
@@ -57,6 +59,6 @@ startup_message off
 exec /usr/bin/rpws init 3 -k
 exec xcompmgr -fcD 5
 exec mpd
-exec xwallpaper --zoom ~/Pictures/k.png
 exec redshift -l 30.00:-90.00 -t 6500:3500 -m randr
 exec xsetroot -cursor_name left_ptr
+exec xwallpaper --zoom ~/Pictures/k.jpg

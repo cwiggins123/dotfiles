@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =3
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/home/christopher/.emacs.d'
 let g:netrw_dirhist_3='/home/christopher/.config/dotfiles/.vim'
 let g:netrw_dirhist_2='/home/christopher/.config/dotfiles'
 let g:netrw_dirhist_1='/home/christopher/.config/dotfiles/.vim'
@@ -9,4 +10,3 @@ let g:netrw_dirhist_8='/home/christopher/exercism/erlang/two-fer/src'
 let g:netrw_dirhist_7='/home/christopher/.config/dotfiles/suckless/dwmblocks'
 let g:netrw_dirhist_6='/home/christopher/.config/st'
 let g:netrw_dirhist_5='/home/christopher/exercism/go/hello-world'
-let g:netrw_dirhist_4='/home/christopher/exercism/elixir/freelancer-rates/lib'
