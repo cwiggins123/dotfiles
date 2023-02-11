@@ -7,8 +7,9 @@ if filereadable(expand("~/.vim/autoload/plug.vim"))
   call plug#begin('~/.vim/plugins')
   Plug 'tpope/vim-fugitive'
   Plug 'sheerun/vim-polyglot'
-  Plug 'srcery-colors/srcery-vim'
   Plug 'itchyny/lightline.vim'
+  Plug 'embark-theme/vim', { 'as': 'embark', 'branch': 'main' }
+  Plug 'srcery-colors/srcery-vim'
   call plug#end()
 else
   autocmd vimleavepre *.go !gofmt -w % 
@@ -32,8 +33,8 @@ set smarttab
 "colors
 if has("termguicolors")
   " truecolor for st
-  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum" 
+  "let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  "let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum" 
   set termguicolors
 endif
 
@@ -45,7 +46,6 @@ if has("syntax")
   colorscheme srcery
   hi Normal guibg=NONE ctermbg=NONE
 endif
-
 
 " misc stuff, makes vim less annoying
 if v:version >=  800
@@ -92,5 +92,5 @@ let g:lightline = {
 \  'colorscheme': 'srcery',
 \}
 
-nn <M-g> :call JumpToDef()<cr>
-ino <M-g> <esc>:call JumpToDef()<cr>i
+"nn <M-g> :call JumpToDef()<cr>
+"ino <M-g> <esc>:call JumpToDef()<cr>i
