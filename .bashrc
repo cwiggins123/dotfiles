@@ -8,7 +8,7 @@ esac
 
 # better compatibility and portability
 export MC_SKIN=modarin256-defbg
-export PATH=$PATH:/sbin/:/usr/sbin:~/go/bin/:/usr/sbin:~/.local/bin/:/home/christopher/.cache/rebar3/bin/
+export PATH=$PATH:/sbin/:/usr/sbin:~/go/bin/:~/.local/bin/
 export EDITOR=vim
 export TERM="xterm-256color"
 
