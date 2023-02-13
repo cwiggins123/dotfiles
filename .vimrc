@@ -3,17 +3,6 @@ if has("eval")
    let skip_defaults_vim = 1
 endif
 
-if filereadable(expand("~/.vim/autoload/plug.vim"))
-  call plug#begin('~/.vim/plugins')
-  Plug 'tpope/vim-fugitive'
-  Plug 'sheerun/vim-polyglot'
-  Plug 'itchyny/lightline.vim'
-  Plug 'srcery-colors/srcery-vim'
-  call plug#end()
-else
-  autocmd vimleavepre *.go !gofmt -w % 
-endif
-
 " some basic tweaks
 set nocompatible
 set autoindent 
@@ -31,17 +20,7 @@ set smarttab
 
 "colors
 if has("termguicolors")
-  " truecolor for st
-  "let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-  "let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum" 
   set termguicolors
-endif
-
-if has("syntax")
-  syntax on
-  set background=dark
-  colorscheme srcery
-  hi Normal guibg=NONE ctermbg=NONE
 endif
 
 " misc stuff, makes vim less annoying
@@ -50,6 +29,17 @@ if v:version >=  800
   set listchars=space:*,trail:*,nbsp:*,extends:>,precedes:<,tab:\|>
   set foldmethod=manual
   set nofoldenable
+  packadd! srcery-vim
+endif
+
+if has("syntax")
+  syntax on
+  set background=dark
+  let g:srcery_italic = 1
+  let g:srcery_underline = 1
+  let g:srcery_italic_types = 1
+  colorscheme srcery
+  hi Normal guibg=NONE ctermbg=NONE
 endif
 
 " more misc stuff
@@ -80,9 +70,3 @@ fun! JumpToDef()
 endf
 
 set laststatus=2
-
-set noshowmode
-
-let g:lightline = {
-\  'colorscheme': 'srcery',
-\}
