@@ -20,11 +20,11 @@ The software and hardware I use:
   either Slackware or OpenBSD
 * HP z220 with nvidia gtx 1050 TI small form factor, running Slackware
 * Razer Blade Stealth late 2016 running popOS
-* Keyboards: ZSA Moonlander split ergo keyboard with halo trues, unicomp sun unix keyboard,
-vortex core 40% keyboard
-* Mice: logitech M575 wireless trackball, X-Keys L-trac trackball
-* OS: Fedora, OpenBSD, Slackware
-* Window Manager: formerly Ratpoison, now DWM
+* Keyboards: ZSA Moonlander split ergo keyboard with halo trues, unicomp sun unix keyboard with old school buckling-spring switches, vortex core 40% keyboard with cherry mx speed silvers.
+* Mice: X-Keys L-trac trackball, logitech M575 wireless trackball for travel
+* OS: Popos, OpenBSD, Slackware
+* Window Manager: Ratpoison, CWM
 * editor: Vi, the only correct answer
-* terminal: st, xterm, and urxvt
+* terminal: st, xterm, urxvt, sometimes alacritty
 * TMUX, the single most important software I use probably
+* favorite font and colorscheme: Hack and Srcery

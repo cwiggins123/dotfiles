@@ -7,7 +7,7 @@ case $- in
 esac
 
 # better compatibility and portability
-export MC_SKIN=modarin256-defbg
+export MC_SKIN=nicedark
 export PATH=$PATH:/sbin/:/usr/sbin:~/go/bin/:~/.local/bin/
 export EDITOR=vim
 export TERM="xterm-256color"

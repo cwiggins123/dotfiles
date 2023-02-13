@@ -10,16 +10,11 @@ URxvt.cursorBlink: true
 URxvt.keysym.M-v: eval:paste_clipboard
 URxvt.depth: 32
 
-!! dzen2 config
-dzen2.font:   -*-Hack-*-r-normal-*-*-120-*-*-*-*-iso8859-*
-dzen2.foreground: #e0d7c3
-dzen2.background: #3c4c55
-
-!! srcry
+!! srcery
 ! special
 *foreground:   #fce8c3
 *background:   #1c1b19
-URxvt.background: [85]#1c1b19
+URxvt.background: [90]#1c1b19
 *cursorColor:  #fbb829
 
 ! black

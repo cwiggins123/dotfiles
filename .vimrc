@@ -8,7 +8,6 @@ if filereadable(expand("~/.vim/autoload/plug.vim"))
   Plug 'tpope/vim-fugitive'
   Plug 'sheerun/vim-polyglot'
   Plug 'itchyny/lightline.vim'
-  Plug 'embark-theme/vim', { 'as': 'embark', 'branch': 'main' }
   Plug 'srcery-colors/srcery-vim'
   call plug#end()
 else
@@ -40,9 +39,7 @@ endif
 
 if has("syntax")
   syntax on
-  let g:srcery_italic = 1
-  let g:srcery_underline = 1
-  let g:srcery_italic_types = 1
+  set background=dark
   colorscheme srcery
   hi Normal guibg=NONE ctermbg=NONE
 endif
@@ -84,13 +81,8 @@ endf
 
 set laststatus=2
 
-"if has(lightline)
-"  set noshowmode
-"endif
+set noshowmode
 
 let g:lightline = {
 \  'colorscheme': 'srcery',
 \}
-
-"nn <M-g> :call JumpToDef()<cr>
-"ino <M-g> <esc>:call JumpToDef()<cr>i
