@@ -10,7 +10,7 @@ while true; do
         MUS=$(sb-music)
         DSK=$(sb-disk)
         DID=$(xprop -root 32c '\t$0' _NET_CURRENT_DESKTOP | cut -f 2)
-        printf "  ${red}$USER${rst}  %s  %-242s %s  %s  %s  %s  %s\\r" \
+        printf "  ${red}$USER${rst}  %s  %-241s %s  %s  %s  %s  %s\\r" \
                  "$DID"  "$MUS"  "$VOL"  "$FCST"  "$DSK"  "$DATE"
         sleep 1s
 done

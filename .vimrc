@@ -30,6 +30,8 @@ if v:version >=  800
   set foldmethod=manual
   set nofoldenable
   packadd! srcery-vim
+  packadd! vim-go
+  packadd! vim-fugitive
 endif
 
 if has("syntax")
