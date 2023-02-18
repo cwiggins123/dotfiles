@@ -2,9 +2,9 @@ sticky yes
 snapdist 20
 gap 35 10 10 10 
 fontname "Hack:size=16:antialias=true"
-borderwidth 3
-color activeborder "#00a3cc"
-color inactiveborder "#e33400"
+borderwidth 1
+color activeborder "#ef2f27"
+color inactiveborder "#918175"
 
 unbind-key CM-Return
 bind-key C-Return "alacritty"
