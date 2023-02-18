@@ -46,7 +46,7 @@ endif
 
 " more misc stuff
 set textwidth=80
-"set colorcolumn=81
+set colorcolumn=81
 set expandtab
 set nobackup
 set noswapfile

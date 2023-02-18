@@ -7,8 +7,8 @@ color activeborder "#00a3cc"
 color inactiveborder "#e33400"
 
 unbind-key CM-Return
-bind-key C-Return "xterm"
-bind-key CM-n "xterm -e ncmpcpp"
+bind-key C-Return "alacritty"
+bind-key CM-n "alacritty -e ncmpcpp"
 bind-key M-p passmenu
 unbind CM-w
 bind-key CM-w "chromium-browser-ungoogled" 

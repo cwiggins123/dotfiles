@@ -1,5 +1,5 @@
 *.faceName: Hack:pixelsize=20:antialias=true
-URxvt.font: xft:Hack:pixelsize=20:antialias=true
+URxvt.font: xft:Hack:pixelsize=20:antialias=true, xft:Symbola:pixelsize=20
 XTerm.selectToClipboard: true
 URxvt.scrollBar:  false
 XTerm.highlightSelection: true
@@ -14,7 +14,7 @@ URxvt.depth: 32
 ! special
 *foreground:   #fce8c3
 *background:   #1c1b19
-URxvt.background: [90]#1c1b19
+URxvt.background: #1c1b19
 *cursorColor:  #fbb829
 
 ! black
