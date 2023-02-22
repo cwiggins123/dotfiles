@@ -38,7 +38,7 @@ set winname title
 set padding 0 0 0 0
 set fgcolor #fce8c3
 set bgcolor #1c1b19
-set font Hack:size=14
+set font Hack:size=16
 
 # special keys without escape key
 definekey top XF86_AudioMute exec pactl set-sink-mute 0 toggle && ratpoison -c "echo VOL: $(pactl get-sink-mute 0)" 
