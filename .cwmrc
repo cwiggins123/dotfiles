@@ -1,14 +1,14 @@
 sticky yes
 snapdist 20
-gap 35 10 10 10 
+gap  10 10 10 10 
 fontname "Hack:size=16:antialias=true"
 borderwidth 1
 color activeborder "#ef2f27"
 color inactiveborder "#918175"
 
 unbind-key CM-Return
-bind-key C-Return "alacritty"
-bind-key CM-n "alacritty -e ncmpcpp"
+bind-key C-Return "st"
+bind-key CM-n "st -e ncmpcpp"
 bind-key M-p passmenu
 unbind CM-w
 bind-key CM-w "chromium-browser-ungoogled" 
