@@ -40,7 +40,7 @@ if has("syntax")
   let g:srcery_italic = 1
   let g:srcery_underline = 1
   let g:srcery_italic_types = 1
-  colorscheme srcery
+  colorscheme crayon
   hi Normal guibg=NONE ctermbg=NONE
 endif
 

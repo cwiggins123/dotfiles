@@ -1,8 +1,8 @@
 sticky yes
 snapdist 20
-gap  10 10 10 10 
+gap 40 40 40 40  
 fontname "Hack:size=16:antialias=true"
-borderwidth 1
+borderwidth 0
 color activeborder "#ef2f27"
 color inactiveborder "#918175"
 
