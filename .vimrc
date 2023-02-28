@@ -29,7 +29,6 @@ if v:version >=  800
   set listchars=space:*,trail:*,nbsp:*,extends:>,precedes:<,tab:\|>
   set foldmethod=manual
   set nofoldenable
-  packadd! srcery-vim
   packadd! vim-go
   packadd! vim-fugitive
 endif
@@ -37,11 +36,9 @@ endif
 if has("syntax")
   syntax on
   set background=dark
-  let g:srcery_italic = 1
-  let g:srcery_underline = 1
-  let g:srcery_italic_types = 1
-  colorscheme crayon
+  colorscheme Iosvkem
   hi Normal guibg=NONE ctermbg=NONE
+  hi LineNr guibg=NONE ctermbg=NONE
 endif
 
 " more misc stuff

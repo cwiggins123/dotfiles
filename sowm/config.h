@@ -8,6 +8,7 @@ const char* term[]    = {"st",             0};
 const char* scrot[]   = {"scrot",            0};
 //const char* briup[]   = {"bri", "10", "+", 0};
 //const char* bridown[] = {"bri", "10", "-", 0};
+const char* music[] = {"st", "-e", "ncmpcpp", 0};
 const char* voldown[] = {"amixer", "sset", "Master", "5%-",         0};
 const char* volup[]   = {"amixer", "sset", "Master", "5%+",         0};
 const char* volmute[] = {"amixer", "sset", "Master", "toggle",      0};
@@ -25,6 +26,7 @@ static struct key keys[] = {
     //{MOD|ControlMask, XK_w,      run, {.com = colors}},
     {MOD|ControlMask, XK_p,      run, {.com = scrot}},
     {MOD|ControlMask, XK_t,      run, {.com = term}},
+    {MOD|ControlMask, XK_m,      run, {.com = music}}, 
 
     {0,   XF86XK_AudioLowerVolume,  run, {.com = voldown}},
     {0,   XF86XK_AudioRaiseVolume,  run, {.com = volup}},
