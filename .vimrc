@@ -31,12 +31,15 @@ if v:version >=  800
   set nofoldenable
   packadd! vim-go
   packadd! vim-fugitive
+  packadd! srcery-vim
 endif
 
 if has("syntax")
   syntax on
   set background=dark
-  colorscheme Iosvkem
+  let g:srcery_italic=1
+  let g:srcery_italic_types=1
+  colorscheme srcery
   hi Normal guibg=NONE ctermbg=NONE
   hi LineNr guibg=NONE ctermbg=NONE
 endif

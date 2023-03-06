@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Terminus:pixelsize=22:antialias=false";
+static char *font = "Hack Nerd Font:pixelsize=18:antialias=true";
 static int borderpx = 50;
 
 /*
@@ -98,35 +98,35 @@ float alpha = 0.90;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-	/* 8 normal colors */
-	"#080808",
-	"#d02b61",
-	"#60aa00",
-	"#d08928",
-	"#5c8ee8",
-	"#b77fdb",
-	"#00aa80",
-	"#dddddd",
+  // Srcery theme
+  /* 8 normal colors */
+	"#1c1b19",
+	"#ef2f27",
+	"#519f50",
+	"#fbb829",
+	"#2c78bf",
+	"#e02c6d",
+	"#0aaeb3",
+	"#baa67f",
 
 	/* 8 bright colors */
-	"#707070",
-	"#d02b61",
-	"#60aa00",
-	"#d08928",
-	"#5c8ee8",
-	"#b77fdb",
-	"#00aa80",
-	"#ffffff",
+	"#918175",
+	"#f75341",
+	"#98bc37",
+	"#fed06e",
+	"#68a8e4",
+	"#ff5c8f",
+	"#2be4d0",
+	"#fce8c3",
 
 	[255] = 0,
 
 	/* more colors can be added after 255 to use with DefaultXX */
-	"#d08928",
-	"#ffffff",
-	"#ffffff", /* default foreground colour */
-	"#080808", /* default background colour */
+	"#fed06e", /* cursor */
+  "#fce8c3",
+	"#fce8c3", /* foreground */
+	"#1c1b19", /* background */
 };
-
 /*
  * Default colors (colorname index)
  * foreground, background, cursor, reverse cursor
