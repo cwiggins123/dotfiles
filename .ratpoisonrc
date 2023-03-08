@@ -38,7 +38,7 @@ set winname title
 set padding 0 0 0 0
 set fgcolor #fce8c3
 set bgcolor #1c1b19
-set font Terminus:size=16
+set font Hack Nerd Font:size=18
 
 # special keys without escape key
 definekey top XF86_AudioMute exec pactl set-sink-mute 0 toggle && ratpoison -c "echo VOL: $(pactl get-sink-mute 0)" 
@@ -57,6 +57,6 @@ startup_message off
 exec /usr/bin/rpws init 3 -k
 exec xcompmgr -fcD 5
 exec mpd
-exec redshift -l 30.00:-90.00 -t 6500:3500 -m randr
+exec redshift -l 30.00:-90.00 -t 3500:3500 -m randr
 exec xsetroot -cursor_name left_ptr
-exec xwallpaper --zoom ~/Pictures/n.jpg
+exec xwallpaper --zoom ~/Pictures/p.jpg
