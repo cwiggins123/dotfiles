@@ -31,17 +31,13 @@ if v:version >=  800
   set nofoldenable
   packadd! vim-go
   packadd! vim-fugitive
-  packadd! srcery-vim
 endif
 
 if has("syntax")
   syntax on
   set background=dark
-  let g:srcery_italic=1
-  let g:srcery_italic_types=1
-  colorscheme srcery
+  colorscheme pablo
   hi Normal guibg=NONE ctermbg=NONE
-  hi LineNr guibg=NONE ctermbg=NONE
 endif
 
 " more misc stuff
@@ -59,6 +55,7 @@ set linebreak
 set wrapscan
 set ttyfast
 set ttimeoutlen=0
+set showmatch
 filetype plugin indent on 
 set wildmenu
 set omnifunc=syntaxcomplete#Complete

@@ -20,7 +20,7 @@ The software and hardware I use:
   either Slackware or OpenBSD, experimenting with KISS linux on one of them.
 * HP z220 with nvidia gtx 1050 TI small form factor, running Slackware
 * Razer Blade Stealth late 2016 running Linux Mint
-* Keyboards: ZSA Moonlander split ergo keyboard with halo trues, unicomp sun unix keyboard with old school buckling-spring switches, vortex core 40% keyboard with cherry mx speed silvers.
+* Keyboards: ZSA Moonlander split ergo keyboard with KTT Monochrome Onyx switches, unicomp sun unix keyboard with old school buckling-spring switches, vortex core 40% keyboard with cherry mx speed silvers.
 * Mice: X-Keys L-trac trackball, logitech M575 wireless trackball for travel
 * Window Manager: Ratpoison, CWM, sowm
 * editor: Vi, the only correct answer

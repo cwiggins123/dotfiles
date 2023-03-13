@@ -100,32 +100,32 @@ float alpha = 0.90;
 static const char *colorname[] = {
   // Srcery theme
   /* 8 normal colors */
-	"#1c1b19",
-	"#ef2f27",
-	"#519f50",
-	"#fbb829",
-	"#2c78bf",
-	"#e02c6d",
-	"#0aaeb3",
-	"#baa67f",
+	"black",
+	"red3",
+	"green3",
+	"yellow3",
+	"blue2",
+	"magenta3",
+	"cyan3",
+	"gray90",
 
 	/* 8 bright colors */
-	"#918175",
-	"#f75341",
-	"#98bc37",
-	"#fed06e",
-	"#68a8e4",
-	"#ff5c8f",
-	"#2be4d0",
-	"#fce8c3",
+	"gray50",
+	"red",
+	"green",
+	"yellow",
+	"#5c5cff",
+	"magenta",
+	"cyan",
+	"white",
 
 	[255] = 0,
 
 	/* more colors can be added after 255 to use with DefaultXX */
-	"#fed06e", /* cursor */
-  "#fce8c3",
-	"#fce8c3", /* foreground */
-	"#1c1b19", /* background */
+	"yellow", /* cursor */
+  "black",
+	"gray90", /* foreground */
+	"black", /* background */
 };
 /*
  * Default colors (colorname index)
