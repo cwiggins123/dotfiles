@@ -14,13 +14,13 @@ sysmodmap=/etc/X11/xinit/.Xmodmap
 
 #xterm -geometry 320x1+0+0 -fa Hack -fs 12 -bg "#1c1b19" -fg "#fce8c3" -name termbar -class termbar -T termbar -e ~/.config/dotfiles/cwmblocks.sh &
 
-#xcompmgr -fcD 5 &
-#mpd &
-#redshift -l 30.00:-90.00 -t 6500:3500 -m randr &
-#xwallpaper --zoom ~/Pictures/n.jpg &
+xcompmgr -fcD 5 &
+mpd &
+redshift -l 30.00:-90.00 -t 6500:3500 -m randr &
+xwallpaper --zoom ~/Pictures/lotr1.jpg &
 
 if [ -z "$DESKTOP_SESSION" -a -x /usr/bin/ck-launch-session ]; then
-  exec ck-launch-session dbus-launch --exit-with-session ratpoison
+  exec ck-launch-session dbus-launch --exit-with-session sowm
 else
-  exec ratpoison
+  exec sowm
 fi

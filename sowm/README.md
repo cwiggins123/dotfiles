@@ -82,6 +82,7 @@ Exec=sowm
 Type=Application
 ```
 
+
 ## Thanks
 
 - [2bwm](https://github.com/venam/2bwm)
