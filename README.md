@@ -14,16 +14,16 @@ hobby, and an aspiring homesteader.
 
 The software and hardware I use:
 
-* Home Server: Fedora on an HP Z820 workstation
+* Home Server: Proxmox on an HP Z820 workstation
 * Microsoft Surface pro 4 (Fedora and linux kernel for the surface)
 * Many, Many thinkpads (t430, w520, w500, x200t, ~~w530~~), running
   either Slackware or OpenBSD, experimenting with KISS linux on one of them.
 * HP z220 with nvidia gtx 1050 TI small form factor, running Slackware
-* Razer Blade Stealth late 2016 running Linux Mint
+* Razer Blade Stealth late 2016 running openSuse Tumbleweed
 * Keyboards: ZSA Moonlander split ergo keyboard with KTT Monochrome Onyx switches, unicomp sun unix keyboard with old school buckling-spring switches, vortex core 40% keyboard with cherry mx speed silvers.
 * Mice: X-Keys L-trac trackball, logitech M575 wireless trackball for travel
-* Window Manager: Ratpoison, CWM, sowm
+* Window Manager: DWM(main), Ratpoison, CWM, sowm
 * editor: Vi, the only correct answer
-* terminal: st, xterm, urxvt, alacritty
+* terminal: st(main), xterm, urxvt, alacritty
 * TMUX, the single most important software I use probably
-* favorite font and colorscheme: Hack and Srcery
+* favorite font and colorscheme: Hack and Srcery(nerd font)

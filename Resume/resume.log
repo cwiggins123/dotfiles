@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021 on Slackware) (preloaded format=pdflatex 2023.2.10)  23 FEB 2023 11:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021 on Slackware) (preloaded format=pdflatex 2023.3.21)  23 MAR 2023 13:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -74,8 +74,7 @@ Package: setspace 2011/12/19 v6.7a set line spacing
 File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count190
 \l__pdf_internal_box=\box48
-)
-No file resume.aux.
+) (./resume.aux)
 \openout1 = `resume.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
@@ -137,9 +136,9 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 {/usr/share/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] (./resume.aux) )
  
 Here is how much of TeX's memory you used:
- 1349 strings out of 478994
- 20120 string characters out of 5864716
- 323182 words of memory out of 5000000
+ 1351 strings out of 478994
+ 20142 string characters out of 5864716
+ 323173 words of memory out of 5000000
  18879 multiletter control sequences out of 15000+600000
  407722 words of font info for 41 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -148,7 +147,7 @@ Here is how much of TeX's memory you used:
 .600pk></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/s
 hare/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on resume.pdf (2 pages, 48205 bytes).
+Output written on resume.pdf (2 pages, 48210 bytes).
 PDF statistics:
  28 PDF objects out of 1000 (max. 8388607)
  19 compressed objects within 1 object stream
