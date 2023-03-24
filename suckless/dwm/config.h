@@ -30,9 +30,9 @@ typedef struct {
   const char *name;
   const void *cmd;
 } Sp;
-const char *spcmd1[] = {"st", "-n", "spterm", "-g", "120x34", NULL };
-const char *spcmd2[] = {"st", "-n", "spfm", "-g", "144x41", "-e", "mc", NULL };
-const char *spcmd3[] = {"st", "-n", "music", "-g", "144x41", "-e", "ncmpcpp", NULL };
+const char *spcmd1[] = {"st", "-n", "spterm", "-g", "120x34", "-e", "tmux", NULL };
+const char *spcmd2[] = {"st", "-n", "spfm", "-g", "120x34", "-e", "mc", NULL };
+const char *spcmd3[] = {"st", "-n", "music", "-g", "120x34", "-e", "ncmpcpp", NULL };
 static Sp scratchpads[] = {
   {"spterm",    spcmd1},
   {"spfm",      spcmd2},
@@ -85,8 +85,7 @@ static const Layout layouts[] = {
 	{ MODKEY|ShiftMask,             KEY,      tag,            {.ui = 1 << TAG} }, \
 	{ MODKEY|ControlMask|ShiftMask, KEY,      toggletag,      {.ui = 1 << TAG} }, \
         { ALTMOD|ControlMask,                       KEY,      focusnthmon,    {.i  = TAG } }, \
-        { ALTMOD|ShiftMask,             KEY,      tagnthmon,      {.i  = TAG } },
-
+        { ALTMOD|ControlMask|ShiftMask,             KEY,      tagnthmon,      {.i  = TAG } },
 
 /* helper for spawning shell commands in the pre dwm-5.0 fashion */
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
