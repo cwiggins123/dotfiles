@@ -30,7 +30,7 @@ typedef struct {
   const char *name;
   const void *cmd;
 } Sp;
-const char *spcmd1[] = {"st", "-n", "spterm", "-g", "120x34", "-e", "tmux", NULL };
+const char *spcmd1[] = {"st", "-n", "spterm", "-g", "120x34", NULL };
 const char *spcmd2[] = {"st", "-n", "spfm", "-g", "120x34", "-e", "mc", NULL };
 const char *spcmd3[] = {"st", "-n", "music", "-g", "120x34", "-e", "ncmpcpp", NULL };
 static Sp scratchpads[] = {
@@ -128,7 +128,6 @@ static const Key keys[] = {
   { 0, XF86XK_AudioRaiseVolume, spawn, SHCMD("pamixer -i 5; kill -44 $(pidof dwmblocks)") },
   { 0, XF86XK_AudioMute,        spawn, SHCMD("pamixer -t; kill -44 $(pidof dwmblocks)") },
   { MODKEY|ShiftMask,             XK_p,      spawn,  SHCMD("passmenu")},
-  { MODKEY,                       XK_m,      spawn,  SHCMD("st -e ncmpcpp")},
   { MODKEY,                       XK_u,      swalstopsel,   {0} },
   { Mod1Mask,                     XK_Tab,    altTabStart,   {0} },
 	TAGKEYS(                        XK_1,                      0)

@@ -18,8 +18,9 @@ xcompmgr -fcD 5 &
 mpd &
 redshift -l 30.00:-90.00 -t 6500:3500 -m randr &
 dunst &
-xwallpaper --zoom ~/Pictures/iceland2.jpg &
+xwallpaper --zoom ~/Pictures/yob1.jpg &
 dwmblocks &
+tmux -u2 &
 
 if [ -z "$DESKTOP_SESSION" -a -x /usr/bin/ck-launch-session ]; then
   exec ck-launch-session dbus-launch --exit-with-session dwm

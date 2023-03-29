@@ -17,6 +17,7 @@ alias dot="cd ~/.config/dotfiles"
 alias l="ls"
 alias la="ls -al"
 alias tmux="tmux -u2"
+alias s="dwmswallow $WINDOWID;"
 
 # vi keys 
 set -o vi
