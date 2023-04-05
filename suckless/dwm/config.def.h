@@ -13,13 +13,13 @@ static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "Hack Nerd Font:size=14" };
-static const char dmenufont[]       = "Hack Nerd Font:size=14";
-static const char col_gray1[]       = "#2e3440";
-static const char col_gray2[]       = "#2e3440";
-static const char col_gray3[]       = "#d8dee9";
-static const char col_gray4[]       = "#2e3440";
-static const char col_cyan[]        = "#88c0d0";
+static const char *fonts[]          = { "Terminus:size=14" };
+static const char dmenufont[]       = "Terminus:size=14";
+static const char col_gray1[]       = "#0f0908";
+static const char col_gray2[]       = "#0f0908";
+static const char col_gray3[]       = "#e0ccae";
+static const char col_gray4[]       = "#0f0908";
+static const char col_cyan[]        = "#f2a766";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
@@ -30,13 +30,16 @@ typedef struct {
   const char *name;
   const void *cmd;
 } Sp;
-const char *spcmd1[] = {"st", "-n", "spterm", "-g", "120x34", "-e", "tmux -u2", NULL };
-const char *spcmd2[] = {"st", "-n", "spfm", "-g", "120x34", "-e", "mc", NULL };
-const char *spcmd3[] = {"st", "-n", "music", "-g", "120x34", "-e", "ncmpcpp", NULL };
+
+const char *spcmd1[] = {"st", "-n", "spterm", "-g", "120x34", NULL };
+const char *spcmd2[] = {"st", "-n", "spfm", "-g", "130x40", "-e", "mc", NULL };
+const char *spcmd3[] = {"st", "-n", "music", "-g", "130x40", "-e", "cmus", NULL };
+const char *spcmd4[] = {"st", "-n", "wttr", "-e", "curl wttr.in", NULL };
 static Sp scratchpads[] = {
   {"spterm",    spcmd1},
   {"spfm",      spcmd2},
   {"music",     spcmd3},
+  {"wttr",      spcmd4},
 };
 
 /* tagging */
@@ -55,6 +58,7 @@ static const Rule rules[] = {
   { NULL, "spterm", NULL, SPTAG(0), 1, -1 },
   { NULL, "spfm", NULL, SPTAG(1), 1, -1 },
   { NULL, "music", NULL, SPTAG(2), 1, -1 },
+  { NULL, "wttr", NULL, SPTAG(3), 1, -1 },
 };
 
 /* window swallowing */
@@ -112,6 +116,7 @@ static const Key keys[] = {
   { MODKEY,                       XK_y,      togglescratch, {.ui = 0} },
   { MODKEY,                       XK_o,      togglescratch, {.ui = 1} },
   { MODKEY,                       XK_n,      togglescratch, {.ui = 2} },
+  { MODKEY,                       XK_w,      togglescratch, {.ui = 3} },
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },

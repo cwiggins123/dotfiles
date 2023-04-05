@@ -5,8 +5,8 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Hack Nerd Font Mono:pixelsize=20:antialias=true:autohint=true";
-static int borderpx = 2;
+static char *font = "Terminus:pixelsize=22:antialias=true";
+static int borderpx = 50;
 
 /*
  * What program is execed by st depends of these precedence rules:
@@ -76,64 +76,48 @@ static int bellvolume = 0;
 /* default TERM value */
 char *termname = "st-256color";
 
-/*
- * spaces per tab
- *
- * When you are changing this value, don't forget to adapt the »it« value in
- * the st.info and appropriately install the st.info in the environment where
- * you use this st version.
- *
- *	it#$tabspaces,
- *
- * Secondly make sure your kernel is not expanding tabs. When running `stty
- * -a` »tab0« should appear. You can tell the terminal to not expand tabs by
- *  running following command:
- *
- *	stty tabs
- */
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 0.8;
+float alpha = 1.00; 
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-	/* 8 normal colors */
-	"#1c1b19",
-	"#ef2f27",
-	"#519f50",
-	"#fbb829",
-	"#2c78bf",
-	"#e02c6d",
-	"#0aaeb3",
-	"#baa67f",
+  /* 8 normal colors */
+   "#0f0908", /* black   */
+   "#bf472c", /* red     */
+   "#a4896f", /* green   */
+   "#f2a766", /* yellow  */
+   "#d47d49", /* blue    */
+   "#8a4b53", /* magenta */
+   "#a67458", /* cyan    */
+   "#e0ccae", /* white   */
 
-	/* 8 bright colors */
-	"#918175",
-	"#f75341",
-	"#98bc37",
-	"#fed06e",
-	"#68a8e4",
-	"#ff5c8f",
-	"#2be4d0",
-	"#fce8c3",
+   /* 8 bright colors */
+   "#1f1311", /* black   */
+   "#df674c", /* red     */
+   "#c4a98f", /* green   */
+   "#ffc786", /* yellow  */
+   "#f49d69", /* blue    */
+   "#aa6b73", /* magenta */
+   "#c69478", /* cyan    */
+   "#f2ddbc", /* white   */
 
-	[255] = 0,
+   [255] = 0,
 
-	/* more colors can be added after 255 to use with DefaultXX */
-	"#fbb829",
-	"#1c1b19",
-	"#fce8c3", /* default foreground colour */
-	"#1c1b19", /* default background colour */
+   /* more colors can be added after 255 to
+   * use with DefaultXX */
+   "#e0ccae", /* default foreground colour */
+   "#0f0908", /* default background colour */
+   "#d47d49", /* cursor */
 };
-
 /*
  * Default colors (colorname index)
  * foreground, background, cursor, reverse cursor
  */
-unsigned int defaultfg = 258;
-unsigned int defaultbg = 259;
-unsigned int defaultcs = 256;
+unsigned int defaultfg = 256;
+unsigned int defaultbg = 257;
+unsigned int defaultcs = 258;
 static unsigned int defaultrcs = 257;
 
 /*

@@ -13,8 +13,8 @@ static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "Hack Nerd Font:size=14" };
-static const char dmenufont[]       = "Hack Nerd Font:size=14";
+static const char *fonts[]          = { "Hack Nerd Font Mono:size=12:antialias=true" };
+static const char dmenufont[]       = "Hack Nerd Font Mono:size=12:antialias=true";
 static const char col_gray1[]       = "#2e3440";
 static const char col_gray2[]       = "#2e3440";
 static const char col_gray3[]       = "#d8dee9";
@@ -23,20 +23,23 @@ static const char col_cyan[]        = "#88c0d0";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
+	[SchemeSel]  = { col_cyan, col_gray1,  col_gray2  },
 };
 
 typedef struct {
   const char *name;
   const void *cmd;
 } Sp;
+
 const char *spcmd1[] = {"st", "-n", "spterm", "-g", "120x34", NULL };
-const char *spcmd2[] = {"st", "-n", "spfm", "-g", "120x34", "-e", "mc", NULL };
-const char *spcmd3[] = {"st", "-n", "music", "-g", "120x34", "-e", "ncmpcpp", NULL };
+const char *spcmd2[] = {"st", "-n", "spfm", "-g", "130x40", "-e", "mc", NULL };
+const char *spcmd3[] = {"st", "-n", "music", "-g", "130x40", "-e", "cmus", NULL };
+const char *spcmd4[] = {"qbittorrent", NULL};
 static Sp scratchpads[] = {
   {"spterm",    spcmd1},
   {"spfm",      spcmd2},
   {"music",     spcmd3},
+  {"torrent",   spcmd4},
 };
 
 /* tagging */
@@ -55,6 +58,7 @@ static const Rule rules[] = {
   { NULL, "spterm", NULL, SPTAG(0), 1, -1 },
   { NULL, "spfm", NULL, SPTAG(1), 1, -1 },
   { NULL, "music", NULL, SPTAG(2), 1, -1 },
+  { NULL, "torrent", NULL, SPTAG(3), 1, -1 },
 };
 
 /* window swallowing */
@@ -107,11 +111,13 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
 	{ MODKEY,                       XK_Return, zoom,           {0} },
-	{ MODKEY,                       XK_q,	   view,           {0} },
+	{ MODKEY,                       XK_q,	     view,           {0} },
+  { ControlMask|ShiftMask,        XK_w,      spawn,       SHCMD("doppler")}, 
 	{ MODKEY|ShiftMask,             XK_c,      killclient,     {0} },
   { MODKEY,                       XK_y,      togglescratch, {.ui = 0} },
   { MODKEY,                       XK_o,      togglescratch, {.ui = 1} },
   { MODKEY,                       XK_n,      togglescratch, {.ui = 2} },
+  { MODKEY|ShiftMask,             XK_t,      togglescratch, {.ui = 3} },
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
@@ -128,6 +134,7 @@ static const Key keys[] = {
   { 0, XF86XK_AudioRaiseVolume, spawn, SHCMD("pamixer -i 5; kill -44 $(pidof dwmblocks)") },
   { 0, XF86XK_AudioMute,        spawn, SHCMD("pamixer -t; kill -44 $(pidof dwmblocks)") },
   { MODKEY|ShiftMask,             XK_p,      spawn,  SHCMD("passmenu")},
+  { MODKEY|ShiftMask,             XK_e,      spawn,  SHCMD("dmenuunicode")},
   { MODKEY,                       XK_u,      swalstopsel,   {0} },
   { Mod1Mask,                     XK_Tab,    altTabStart,   {0} },
 	TAGKEYS(                        XK_1,                      0)
