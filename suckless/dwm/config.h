@@ -135,6 +135,8 @@ static const Key keys[] = {
   { 0, XF86XK_AudioMute,        spawn, SHCMD("pamixer -t; kill -44 $(pidof dwmblocks)") },
   { MODKEY|ShiftMask,             XK_p,      spawn,  SHCMD("passmenu")},
   { MODKEY|ShiftMask,             XK_e,      spawn,  SHCMD("dmenuunicode")},
+  { ControlMask|ShiftMask,        XK_m,      spawn,  SHCMD("mounter")},
+  { ControlMask|ShiftMask,        XK_u,      spawn,  SHCMD("unmounter")},
   { MODKEY,                       XK_u,      swalstopsel,   {0} },
   { Mod1Mask,                     XK_Tab,    altTabStart,   {0} },
 	TAGKEYS(                        XK_1,                      0)
