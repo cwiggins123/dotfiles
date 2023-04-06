@@ -9,8 +9,8 @@ the repo with all of my dotfiles
 
 ## About Me:
 
-I'm Chris Wiggins, an UNIX and FOSS admin and enthusiast by trade and
-hobby, and an aspiring homesteader.
+I'm Chris Wiggins, a WiFi engineer by trade, an UNIX and FOSS admin and enthusiast 
+by hobby, and an aspiring homesteader.
 
 The software and hardware I use:
 
@@ -26,4 +26,4 @@ The software and hardware I use:
 * editor: Vi, the only correct answer
 * terminal: st(main), xterm, urxvt, alacritty
 * TMUX, the single most important software I use probably
-* favorite font and colorscheme: Hack and Srcery(nerd font)
+* favorite font and colorscheme: Nord and Hack(nerd font)
