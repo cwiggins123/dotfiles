@@ -18,6 +18,7 @@ alias l="ls"
 alias la="ls -al"
 alias tmux="tmux -u2"
 alias s="dwmswallow $WINDOWID;"
+alias shutdown="openrc-shutdown"
 
 # vi keys 
 set -o vi

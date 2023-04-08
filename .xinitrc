@@ -15,8 +15,8 @@ sysmodmap=/etc/X11/xinit/.Xmodmap
 #xterm -geometry 320x1+0+0 -fa Hack -fs 12 -bg "#1c1b19" -fg "#fce8c3" -name termbar -class termbar -T termbar -e ~/.config/dotfiles/cwmblocks.sh &
 
 xcompmgr -fcD 5 &
-redshift -l 30.00:-90.00 -t 6500:3500 -m randr &
-dunst &
+#redshift -l 30.00:-90.00 -t 6500:3500 -m randr &
+#dunst &
 xwallpaper --zoom ~/Pictures/iceland1.jpg &
 dwmblocks &
 
