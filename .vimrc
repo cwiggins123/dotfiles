@@ -36,13 +36,9 @@ endif
 if has("syntax")
   syntax on
   set background=dark
-  let g:nord_uniform_diff_background = 1
-  let g:nord_italic = 1
-  let g:nord_italic_comments = 1
-  let g:nord_underline = 1
-  let g:nord_cursor_line_number_background = 1
-  colorscheme nord
+  colorscheme apprentice
   hi Normal guibg=NONE ctermbg=NONE
+  hi LineNr guibg=NONE ctermbg=NONE
 endif
 
 " more misc stuff

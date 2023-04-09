@@ -26,4 +26,4 @@ The software and hardware I use:
 * editor: Vi, the only correct answer
 * terminal: st(main), xterm, urxvt, alacritty
 * TMUX, the single most important software I use probably
-* favorite font and colorscheme: Nord and Hack(nerd font)
+* favorite font and colorscheme: Apprentice and Hermit(nerd font)

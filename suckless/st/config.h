@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Hack Nerd Font Mono:pixelsize=18:antialias=true";
+static char *font = "Hurmit Nerd Font Mono:pixelsize=18:antialias=true";
 static int borderpx = 25;
 
 /*
@@ -84,31 +84,31 @@ float alpha = 0.80;
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
   /* 8 normal colors */
-   "#3b4252", /* black   */
-   "#bf616a", /* red     */
-   "#a3be8c", /* green   */
-   "#ebcb8b", /* yellow  */
-   "#81a1c1", /* blue    */
-   "#b48ead", /* magenta */
-   "#88c0d0", /* cyan    */
-   "#e5e9f0", /* white   */
+   "#1c1c1c", /* black   */
+   "#af5f5f", /* red     */
+   "#5f875f", /* green   */
+   "#87875f", /* yellow  */
+   "#5f87af", /* blue    */
+   "#5f5f87", /* magenta */
+   "#5f8787", /* cyan    */
+   "#6c6c6c", /* white   */
 
    /* 8 bright colors */
-   "#4c566a", /* black   */
-   "#bf616a", /* red     */
-   "#a3be8c", /* green   */
-   "#ebcb8b", /* yellow  */
-   "#81a1c1", /* blue    */
-   "#b48ead", /* magenta */
-   "#8fbcbb", /* cyan    */
-   "#eceff4", /* white   */
+   "#444444", /* black   */
+   "#ff8700", /* red     */
+   "#87af87", /* green   */
+   "#ffffaf", /* yellow  */
+   "#8fafd7", /* blue    */
+   "#8787af", /* magenta */
+   "#5fafaf", /* cyan    */
+   "#ffffff", /* white   */
 
    [255] = 0,
 
    /* more colors can be added after 255 to
    * use with DefaultXX */
-   "#d8dee9", /* default foreground colour */
-   "#2e3440", /* default background colour */
+   "#bcbcbc", /* default foreground colour */
+   "#262626", /* default background colour */
 };
 /*
  * Default colors (colorname index)

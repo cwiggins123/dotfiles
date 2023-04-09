@@ -13,13 +13,13 @@ static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "Hack Nerd Font Mono:size=12:antialias=true" };
-static const char dmenufont[]       = "Hack Nerd Font Mono:size=12:antialias=true";
-static const char col_gray1[]       = "#2e3440";
-static const char col_gray2[]       = "#2e3440";
-static const char col_gray3[]       = "#d8dee9";
-static const char col_gray4[]       = "#2e3440";
-static const char col_cyan[]        = "#88c0d0";
+static const char *fonts[]          = { "Hurmit Nerd Font Mono:size=12:antialias=true" };
+static const char dmenufont[]       = "Hurmit Nerd Font Mono:size=12:antialias=true";
+static const char col_gray1[]       = "#bcbcbc";
+static const char col_gray2[]       = "#bcbcbc";
+static const char col_gray3[]       = "#262626";
+static const char col_gray4[]       = "#bcbcbc";
+static const char col_cyan[]        = "#8fafd7";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
