@@ -18,7 +18,7 @@ xcompmgr -fcD 5 &
 mpd &
 redshift -l 30.00:-90.00 -t 6500:3500 -m randr &
 dunst &
-xwallpaper --zoom ~/Pictures/england2.jpg &
+xwallpaper --zoom ~/Pictures/anglosaxon1.png &
 dwmblocks &
 
 if [ -z "$DESKTOP_SESSION" -a -x /usr/bin/ck-launch-session ]; then

@@ -13,12 +13,12 @@ static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "Hurmit Nerd Font Mono:size=12:antialias=true" };
-static const char dmenufont[]       = "Hurmit Nerd Font Mono:size=12:antialias=true";
-static const char col_gray1[]       = "#bcbcbc";
-static const char col_gray2[]       = "#bcbcbc";
-static const char col_gray3[]       = "#262626";
-static const char col_gray4[]       = "#bcbcbc";
+static const char *fonts[]          = { "Hermit:size=14:antialias=true" };
+static const char dmenufont[]       = "Hermit:size=14:antialias=true";
+static const char col_gray1[]       = "#262626";
+static const char col_gray2[]       = "#262626";
+static const char col_gray3[]       = "#bcbcbc";
+static const char col_gray4[]       = "#262626";
 static const char col_cyan[]        = "#8fafd7";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
@@ -33,7 +33,7 @@ typedef struct {
 
 const char *spcmd1[] = {"st", "-n", "spterm", "-g", "120x34", NULL };
 const char *spcmd2[] = {"st", "-n", "spfm", "-g", "130x40", "-e", "mc", NULL };
-const char *spcmd3[] = {"st", "-n", "music", "-g", "130x40", "-e", "cmus", NULL };
+const char *spcmd3[] = {"st", "-n", "music", "-g", "130x40", "-e", "ncmpcpp", NULL };
 const char *spcmd4[] = {"qbittorrent", NULL};
 static Sp scratchpads[] = {
   {"spterm",    spcmd1},
