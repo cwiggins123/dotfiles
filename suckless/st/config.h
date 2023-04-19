@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Hermit:pixelsize=18:antialias=true";
+static char *font = "Hack:pixelsize=18:antialias=true";
 static int borderpx = 25;
 
 /*
@@ -84,31 +84,31 @@ float alpha = 0.90;
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
   /* 8 normal colors */
-   "#323437", /* black   */
-   "#ff5454", /* red     */
-   "#8cc85f", /* green   */
-   "#e3c78a", /* yellow  */
-   "#80a0ff", /* blue    */
-   "#cf87e8", /* magenta */
-   "#79dac8", /* cyan    */
-   "#c6c6c6", /* white   */
+   "#293136", /* black   */
+   "#e67e80", /* red     */
+   "#a7c080", /* green   */
+   "#dbbc7f", /* yellow  */
+   "#7fbbb3", /* blue    */
+   "#d699b6", /* magenta */
+   "#83c092", /* cyan    */
+   "#9da9a0", /* white   */
 
    /* 8 bright colors */
-   "#949494", /* black   */
-   "#ff5189", /* red     */
-   "#36c692", /* green   */
-   "#c2c292", /* yellow  */
-   "#74b2ff", /* blue    */
-   "#ae81ff", /* magenta */
-   "#85dc85", /* cyan    */
-   "#e4e4e4", /* white   */
+   "#293136", /* black   */
+   "#e69875", /* red     */
+   "#a7c080", /* green   */
+   "#dbbc7f", /* yellow  */
+   "#7fbbb3", /* blue    */
+   "#d699b6", /* magenta */
+   "#83c092", /* cyan    */
+   "#d3c6aa", /* white   */
 
    [255] = 0,
 
    /* more colors can be added after 255 to
    * use with DefaultXX */
-   "#b2b2b2", /* default foreground colour */
-   "#080808", /* default background colour */
+   "#d3c6aa", /* default foreground colour */
+   "#333c43", /* default background colour */
 };
 /*
  * Default colors (colorname index)

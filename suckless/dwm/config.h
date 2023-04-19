@@ -15,11 +15,11 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "Hermit:size=12:antialias=true" };
 static const char dmenufont[]       = "Hermit:size=12:antialias=true";
-static const char col_gray1[]       = "#262626";
-static const char col_gray2[]       = "#262626";
-static const char col_gray3[]       = "#bcbcbc";
-static const char col_gray4[]       = "#262626";
-static const char col_cyan[]        = "#8fafd7";
+static const char col_gray1[]       = "#080808";
+static const char col_gray2[]       = "#080808";
+static const char col_gray3[]       = "#b2b2b2";
+static const char col_gray4[]       = "#080808";
+static const char col_cyan[]        = "#74b2ff";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },

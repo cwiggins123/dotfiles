@@ -6,8 +6,10 @@ bind c exec st
 bind M-l exec xlock
 unbind C-v
 unbind v
-bind C-v exec ratpoison -c "echo VOL: $(pactl get-sink-volume 0 | awk {'print $5'})"
-bind v exec ratpoison -c "echo VOL: $(pactl get-sink-volume 0 | awk {'print $5'})"
+#bind C-v exec ratpoison -c "echo VOL: $(pactl get-sink-volume 0 | awk {'print $5'})"
+#bind v exec ratpoison -c "echo VOL: $(pactl get-sink-volume 0 | awk {'print $5'})"
+bind v exec ratpoison -c "volume"
+bind C-v exec ratpoison -c "volume"
 unbind m 
 bind m exec st -e ncmpcpp
 unbind space
@@ -16,13 +18,14 @@ bind space exec st -e mc
 # battery info for laptops
 #bind b exec notify-send "$(acpi)"
 bind Escape abort
-bind w exec chromium-ungoogled
-bind C-w exec chromium-ungoogled
+bind w exec librewolf
+bind C-w exec librewolf
 bind M-p exec passmenu
 bind M-w exec ~/.local/bin/allwindows.sh
 unbind C-a
 bind C-a exec ~/.local/bin/ratdate.sh
 bind f exec ratpoison -c "echo $(curl wttr.in/?T)"
+bind q exec doppler
 bind 9 restart
 
 rudeness 13
@@ -36,9 +39,9 @@ set transgravity center
 set bargravity center
 set winname title
 set padding 0 0 0 0
-set fgcolor #fce8c3
-set bgcolor #1c1b19
-set font Hack Nerd Font:size=18
+set fgcolor #b2b2b2
+set bgcolor #080808
+set font Hack:size=18
 
 # special keys without escape key
 definekey top XF86_AudioMute exec pactl set-sink-mute 0 toggle && ratpoison -c "echo VOL: $(pactl get-sink-mute 0)" 
@@ -59,4 +62,4 @@ exec xcompmgr -fcD 5
 exec mpd
 exec redshift -l 30.00:-90.00 -t 3500:3500 -m randr
 exec xsetroot -cursor_name left_ptr
-exec xwallpaper --zoom ~/Pictures/lotr.jpg
+exec xwallpaper --zoom ~/Pictures/sp1.jpg

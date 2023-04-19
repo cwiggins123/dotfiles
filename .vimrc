@@ -29,14 +29,14 @@ if v:version >=  800
   set listchars=space:*,trail:*,nbsp:*,extends:>,precedes:<,tab:\|>
   set foldmethod=manual
   set nofoldenable
-  packadd! vim-go
+  packadd! zig.vim
   packadd! vim-fugitive
 endif
 
 if has("syntax")
   syntax on
   set background=dark
-  colorscheme moonfly
+  colorscheme everforest
   hi Normal guibg=NONE ctermbg=NONE
   hi LineNr guibg=NONE ctermbg=NONE
 endif
