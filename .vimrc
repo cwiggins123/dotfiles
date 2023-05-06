@@ -36,7 +36,7 @@ endif
 if has("syntax")
   syntax on
   set background=dark
-  colorscheme everforest
+  colorscheme gruvbox
   hi Normal guibg=NONE ctermbg=NONE
   hi LineNr guibg=NONE ctermbg=NONE
 endif

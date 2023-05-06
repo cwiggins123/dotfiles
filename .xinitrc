@@ -16,10 +16,10 @@ sysmodmap=/etc/X11/xinit/.Xmodmap
 
 xcompmgr -fcD 5 &
 mpd &
-redshift -l 30.00:-90.00 -t 6500:3500 -m randr &
+#redshift -l 30.00:-90.00 -t 6500:3500 -m randr &
 dunst &
 xwallpaper --zoom ~/Pictures/wallpaper.jpg &
-#dwmblocks &
+dwmblocks &
 
 if [ -z "$DESKTOP_SESSION" -a -x /usr/bin/ck-launch-session ]; then
   exec ck-launch-session dbus-launch --exit-with-session dwm
