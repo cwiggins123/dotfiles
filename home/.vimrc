@@ -31,19 +31,20 @@ if v:version >=  800
   set nofoldenable
   packadd! zig.vim
   packadd! vim-fugitive
+  packadd! rosepine
 endif
 
 if has("syntax")
   syntax on
   set background=dark
-  colorscheme gruvbox
+  colorscheme rosepine
   hi Normal guibg=NONE ctermbg=NONE
   hi LineNr guibg=NONE ctermbg=NONE
 endif
 
 " more misc stuff
 set textwidth=80
-set colorcolumn=81
+"set colorcolumn=81
 set expandtab
 set nobackup
 set noswapfile
