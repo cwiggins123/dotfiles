@@ -1,3 +1,0 @@
-#!/bin/sh
-# fetches doppler radar from new orleans station
-mpv --loop-file=inf https://radar.weather.gov/ridge/standard/KLIX_loop.gif

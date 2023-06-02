@@ -1,4 +1,0 @@
-#!/bin/sh
-# to use dmenu as a password input instead of some random ugly xorg window
-
-dmenu -fn Monospace-18 -P -p "$1" <&- && echo
