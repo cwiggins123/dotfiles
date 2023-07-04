@@ -1,12 +1,12 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =3
+let g:netrw_dirhistcnt =7
+let g:netrw_dirhist_7='/home/christopher/.local/bin'
+let g:netrw_dirhist_6='/home'
+let g:netrw_dirhist_5='/home/christopher'
+let g:netrw_dirhist_4='/home/christopher/.tmux'
 let g:netrw_dirhist_3='/home/christopher/.config/dotfiles/suckless/st'
 let g:netrw_dirhist_2='/etc/openrc/conf.d'
 let g:netrw_dirhist_1='/home/christopher/.cache'
 let g:netrw_dirhist_0='/home/christopher/.config/dotfiles/sowm'
 let g:netrw_dirhist_9='/home/christopher/.tmux'
 let g:netrw_dirhist_8='/home/christopher/.config/dotfiles/suckless/dwm'
-let g:netrw_dirhist_7='/home/christopher'
-let g:netrw_dirhist_6='/home/christopher/.xwmconfig'
-let g:netrw_dirhist_5='/home/christopher/.tmux'
-let g:netrw_dirhist_4='/home/christopher/.emacs.d'

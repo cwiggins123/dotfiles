@@ -30,13 +30,12 @@ if v:version >=  800
   set foldmethod=manual
   set nofoldenable
   packadd! vim-fugitive
-  packadd! rosepine
 endif
 
 if has("syntax")
   syntax on
   set background=dark
-  colorscheme rosepine
+  colorscheme everforest
   hi Normal guibg=NONE ctermbg=NONE
   hi LineNr guibg=NONE ctermbg=NONE
 endif

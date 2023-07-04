@@ -13,8 +13,8 @@ static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "Terminus:size=12:antialias=false" };
-static const char dmenufont[]       = "Terminus:size=12:antialias=false";
+static const char *fonts[]          = { "IBM Plex Mono:size=14:antialias=true" };
+static const char dmenufont[]       = "IBM Plex Mono:size=14:antialias=true";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
@@ -35,15 +35,17 @@ const char *spcmd1[] = {"st", "-n", "spterm", "-g", "120x34", NULL };
 const char *spcmd2[] = {"st", "-n", "spfm", "-g", "130x40", "-e", "mc", NULL };
 const char *spcmd3[] = {"st", "-n", "music", "-g", "130x40", "-e", "ncmpcpp", NULL };
 const char *spcmd4[] = {"qbittorrent", NULL};
+const char *spcmd5[] = {"mpv", "cdda://", NULL};
 static Sp scratchpads[] = {
   {"spterm",    spcmd1},
   {"spfm",      spcmd2},
   {"music",     spcmd3},
   {"torrent",   spcmd4},
+  {"cd",        spcmd5},
 };
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4" };
+static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -59,6 +61,7 @@ static const Rule rules[] = {
   { NULL, "spfm", NULL, SPTAG(1), 1, -1 },
   { NULL, "music", NULL, SPTAG(2), 1, -1 },
   { NULL, "torrent", NULL, SPTAG(3), 1, -1 },
+  { NULL, "cd", NULL, SPTAG(4), 1, -1},
 };
 
 /* window swallowing */
@@ -118,6 +121,7 @@ static const Key keys[] = {
   { MODKEY,                       XK_o,      togglescratch, {.ui = 1} },
   { MODKEY,                       XK_n,      togglescratch, {.ui = 2} },
   { MODKEY|ShiftMask,             XK_t,      togglescratch, {.ui = 3} },
+  { MODKEY|ShiftMask,             XK_c,      togglescratch, {.ui = 4} },
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
@@ -130,9 +134,9 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
-  { 0, XF86XK_AudioLowerVolume, spawn, SHCMD("pamixer -d 5; kill -44 $(pidof dwmblocks)") },
-  { 0, XF86XK_AudioRaiseVolume, spawn, SHCMD("pamixer -i 5; kill -44 $(pidof dwmblocks)") },
-  { 0, XF86XK_AudioMute,        spawn, SHCMD("pamixer -t; kill -44 $(pidof dwmblocks)") },
+  { 0, XF86XK_AudioLowerVolume, spawn, SHCMD("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-; kill -44 $(pidof dwmblocks)") },
+  { 0, XF86XK_AudioRaiseVolume, spawn, SHCMD("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+ ; kill -44 $(pidof dwmblocks)") },
+  { 0, XF86XK_AudioMute,        spawn, SHCMD("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle ; kill -44 $(pidof dwmblocks)") },
   { MODKEY|ShiftMask,             XK_p,      spawn,  SHCMD("passmenu")},
   { MODKEY|ShiftMask,             XK_e,      spawn,  SHCMD("dmenuunicode")},
   { ControlMask|ShiftMask,        XK_m,      spawn,  SHCMD("mounter")},

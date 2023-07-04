@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Hack:pixelsize=14:antialias=true";
+static char *font = "IBM Plex Mono:size=16:antialias=true";
 static int borderpx = 25;
 
 /*
@@ -79,37 +79,38 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 0.90;
+float alpha = 1.00;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-   "#26233a",
-   "#eb6f92",
-   "#9ccfd8",
-   "#f6c177",
-   "#31748f",
-   "#c4a7e7",
-   "#ebbcba",
-   "#e0def4",
-   "#6e6a86",
-   "#eb6f92",
-   "#9ccfd8",
-   "#f6c177",
-   "#31748f",
-   "#c4a7e7",
-   "#ebbcba",
-   "#e0def4",
-   [255] = 0,
-   [256] = "#191724",
+ 	[0] = "#7a8478", /* black */
+	[1] = "#e67e80", /* red     */
+	[2] = "#a7c080", /* green   */
+	[3] = "#dbbc7f", /* yellow  */
+	[4] = "#7fbbb3", /* blue    */
+	[5] = "#d699b6", /* magenta */
+	[6] = "#83c092", /* cyan    */
+	[7] = "#d3c6aa", /* white   */
+  [8]  = "#7a8478", /* black   */
+	[9]  = "#e67e80", /* red     */
+	[10] = "#a7c080", /* green   */
+	[11] = "#dbbc7f", /* yellow  */
+	[12] = "#7fbbb3", /* blue    */
+	[13] = "#d699b6", /* magenta */
+	[14] = "#83c092", /* cyan    */
+	[15] = "#d3c6aa", /* white   */
+  [256] = "#d3c6aa",
+  [257] = "#232a2e",
+  [258] = "#d3c6aa",
 };
 /*
  * Default colors (colorname index)
  * foreground, background, cursor, reverse cursor
  */
-unsigned int defaultbg = 256;
-unsigned int defaultfg = 7;
-unsigned int defaultcs = 7;
-static unsigned int defaultrcs = 7;
+unsigned int defaultbg = 257;
+unsigned int defaultfg = 256;
+unsigned int defaultcs = 258;
+static unsigned int defaultrcs = 257;
 
 /*
  * Default shape of cursor
