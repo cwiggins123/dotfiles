@@ -10,7 +10,6 @@ esac
 export MC_SKIN=modarin256-defbg
 export PATH=$PATH:/sbin/:/usr/sbin:~/go/bin/:~/.local/bin/
 export EDITOR=vim
-export TERM=xterm-256color
 
 # aliases
 alias dot="cd ~/.config/dotfiles"
