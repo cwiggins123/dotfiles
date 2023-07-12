@@ -13,8 +13,8 @@ static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "IBM Plex Mono:size=14:antialias=true" };
-static const char dmenufont[]       = "IBM Plex Mono:size=14:antialias=true";
+static const char *fonts[]          = { "Hack:size=14:antialias=true" };
+static const char dmenufont[]       = "Hack:size=14:antialias=true";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
@@ -134,9 +134,14 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
-  { 0, XF86XK_AudioLowerVolume, spawn, SHCMD("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-; kill -44 $(pidof dwmblocks)") },
-  { 0, XF86XK_AudioRaiseVolume, spawn, SHCMD("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+ ; kill -44 $(pidof dwmblocks)") },
-  { 0, XF86XK_AudioMute,        spawn, SHCMD("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle ; kill -44 $(pidof dwmblocks)") },
+  // for pipewire
+//{ 0, XF86XK_AudioLowerVolume, spawn, SHCMD("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-; kill -44 $(pidof dwmblocks)") },
+//{ 0, XF86XK_AudioRaiseVolume, spawn, SHCMD("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+ ; kill -44 $(pidof dwmblocks)") },
+//{ 0, XF86XK_AudioMute,        spawn, SHCMD("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle ; kill -44 $(pidof dwmblocks)") },
+  // for pulseaudio
+  { 0, XF86XK_AudioLowerVolume, spawn, SHCMD("pactl set-sink-volume $(pactl get-default-sink) -5%; kill -44 $(pidof dwmblocks)") },
+  { 0, XF86XK_AudioRaiseVolume, spawn, SHCMD("pactl set-sink-volume $(pactl get-default-sink) +5% ; kill -44 $(pidof dwmblocks)") },
+  { 0, XF86XK_AudioMute,        spawn, SHCMD("pactl set-sink-mute $(pactl get-default-sink) toggle ; kill -44 $(pidof dwmblocks)") },
   { MODKEY|ShiftMask,             XK_p,      spawn,  SHCMD("passmenu")},
   { MODKEY|ShiftMask,             XK_e,      spawn,  SHCMD("dmenuunicode")},
   { ControlMask|ShiftMask,        XK_m,      spawn,  SHCMD("mounter")},
