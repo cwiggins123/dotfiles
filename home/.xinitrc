@@ -12,13 +12,12 @@ sysmodmap=/etc/X11/xinit/.Xmodmap
 [ -f $userresources ] && xrdb -merge $userresources
 [ -f $usermodmap ] && xmodmap $usermodmap
 
-#xterm -geometry 320x1+0+0 -fa Hack -fs 12 -bg "#1c1b19" -fg "#fce8c3" -name termbar -class termbar -T termbar -e ~/.config/dotfiles/cwmblocks.sh &
 gentoo-pipewire-launcher &
 xcompmgr -fcD 5 &
 mpd &
 #redshift -l 30.00:-90.00 -t 6500:3500 -m randr &
 dunst &
-xwallpaper --zoom ~/Pictures/isle3.jpg &
+xwallpaper --zoom ~/Pictures/sp1.jpg &
 dwmblocks &
 
 exec dbus-launch --exit-with-session dwm 
