@@ -3,7 +3,9 @@ if has("eval")
    let skip_defaults_vim = 1
 endif
 
-" some basic tweaks
+"""""""""""""""""""""
+" some basic tweaks "
+"""""""""""""""""""""
 set nocompatible
 set autoindent 
 set autowrite
@@ -18,18 +20,21 @@ set shiftwidth=2
 set smartindent
 set smarttab
 
-"colors
-if has("termguicolors")
-  set termguicolors
-endif
-
-" misc stuff, makes vim less annoying
+"""""""""""""""""""""""""""""""""""""""
+" misc stuff, makes vim less annoying "
+"""""""""""""""""""""""""""""""""""""""
 if v:version >=  800
   set nofixendofline
   set listchars=space:*,trail:*,nbsp:*,extends:>,precedes:<,tab:\|>
   set foldmethod=manual
   set nofoldenable
-  packadd! vim-fugitive
+endif
+
+""""""""""
+" colors "
+""""""""""
+if has("termguicolors")
+  set termguicolors
 endif
 
 if has("syntax")
@@ -40,7 +45,9 @@ if has("syntax")
   hi LineNr guibg=NONE ctermbg=NONE
 endif
 
-" more misc stuff
+"""""""""""""""""""
+" more misc stuff "
+"""""""""""""""""""
 set textwidth=80
 "set colorcolumn=81
 set expandtab
