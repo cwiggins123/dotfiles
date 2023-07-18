@@ -12,12 +12,14 @@ sysmodmap=/etc/X11/xinit/.Xmodmap
 [ -f $userresources ] && xrdb -merge $userresources
 [ -f $usermodmap ] && xmodmap $usermodmap
 
-gentoo-pipewire-launcher &
+/usr/bin/pipewire &
+/usr/bin/pipewire-pulse &
+/usr/bin/wireplumber &
 xcompmgr -fcD 5 &
 mpd &
 #redshift -l 30.00:-90.00 -t 6500:3500 -m randr &
 dunst &
-xwallpaper --zoom ~/Pictures/sp1.jpg &
+xwallpaper --zoom ~/Pictures/wall3.jpg &
 dwmblocks &
 
 exec dbus-launch --exit-with-session dwm 

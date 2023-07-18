@@ -4,7 +4,7 @@ static const Block blocks[] = {
   {"",	"price btc Bitcoin 💰 21",			9000,	21},
   {"",  "volume", 0, 10},
   {"",	"forecast",	18000,	5},
-  {"",	"battery",	5,	3},
+  //{"",	"battery",	5,	3},
   {"",	"clock",	60,	1},
 };
 
