@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Hack:size=16:antialias=true";
+static char *font = "Hack:size=22:antialias=true";
 static int borderpx = 25;
 
 /*
@@ -121,9 +121,9 @@ static const char *colorname[] = {
   [13] = "#71d3b4",
   [14] = "#dfe4cf", 
   [15] = "#ffcfaf",
-  [256] = "#ffcfaf",
+  [256] = "#dfe4cf",
   [257] = "#1f1f1f",
-  [258] = "#ffcfaf",
+  [258] = "#dfe4cf",
 };
 /*
  * Default colors (colorname index)

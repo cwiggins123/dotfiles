@@ -19,7 +19,7 @@ xcompmgr -fcD 5 &
 mpd &
 #redshift -l 30.00:-90.00 -t 6500:3500 -m randr &
 dunst &
-xwallpaper --zoom ~/Pictures/wall3.jpg &
+xwallpaper --zoom ~/Pictures/wall4.jpg &
 dwmblocks &
 
 exec dbus-launch --exit-with-session dwm 

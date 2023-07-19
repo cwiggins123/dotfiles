@@ -30,6 +30,7 @@ if v:version >=  800
   set nofoldenable
 endif
 
+
 """"""""""
 " colors "
 """"""""""
@@ -44,6 +45,7 @@ if has("syntax")
   hi Normal guibg=NONE ctermbg=NONE
   hi LineNr guibg=NONE ctermbg=NONE
 endif
+
 
 """""""""""""""""""
 " more misc stuff "
