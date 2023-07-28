@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Hack:size=22:antialias=true";
+static char *font = "Hack Nerd Font Mono:size=18:antialias=true";
 static int borderpx = 25;
 
 /*
@@ -74,7 +74,7 @@ static unsigned int cursorthickness = 2;
 static int bellvolume = 0;
 
 /* default TERM value */
-char *termname = "st-256color";
+char *termname = "xterm-256color";
 
 unsigned int tabspaces = 8;
 
@@ -83,28 +83,28 @@ float alpha = 0.90;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-  /* everforest
- 	[0] = "#7a8478", /* black /
-	[1] = "#e67e80", /* red     /
-	[2] = "#a7c080", /* green   /
-	[3] = "#dbbc7f", /* yellow  /
-	[4] = "#7fbbb3", /* blue    /
-	[5] = "#d699b6", /* magenta /
-	[6] = "#83c092", /* cyan   /
-	[7] = "#d3c6aa", /* white   
-  [8]  = "#7a8478", /* black   /
-	[9]  = "#e67e80", /* red     /
-	[10] = "#a7c080", /* green   /
-	[11] = "#dbbc7f", /* yellow  /
-	[12] = "#7fbbb3", /* blue    /
-	[13] = "#d699b6", /* magenta /
-	[14] = "#83c092", /* cyan    /
-	[15] = "#d3c6aa", /* white   /
+  /* everforest */
+ 	[0] = "#7a8478", /* black */
+	[1] = "#e67e80", /* red   */
+	[2] = "#a7c080", /* green */
+	[3] = "#dbbc7f", /* yellow  */
+	[4] = "#7fbbb3", /* blue    */
+	[5] = "#d699b6", /* magenta */
+	[6] = "#83c092", /* cyan   */
+	[7] = "#d3c6aa", /* white  */ 
+  [8]  = "#7a8478", /* black   */
+	[9]  = "#e67e80", /* red     */
+	[10] = "#a7c080", /* green   */
+	[11] = "#dbbc7f", /* yellow  */
+	[12] = "#7fbbb3", /* blue    */
+	[13] = "#d699b6", /* magenta */
+	[14] = "#83c092", /* cyan    */
+	[15] = "#d3c6aa", /* white   */
   [256] = "#d3c6aa",
   [257] = "#232a2e",
   [258] = "#d3c6aa",
-  */
-  /* zenburn */
+  
+  /* zenburn 
   [0] = "#1f1f1f", 
   [1] = "#cc9393",
   [2] = "#5f7f5f",
@@ -124,6 +124,7 @@ static const char *colorname[] = {
   [256] = "#dfe4cf",
   [257] = "#1f1f1f",
   [258] = "#dfe4cf",
+  */
 };
 /*
  * Default colors (colorname index)
