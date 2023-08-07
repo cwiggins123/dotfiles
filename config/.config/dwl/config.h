@@ -11,7 +11,7 @@ static const float fullscreen_bg[]         = {0.1, 0.1, 0.1, 1.0};
 static const char *const autostart[] = {
         "foot", "--server", NULL,
         "fnott", NULL,
-        "wbg", "/home/christopher/Pictures/c.jpg", NULL,
+        "wbg", "/home/christopher/Pictures/e.jpg", NULL,
         "/usr/bin/pipewire", NULL,
         "/usr/bin/pipewire-pulse", NULL,
         "/usr/bin/wireplumber", NULL,
@@ -119,7 +119,7 @@ static const char *termcmd[] = { "footclient", NULL };
 static const char *menucmd[] = { "dmenu-wl_run", NULL };
 
 /* named scratchpads - First arg only serves to match against key in rules*/
-static const char *scratchpadcmd[] = { "s", "st", "-t", "scratchpad", NULL };
+static const char *scratchpadcmd[] = { "s", "foot", "-T", "scratchpad", NULL };
 
 #include <X11/XF86keysym.h>
 static const Key keys[] = {
