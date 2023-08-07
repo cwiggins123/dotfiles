@@ -7,16 +7,28 @@ static const float focuscolor[]            = {1.0, 0.0, 0.0, 1.0};
 /* To conform the xdg-protocol, set the alpha to zero to restore the old behavior */
 static const float fullscreen_bg[]         = {0.1, 0.1, 0.1, 1.0};
 
+/* Autostart */
+static const char *const autostart[] = {
+        "foot", "--server", NULL,
+        "fnott", NULL,
+        "wbg", "/home/christopher/Pictures/a.jpg", NULL,
+        "/usr/bin/pipewire", NULL,
+        "/usr/bin/pipewire-pulse", NULL,
+        "/usr/bin/wireplumber", NULL,
+        NULL /* terminate */
+};
+
 /* tagging - tagcount must be no greater than 31 */
-#define TAGCOUNT (9)
+#define TAGCOUNT (4)
 
 static const Rule rules[] = {
 	/* app_id     title       tags mask     isfloating  isterm  noswallow  monitor scratchkey*/
 	/* examples:
 	{ "Gimp",     NULL,       0,            1,          0,      1,         -1 },
 	*/
-  { "firefox", NULL,    1 << 8,  0, -1, 1, 0},
-  { NULL, "scratchpad", 0, 1, 1, 0, -1, 's'},
+  { "Firefox", NULL,        0,            0,           0,     1,         -1,   0 },
+  { NULL, "scratchpad",     0,            1,           1,     0,         -1,  's' },
+  { "Footclient", NULL,             0,            0,           1,     0,         -1,   0 },
 };
 
 /* layout(s) */
@@ -105,11 +117,11 @@ static const enum libinput_config_tap_button_map button_map = LIBINPUT_CONFIG_TA
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 
 /* commands */
-static const char *termcmd[] = { "st", NULL };
-static const char *menucmd[] = { "dmenu_run", NULL };
+static const char *termcmd[] = { "footclient", NULL };
+static const char *menucmd[] = { "dmenu-wl_run -i -h 35", NULL };
 
 /* named scratchpads - First arg only serves to match against key in rules*/
-static const char *scratchpadcmd[] = { "s", "alacritty", "-t", "scratchpad", NULL };
+static const char *scratchpadcmd[] = { "s", "footclient", "-t", "scratchpad", NULL };
 
 #include <X11/XF86keysym.h>
 static const Key keys[] = {
@@ -117,7 +129,7 @@ static const Key keys[] = {
 	/* modifier                  key                 function        argument */
 	{ MODKEY,                    XKB_KEY_p,          spawn,          {.v = menucmd} },
 	{ MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_Return,     spawn,          {.v = termcmd} },
-	{ MODKEY,                    XKB_KEY_grave,      togglescratch,  {.v = scratchpadcmd } },
+	{ MODKEY,                    XKB_KEY_y,      togglescratch,  {.v = scratchpadcmd } },
 	{ MODKEY,                    XKB_KEY_j,          focusstack,     {.i = +1} },
 	{ MODKEY,                    XKB_KEY_k,          focusstack,     {.i = -1} },
 	{ MODKEY,                    XKB_KEY_i,          incnmaster,     {.i = +1} },

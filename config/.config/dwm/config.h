@@ -36,12 +36,14 @@ const char *spcmd2[] = {"st", "-n", "spfm", "-g", "130x40", "-e", "mc", NULL };
 const char *spcmd3[] = {"st", "-n", "music", "-g", "130x40", "-e", "ncmpcpp", NULL };
 const char *spcmd4[] = {"qbittorrent", NULL};
 const char *spcmd5[] = {"mpv", "cdda://", NULL};
+const char *spcmd6[] = {"doppler", NULL};
 static Sp scratchpads[] = {
   {"spterm",    spcmd1},
   {"spfm",      spcmd2},
   {"music",     spcmd3},
   {"torrent",   spcmd4},
   {"cd",        spcmd5},
+  {"radar",     spcmd6},
 };
 
 /* tagging */
@@ -115,13 +117,13 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
 	{ MODKEY,                       XK_Return, zoom,           {0} },
 	{ MODKEY,                       XK_q,	     view,           {0} },
-  { ControlMask|ShiftMask,        XK_w,      spawn,       SHCMD("doppler")}, 
 	{ MODKEY|ShiftMask,             XK_c,      killclient,     {0} },
   { MODKEY,                       XK_y,      togglescratch, {.ui = 0} },
   { MODKEY,                       XK_o,      togglescratch, {.ui = 1} },
   { MODKEY,                       XK_n,      togglescratch, {.ui = 2} },
   { MODKEY|ShiftMask,             XK_t,      togglescratch, {.ui = 3} },
   { MODKEY|ShiftMask,             XK_c,      togglescratch, {.ui = 4} },
+  { MODKEY,                       XK_r,      togglescratch, {.ui = 5} },
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },

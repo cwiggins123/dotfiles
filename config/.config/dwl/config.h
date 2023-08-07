@@ -7,16 +7,26 @@ static const float focuscolor[]            = {1.0, 0.0, 0.0, 1.0};
 /* To conform the xdg-protocol, set the alpha to zero to restore the old behavior */
 static const float fullscreen_bg[]         = {0.1, 0.1, 0.1, 1.0};
 
+/* Autostart */
+static const char *const autostart[] = {
+        "foot", "--server", NULL,
+        "fnott", NULL,
+        "wbg", "/home/christopher/Pictures/c.jpg", NULL,
+        "/usr/bin/pipewire", NULL,
+        "/usr/bin/pipewire-pulse", NULL,
+        "/usr/bin/wireplumber", NULL,
+        "someblocks", NULL,
+        NULL /* terminate */
+};
+
 /* tagging - tagcount must be no greater than 31 */
-#define TAGCOUNT (9)
+#define TAGCOUNT (4)
 
 static const Rule rules[] = {
 	/* app_id     title       tags mask     isfloating  isterm  noswallow  monitor scratchkey*/
-	/* examples:
-	{ "Gimp",     NULL,       0,            1,          0,      1,         -1 },
-	*/
-  { "firefox", NULL,    0,  0, -1, 1, 0},
-  { NULL, "scratchpad", 0, 1, 1, 0, -1, 's'},
+  { "firefox", NULL,        0,            0,           0,     1,         -1,         0 },
+  { NULL, "scratchpad",     0,            1,           1,     0,         -1,        's' },
+  { "footclient", NULL,     0,            0,           1,     1,         -1,         0 },
 };
 
 /* layout(s) */
@@ -105,8 +115,8 @@ static const enum libinput_config_tap_button_map button_map = LIBINPUT_CONFIG_TA
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 
 /* commands */
-static const char *termcmd[] = { "st", NULL };
-static const char *menucmd[] = { "dmenu_run", NULL };
+static const char *termcmd[] = { "footclient", NULL };
+static const char *menucmd[] = { "dmenu-wl_run", NULL };
 
 /* named scratchpads - First arg only serves to match against key in rules*/
 static const char *scratchpadcmd[] = { "s", "st", "-t", "scratchpad", NULL };
