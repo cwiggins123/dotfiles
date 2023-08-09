@@ -41,7 +41,10 @@ endif
 if has("syntax")
   syntax on
   set background=dark
-  colorscheme everforest
+  let g:sonokai_style = 'espresso'
+  let g:sonokai_better_performance = 1
+  let g:sonokai_transparent_background = 2
+  colorscheme sonokai
   hi Normal guibg=NONE ctermbg=NONE
   hi LineNr guibg=NONE ctermbg=NONE
 endif

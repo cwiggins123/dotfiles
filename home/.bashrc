@@ -17,7 +17,7 @@ alias l="ls"
 alias la="ls -al"
 alias tmux="tmux -u2"
 alias s="dwmswallow $WINDOWID;"
-alias shutdown="openrc-shutdown"
+alias fetch="fastfetch"
 
 # vi keys 
 set -o vi
@@ -58,3 +58,4 @@ _ps1() {
 }
 
 PROMPT_COMMAND="_ps1"
+fastfetch
