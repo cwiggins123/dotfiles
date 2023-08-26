@@ -11,15 +11,20 @@ static const unsigned int maxHTab 			= 200;	/* tab menu height */
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
+static const unsigned int gappih    = 20;       /* horiz inner gap between windows */
+static const unsigned int gappiv    = 10;       /* vert inner gap between windows */
+static const unsigned int gappoh    = 10;       /* horiz outer gap between windows and screen edge */
+static const unsigned int gappov    = 30;       /* vert outer gap between windows and screen edge */
+static       int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "Terminus:size=14" };
-static const char dmenufont[]       = "Terminus:size=14";
-static const char col_gray1[]       = "#0f0908";
-static const char col_gray2[]       = "#0f0908";
-static const char col_gray3[]       = "#e0ccae";
-static const char col_gray4[]       = "#0f0908";
-static const char col_cyan[]        = "#f2a766";
+static const char *fonts[]          = { "Hack Nerd Font Mono:size=18:antialias=true" };
+static const char dmenufont[]       = "Hack Nerd Font Mono:size=18:antialias=true";
+static const char col_gray1[]       = "#222222";
+static const char col_gray2[]       = "#444444";
+static const char col_gray3[]       = "#bbbbbb";
+static const char col_gray4[]       = "#eeeeee";
+static const char col_cyan[]        = "#005577";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
@@ -33,17 +38,21 @@ typedef struct {
 
 const char *spcmd1[] = {"st", "-n", "spterm", "-g", "120x34", NULL };
 const char *spcmd2[] = {"st", "-n", "spfm", "-g", "130x40", "-e", "mc", NULL };
-const char *spcmd3[] = {"st", "-n", "music", "-g", "130x40", "-e", "cmus", NULL };
-const char *spcmd4[] = {"st", "-n", "wttr", "-e", "curl wttr.in", NULL };
+const char *spcmd3[] = {"st", "-n", "music", "-g", "130x40", "-e", "ncmpcpp", NULL };
+const char *spcmd4[] = {"qbittorrent", NULL};
+const char *spcmd5[] = {"mpv", "cdda://", NULL};
+const char *spcmd6[] = {"doppler", NULL};
 static Sp scratchpads[] = {
   {"spterm",    spcmd1},
   {"spfm",      spcmd2},
   {"music",     spcmd3},
-  {"wttr",      spcmd4},
+  {"torrent",   spcmd4},
+  {"cd",        spcmd5},
+  {"radar",     spcmd6},
 };
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4" };
+static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -58,7 +67,8 @@ static const Rule rules[] = {
   { NULL, "spterm", NULL, SPTAG(0), 1, -1 },
   { NULL, "spfm", NULL, SPTAG(1), 1, -1 },
   { NULL, "music", NULL, SPTAG(2), 1, -1 },
-  { NULL, "wttr", NULL, SPTAG(3), 1, -1 },
+  { NULL, "torrent", NULL, SPTAG(3), 1, -1 },
+  { NULL, "cd", NULL, SPTAG(4), 1, -1},
 };
 
 /* window swallowing */
@@ -73,11 +83,16 @@ static const int resizehints = 1;    /* 1 means respect size hints in tiled resi
 static const int attachdirection = 0;
 static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen window */
 
+#define FORCE_VSPLIT 1  /* nrowgrid layout: force two clients to always split vertically */
+#include "vanitygaps.c"
+
 static const Layout layouts[] = {
 	/* symbol     arrange function */
 	{ "[]=",      tile },    /* first entry is default */
-	{ "><>",      NULL },    /* no layout function means floating behavior */
 	{ "[M]",      monocle },
+	{ "HHH",      grid },
+	{ "><>",      NULL },    /* no layout function means floating behavior */
+	{ NULL,       NULL },
 };
 
 /* key definitions */
@@ -103,6 +118,22 @@ static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
+  { MODKEY|ShiftMask,             XK_u,      incrgaps,       {.i = +1 } },
+  { MODKEY|ShiftMask|ControlMask, XK_u,      incrgaps,       {.i = -1 } },
+  { MODKEY|ShiftMask,             XK_i,      incrigaps,      {.i = +1 } },
+  { MODKEY|ShiftMask|ControlMask, XK_i,      incrigaps,      {.i = -1 } },
+  { MODKEY|ShiftMask,             XK_o,      incrogaps,      {.i = +1 } },
+  { MODKEY|ShiftMask|ControlMask, XK_o,      incrogaps,      {.i = -1 } },
+  { MODKEY|ShiftMask|ControlMask, XK_6,      incrihgaps,     {.i = +1 } },
+  { MODKEY|ShiftMask,             XK_6,      incrihgaps,     {.i = -1 } },
+  { MODKEY|ShiftMask,             XK_7,      incrivgaps,     {.i = +1 } },
+  { MODKEY|ShiftMask|ControlMask, XK_7,      incrivgaps,     {.i = -1 } },
+  { MODKEY|ShiftMask,             XK_8,      incrohgaps,     {.i = +1 } },
+  { MODKEY|ShiftMask|ControlMask, XK_8,      incrohgaps,     {.i = -1 } },
+  { MODKEY|ShiftMask,             XK_9,      incrovgaps,     {.i = +1 } },
+  { MODKEY|ShiftMask|ControlMask, XK_9,      incrovgaps,     {.i = -1 } },
+  { MODKEY|ControlMask,           XK_0,      togglegaps,     {0} },
+  { MODKEY|ControlMask|ShiftMask, XK_0,      defaultgaps,    {0} },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
@@ -111,12 +142,14 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
 	{ MODKEY,                       XK_Return, zoom,           {0} },
-	{ MODKEY,                       XK_q,	   view,           {0} },
+	{ MODKEY,                       XK_q,	     view,           {0} },
 	{ MODKEY|ShiftMask,             XK_c,      killclient,     {0} },
   { MODKEY,                       XK_y,      togglescratch, {.ui = 0} },
   { MODKEY,                       XK_o,      togglescratch, {.ui = 1} },
   { MODKEY,                       XK_n,      togglescratch, {.ui = 2} },
-  { MODKEY,                       XK_w,      togglescratch, {.ui = 3} },
+  { MODKEY|ShiftMask,             XK_t,      togglescratch, {.ui = 3} },
+  { MODKEY|ShiftMask,             XK_c,      togglescratch, {.ui = 4} },
+  { MODKEY,                       XK_r,      togglescratch, {.ui = 5} },
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
@@ -129,10 +162,18 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
-  { 0, XF86XK_AudioLowerVolume, spawn, SHCMD("pamixer -d 5; kill -44 $(pidof dwmblocks)") },
-  { 0, XF86XK_AudioRaiseVolume, spawn, SHCMD("pamixer -i 5; kill -44 $(pidof dwmblocks)") },
-  { 0, XF86XK_AudioMute,        spawn, SHCMD("pamixer -t; kill -44 $(pidof dwmblocks)") },
+  // for pipewire
+{ 0, XF86XK_AudioLowerVolume, spawn, SHCMD("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-; kill -44 $(pidof dwmblocks)") },
+{ 0, XF86XK_AudioRaiseVolume, spawn, SHCMD("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+ ; kill -44 $(pidof dwmblocks)") },
+{ 0, XF86XK_AudioMute,        spawn, SHCMD("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle ; kill -44 $(pidof dwmblocks)") },
+// for pulseaudio
+//  { 0, XF86XK_AudioLowerVolume, spawn, SHCMD("pactl set-sink-volume $(pactl get-default-sink) -5%; kill -44 $(pidof dwmblocks)") },
+ // { 0, XF86XK_AudioRaiseVolume, spawn, SHCMD("pactl set-sink-volume $(pactl get-default-sink) +5% ; kill -44 $(pidof dwmblocks)") },
+ // { 0, XF86XK_AudioMute,        spawn, SHCMD("pactl set-sink-mute $(pactl get-default-sink) toggle ; kill -44 $(pidof dwmblocks)") },
   { MODKEY|ShiftMask,             XK_p,      spawn,  SHCMD("passmenu")},
+  { MODKEY|ShiftMask,             XK_e,      spawn,  SHCMD("dmenuunicode")},
+  { ControlMask|ShiftMask,        XK_m,      spawn,  SHCMD("mounter")},
+  { ControlMask|ShiftMask,        XK_u,      spawn,  SHCMD("unmounter")},
   { MODKEY,                       XK_u,      swalstopsel,   {0} },
   { Mod1Mask,                     XK_Tab,    altTabStart,   {0} },
 	TAGKEYS(                        XK_1,                      0)

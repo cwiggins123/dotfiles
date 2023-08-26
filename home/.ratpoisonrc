@@ -1,25 +1,26 @@
 # my super cool ratpoison config
 unbind C-c
 unbind c
-bind C-c exec st -e tmux attach 
-bind c exec st
+bind C-c exec urxvtc -e tmux attach 
+bind c exec urxvtc
 bind M-l exec xlock
 unbind C-v
 unbind v
-#bind C-v exec ratpoison -c "echo VOL: $(pactl get-sink-volume 0 | awk {'print $5'})"
-#bind v exec ratpoison -c "echo VOL: $(pactl get-sink-volume 0 | awk {'print $5'})"
-bind v exec ratpoison -c "volume"
-bind C-v exec ratpoison -c "volume"
+bind C-v exec ratpoison -c "echo VOL: $(pactl get-sink-volume 0 | awk {'print $5'})"
+bind v exec ratpoison -c "echo VOL: $(pactl get-sink-volume 0 | awk {'print $5'})"
+#bind v exec ratpoison -c "volume"
+#bind C-v exec ratpoison -c "volume"
 unbind m 
-bind m exec st -e ncmpcpp
+bind m exec urxvtc -e ncmpcpp
 unbind space
 unbind C-space
-bind space exec st -e mc
+bind space exec urxvtc -e nnn
+bind C-space exec urxvtc -e nnn
 # battery info for laptops
 #bind b exec notify-send "$(acpi)"
 bind Escape abort
-bind w exec librewolf
-bind C-w exec librewolf
+bind w exec firefox
+bind C-w exec firefox
 bind M-p exec passmenu
 bind M-w exec ~/.local/bin/allwindows.sh
 unbind C-a
@@ -41,7 +42,7 @@ set winname title
 set padding 0 0 0 0
 set fgcolor #b2b2b2
 set bgcolor #080808
-set font Hack:size=12
+set font Hack Nerd Font Mono:size=22
 
 # special keys without escape key
 definekey top XF86_AudioMute exec pactl set-sink-mute 0 toggle && ratpoison -c "echo VOL: $(pactl get-sink-mute 0)" 
@@ -57,9 +58,15 @@ definekey top C-3 exec rpws 3
 
 # startup
 startup_message off
-exec /usr/bin/rpws init 3 -k
+exec /usr/bin/pipewire
+exec /usr/bin/pipewire-pulse
+exec /usr/bin/wireplumber
+#exec picom -b --animations --animation-window-mass 0.5 --animation-for-open-window zoom --animation-stiffness 350
 exec xcompmgr -fcD 5
+exec /usr/bin/rpws init 3 -k
 exec mpd
 exec redshift -l 30.00:-90.00 -t 3500:3500 -m randr
 exec xsetroot -cursor_name left_ptr
-exec xwallpaper --zoom ~/Pictures/sp1.jpg
+exec dunst
+exec xwallpaper --zoom ~/Pictures/a.jpg
+exec urxvtd

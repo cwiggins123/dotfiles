@@ -104,27 +104,55 @@ static const char *colorname[] = {
   [257] = "#232a2e",
   [258] = "#d3c6aa",
   */
-  /* Sonokai Espresso */
-  [0] = "#1f1e1c", /* black */
-  [1] = "#f86882", /* red */
-  [2] = "#a6cd77", /* green */
-  [3] = "#f0c66f", /* yellow */
-  [4] = "#81d0c9", /* blue */
-  [5] = "#9fa0e1", /* magenta */
-  [6] = "#85dad2", /* cyan */
-  [7] = "#90817b", /* white */
-  [8] = "#312c2b", /* black */
-  [9] = "#fd6883", /* red */
-  [10] = "#adda78", /* green */
-  [11] = "#f0c66f", /* yellow */
-  [12] = "#81d0c9", /* blue */
-  [13] = "#9fa0e1", /* magenta */
-  [14] = "#85dad2", /* cyan */
-  [15] = "#e4e3e1", /* white */
-  [256] = "#e4e3e1", /* foreground */
-  [257] = "#312c2b", /* background */
-  [258] = "#e4e3e1", /* cursor */
+  /* Sonokai Espresso /
+  [0] = "#1f1e1c", /* black /
+  [1] = "#f86882", /* red /
+  [2] = "#a6cd77", /* green /
+  [3] = "#f0c66f", /* yellow /
+  [4] = "#81d0c9", /* blue /
+  [5] = "#9fa0e1", /* magenta /
+  [6] = "#85dad2", /* cyan /
+  [7] = "#90817b", /* white /
+  [8] = "#312c2b", /* black /
+  [9] = "#fd6883", /* red /
+  [10] = "#adda78", /* green /
+  [11] = "#f0c66f", /* yellow /
+  [12] = "#81d0c9", /* blue /
+  [13] = "#9fa0e1", /* magenta /
+  [14] = "#85dad2", /* cyan /
+  [15] = "#e4e3e1", /* white /
+  [256] = "#e4e3e1", /* foreground /
+  [257] = "#312c2b", /* background /
+  [258] = "#e4e3e1", /* cursor /
+  */
   
+  	/* 8 normal colors */
+	"#1c1b19",
+	"#ef2f27",
+	"#519f50",
+	"#fbb829",
+	"#2c78bf",
+	"#e02c6d",
+	"#0aaeb3",
+	"#baa67f",
+
+	/* 8 bright colors */
+	"#918175",
+	"#f75341",
+	"#98bc37",
+	"#fed06e",
+	"#68a8e4",
+	"#ff5c8f",
+	"#2be4d0",
+	"#fce8c3",
+
+	[255] = 0,
+
+	/* more colors can be added after 255 to use with DefaultXX */
+	"#fce8c3", /* foreground */
+	"#1c1b19", /* background */
+	"#fbb829", /* cursor */
+
   /* zenburn 
   [0] = "#1f1f1f", 
   [1] = "#cc9393",

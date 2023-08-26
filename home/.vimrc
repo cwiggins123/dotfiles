@@ -28,27 +28,24 @@ if v:version >=  800
   set listchars=space:*,trail:*,nbsp:*,extends:>,precedes:<,tab:\|>
   set foldmethod=manual
   set nofoldenable
+  packadd! srcery-vim
 endif
-
 
 """"""""""
 " colors "
 """"""""""
 if has("termguicolors")
   set termguicolors
+  set t_Co=256
 endif
 
 if has("syntax")
   syntax on
   set background=dark
-  let g:sonokai_style = 'espresso'
-  let g:sonokai_better_performance = 1
-  let g:sonokai_transparent_background = 2
-  colorscheme sonokai
+  colorscheme srcery
   hi Normal guibg=NONE ctermbg=NONE
   hi LineNr guibg=NONE ctermbg=NONE
 endif
-
 
 """""""""""""""""""
 " more misc stuff "

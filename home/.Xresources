@@ -1,5 +1,5 @@
-*.faceName: Hack:pixelsize=20:antialias=true
-URxvt.font: xft:Hack:pixelsize=20:antialias=true, xft:Symbola:pixelsize=20
+*.faceName: Hack Nerd Font Mono:pixelsize=22:antialias=true
+URxvt.font: xft:Hack Nerd Font Mono:pixelsize=22:antialias=true, xft:Symbola:pixelsize=22:antialias=true
 XTerm.selectToClipboard: true
 URxvt.scrollBar:  false
 XTerm.highlightSelection: true
@@ -10,11 +10,18 @@ URxvt.cursorBlink: true
 URxvt.keysym.M-v: eval:paste_clipboard
 URxvt.depth: 32
 
+URxvt.perl-ext-common: default,matcher,resize-font,url-select,keyboard-select URxvt.keysym.M-u:      
+URxvt.keysym.M-u: perl:url-select:select_next 
+URxvt.url-select.launcher: /usr/bin/xdg-open 
+URxvt.url-select.underline: true
+URxvt.resize-font.smaller: C-j
+URxvt.resize-font.bigger: C-k
+
 !! srcery
 ! special
 *foreground:   #fce8c3
 *background:   #1c1b19
-URxvt.background: #1c1b19
+URxvt.background: [90]#1c1b19
 *cursorColor:  #fbb829
 
 ! black

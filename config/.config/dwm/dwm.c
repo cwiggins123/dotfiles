@@ -127,6 +127,10 @@ struct Monitor {
 	int by;               /* bar geometry */
 	int mx, my, mw, mh;   /* screen size */
 	int wx, wy, ww, wh;   /* window area  */
+  int gappih; 
+  int gappiv;
+  int gappoh;
+  int gappov;
 	int altTabN;		  /* move that many clients forward */
 	int nTabs;			  /* number of active clients in tag */
 	int isAlt; 			  /* 1,0 */
@@ -267,7 +271,7 @@ static void swalstopsel(const Arg *unused);
 static void tag(const Arg *arg);
 static void tagmon(const Arg *arg);
 static void tagnthmon(const Arg *arg);
-static void tile(Monitor *m);
+//static void tile(Monitor *m);
 static void togglebar(const Arg *arg);
 static void togglefloating(const Arg *arg);
 static void togglescratch(const Arg *arg);
@@ -799,6 +803,10 @@ createmon(void)
 	m->nmaster = nmaster;
 	m->showbar = showbar;
 	m->topbar = topbar;
+	m->gappih = gappih;
+	m->gappiv = gappiv;
+	m->gappoh = gappoh;
+	m->gappov = gappov;
 	m->lt[0] = &layouts[0];
 	m->lt[1] = &layouts[1 % LENGTH(layouts)];
 	m->nTabs = 0;
@@ -2406,7 +2414,7 @@ altTabEnd()
 void
 drawTab(int nwins, int first, Monitor *m)
 {
-	/* little documentation of functions */
+	/* little documentation of functions *
 	/* void drw_rect(Drw *drw, int x, int y, unsigned int w, unsigned int h, int filled, int invert); */
 	/* int drw_text(Drw *drw, int x, int y, unsigned int w, unsigned int h, unsigned int lpad, const char *text, int invert); */
 	/* void drw_map(Drw *drw, Window win, int x, int y, unsigned int w, unsigned int h); */
@@ -2578,7 +2586,7 @@ tagnthmon(const Arg *arg)
 	sendmon(selmon->sel, numtomon(arg->i));
 }
 
-void
+/*void
 tile(Monitor *m)
 {
 	unsigned int i, n, h, mw, my, ty;
@@ -2605,7 +2613,7 @@ tile(Monitor *m)
 				ty += HEIGHT(c);
 		}
 }
-
+*/
 void
 togglebar(const Arg *arg)
 {

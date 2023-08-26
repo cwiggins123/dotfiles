@@ -18,6 +18,7 @@ alias la="ls -al"
 alias tmux="tmux -u2"
 alias s="dwmswallow $WINDOWID;"
 alias fetch="fastfetch"
+alias ta="tmux attach"
 
 # vi keys 
 set -o vi
@@ -58,4 +59,3 @@ _ps1() {
 }
 
 PROMPT_COMMAND="_ps1"
-fastfetch

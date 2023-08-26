@@ -11,11 +11,12 @@ static const float fullscreen_bg[]         = {0.1, 0.1, 0.1, 1.0};
 static const char *const autostart[] = {
         "foot", "--server", NULL,
         "fnott", NULL,
-        "wbg", "/home/christopher/Pictures/e.jpg", NULL,
         "/usr/bin/pipewire", NULL,
         "/usr/bin/pipewire-pulse", NULL,
         "/usr/bin/wireplumber", NULL,
+        "mpd", NULL,
         "someblocks", NULL,
+        "wbg", "Pictures/d.jpg", NULL,
         NULL /* terminate */
 };
 
@@ -119,15 +120,21 @@ static const char *termcmd[] = { "footclient", NULL };
 static const char *menucmd[] = { "dmenu-wl_run", NULL };
 
 /* named scratchpads - First arg only serves to match against key in rules*/
-static const char *scratchpadcmd[] = { "s", "foot", "-T", "scratchpad", NULL };
+static const char *scratchpadcmd1[] = { "s", "foot", "-w", "1920x1080", "-T", "scratchpad", NULL };
+static const char *scratchpadcmd2[] = { "s", "foot", "-w", "1920x1080", "-e", "ncmpcpp", NULL };
+static const char *scratchpadcmd3[] = { "s", "foot", "-w", "1920x1080", "-e", "nnn", NULL };
 
 #include <X11/XF86keysym.h>
 static const Key keys[] = {
 	/* Note that Shift changes certain key codes: c -> C, 2 -> at, etc. */
 	/* modifier                  key                 function        argument */
 	{ MODKEY,                    XKB_KEY_p,          spawn,          {.v = menucmd} },
+  { MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_i,          spawn,      SHCMD("wtype $(grep -v '^#' ~/.local/share/bookmarks/ | dmenu-wl -i -l 50 | cut -d' ' -f1)")},
 	{ MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_Return,     spawn,          {.v = termcmd} },
-	{ MODKEY,                    XKB_KEY_y,      togglescratch,  {.v = scratchpadcmd } },
+  { MODKEY,                    XKB_KEY_q,          spawn,          SHCMD("doppler")},
+	{ MODKEY,                    XKB_KEY_y,      togglescratch,  {.v = scratchpadcmd1 } },
+  { MODKEY,                    XKB_KEY_m,      togglescratch,  {.v = scratchpadcmd2 } },
+  { MODKEY,                    XKB_KEY_o,      togglescratch,  {.v = scratchpadcmd3 } },      
 	{ MODKEY,                    XKB_KEY_j,          focusstack,     {.i = +1} },
 	{ MODKEY,                    XKB_KEY_k,          focusstack,     {.i = -1} },
 	{ MODKEY,                    XKB_KEY_i,          incnmaster,     {.i = +1} },
