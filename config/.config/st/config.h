@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Hack Nerd Font Mono:size=18:antialias=true";
+static char *font = "Hack:size=18:antialias=true";
 static int borderpx = 25;
 
 /*
@@ -79,7 +79,7 @@ char *termname = "xterm-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 0.90;
+float alpha = 1.0;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
@@ -126,7 +126,7 @@ static const char *colorname[] = {
   [258] = "#e4e3e1", /* cursor /
   */
   
-  	/* 8 normal colors */
+  	/* 8 normal colors /
 	"#1c1b19",
 	"#ef2f27",
 	"#519f50",
@@ -136,7 +136,7 @@ static const char *colorname[] = {
 	"#0aaeb3",
 	"#baa67f",
 
-	/* 8 bright colors */
+	/ 8 bright colors /
 	"#918175",
 	"#f75341",
 	"#98bc37",
@@ -148,12 +148,13 @@ static const char *colorname[] = {
 
 	[255] = 0,
 
-	/* more colors can be added after 255 to use with DefaultXX */
-	"#fce8c3", /* foreground */
-	"#1c1b19", /* background */
-	"#fbb829", /* cursor */
+	/ more colors can be added after 255 to use with DefaultXX /
+	"#fce8c3", / foreground /
+	"#1c1b19", / background /
+	"#fbb829", / cursor /
+  */
 
-  /* zenburn 
+  // zenburn 
   [0] = "#1f1f1f", 
   [1] = "#cc9393",
   [2] = "#5f7f5f",
@@ -173,7 +174,7 @@ static const char *colorname[] = {
   [256] = "#dfe4cf",
   [257] = "#1f1f1f",
   [258] = "#dfe4cf",
-  */
+  
 };
 /*
  * Default colors (colorname index)
