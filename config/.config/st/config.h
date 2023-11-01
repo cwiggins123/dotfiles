@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Hack:size=18:antialias=true";
+static char *font = "Hack:size=14:antialias=true";
 static int borderpx = 25;
 
 /*
@@ -79,7 +79,7 @@ char *termname = "xterm-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 1.0;
+float alpha = 0.85;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {

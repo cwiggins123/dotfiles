@@ -1,0 +1,52 @@
+[bar]
+font= "Hack:size=12:antialias=true:autohint=true"
+name = "mainbar"
+blocks = "desktop | user | volume battery bitcoin date time"
+height = 26 
+areas = 16 
+foreground = "#FFFFFF"
+background = "#000000"
+line-color = "#555555"
+line-width = 2
+
+[default]
+font= "Hack:size=22:antialias=true:autohint=true"
+label-foreground = "#dddddd"
+affix-foreground = "#555555"
+margin = 8
+padding-left = 1
+prefix = "[ " 
+suffix = " ]"
+underline = true
+
+[desktop]
+command = "herbsttag"
+
+[user]
+command = "whoami"
+
+[date]
+command = "date +'%Y-%m-%d'"
+interval = 1
+label = "DATE"
+
+[time]
+command = "date +'%H:%M:%S'"
+interval = 1
+label = "TIME"
+mouse-left = "xclock"
+margin-right = 8
+
+[bitcoin] 
+command = "sh ~/.local/bin/price btc Bitcoin / 21" 
+interval = 600
+label = "BTC"
+mouse-left = "urxvtc -e curl rate.sx/btc"
+
+[volume]
+command = "sh ~/.local/bin/volume"
+interval = 1
+
+[battery]
+command = "sh ~/.local/bin/battery"
+interval = 60
