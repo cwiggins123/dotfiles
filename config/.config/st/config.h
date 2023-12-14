@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Hack:size=14:antialias=true";
+static char *font = "Terminus:size=22:antialias=false";
 static int borderpx = 25;
 
 /*
