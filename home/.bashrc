@@ -7,55 +7,29 @@ case $- in
 esac
 
 # better compatibility and portability
-export MC_SKIN=modarin256-defbg
+export MC_SKIN=modarcon16-defbg-thin
 export PATH=$PATH:/sbin/:/usr/sbin:~/go/bin/:~/.local/bin/
-export EDITOR=vim
+export EDITOR=nano
+
+case "$TERM" in
+*-256color)
+        alias ssh='TERM=${TERM%-256color} ssh'
+        ;;
+*)
+        CUR_TERM=${TERM}-256color
+        CUR_TERMINFO=${TERM:0:1}/$CUR_TERM
+
+        BOX_TERMINFO_DIR=/usr/share/terminfo
+        [[ -f $BOX_TERMINFO_DIR/$CUR_TERMINFO ]] && \
+                export TERM=$CUR_TERM
+
+        HOME_TERMINFO_DIR=$HOME/.terminfo
+        [[ -f $HOME_TERMINFO_DIR/$CUR_TERMINFO ]] && \
+                export TERM=$CUR_TERM
+        ;;
+esac
 
 # aliases
 alias dot="cd ~/.config/dotfiles"
 alias l="ls"
 alias la="ls -al"
-alias tmux="tmux -u2"
-alias s="dwmswallow $WINDOWID;"
-alias fetch="fastfetch"
-alias ta="tmux attach"
-
-# vi keys 
-set -o vi
-
-# smart prompt that I totally didn't steal from Rob Muhlstein
-PROMPT_LONG=20
-PROMPT_MAX=95
-PROMPT_AT=@
-
-_ps1() {
-  local P='$' dir="${PWD##*/}" B countme short long double\
-    r='\[\e[31m\]' g='\[\e[31m\]' h='\[\e[32m\]' \
-    u='\[\e[33m\]' p='\[\e[32m\]' w='\[\e[35m\]' \
-    b='\[\e[36m\]' x='\[\e[0m\]'
-
-  [[ $EUID == 0 ]] && P='#' && u=$r && p=$u # root
-  [[ $PWD = / ]] && dir=/
-  [[ $PWD = "$HOME" ]] && dir='~'
-
-  B=$(git branch --show-current 2>/dev/null)
-  [[ $dir = "$B" ]] && B=.
-  countme="$USER$PROMPT_AT$(hostname):$dir($B)\$ "
-
-  [[ $B == master || $B == main ]] && b="$r"
-  [[ -n "$B" ]] && B="$g($b$B$g)"
-
-  short="$u\u$gPROMPT_AT$h\h$g:$w$dir$B$p$P$x "
-  long="$g$u\u$g$PROMPT_AT$h\h$g:$w$dir$B\n$g$p$P$x "
-  double="$g$u\u$g$PROMPT_AT$h\h$g$W$dir$B\n$G$B\n$g$p$P$x "
-
-  if (( ${#countme} > PROMPT_MAX )); then
-    PS1="$double"
-  elif (( ${#countme} > PROMPT_LONG)); then
-    PS1="$long"
-  else
-    ps1="$short"
-  fi
-}
-
-PROMPT_COMMAND="_ps1"

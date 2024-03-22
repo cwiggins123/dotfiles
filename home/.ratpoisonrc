@@ -1,9 +1,8 @@
 # my super cool ratpoison config
 unbind C-c
-unbind c
-bind C-c exec urxvtc -e tmux attach 
+unbind c 
 bind c exec urxvtc
-bind M-l exec xlock
+bind M-l exec slock
 unbind C-v
 unbind v
 bind C-v exec ratpoison -c "echo VOL: $(pactl get-sink-volume 0 | awk {'print $5'})"
@@ -14,10 +13,8 @@ unbind m
 bind m exec urxvtc -e ncmpcpp
 unbind space
 unbind C-space
-bind space exec urxvtc -e nnn
-bind C-space exec urxvtc -e nnn
 # battery info for laptops
-#bind b exec notify-send "$(acpi)"
+bind b exec notify-send "$(acpi)"
 bind Escape abort
 bind w exec firefox
 bind C-w exec firefox
@@ -28,6 +25,7 @@ bind C-a exec ~/.local/bin/ratdate.sh
 bind f exec ratpoison -c "echo $(curl wttr.in/?T)"
 bind q exec doppler
 bind 9 restart
+bind z exec ~/.ratpoison/dzconky.rp
 
 rudeness 13
 set winname class
@@ -45,28 +43,33 @@ set bgcolor #080808
 set font Hack Nerd Font Mono:size=22
 
 # special keys without escape key
-definekey top XF86_AudioMute exec pactl set-sink-mute 0 toggle && ratpoison -c "echo VOL: $(pactl get-sink-mute 0)" 
-definekey top XF86_AudioRaiseVolume exec pactl set-sink-volume 0 +5% && ratpoison -c "echo VOL: $(pactl get-sink-volume 0 | awk {'print $5'})"
-definekey top XF86_AudioLowerVolume exec pactl set-sink-volume 0 -5% && ratpoison -c "echo VOL: $(pactl get-sink-volume 0 | awk {'print $5'})"
+definekey top XF86_AudioMute exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle "echo VOL: $(wpctl)" 
+definekey top XF86_AudioRaiseVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+ && ratpoison -c "echo $(wpctl get-volume @DEFAULT_AUDIO_SINK@)"
+definekey top XF86_AudioLowerVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%- && ratpoison -c "echo $(wpctl get-volume @DEFAULT_AUDIO_SINK@)"
 definekey top C-1 exec rpws 1
 definekey top C-2 exec rpws 2
 definekey top C-3 exec rpws 3
+definekey top C-4 exec rpws 4
 
 # for laptops
-#definekey top C-F9 exec xbacklight -dec 10
-#definekey top C-F10 exec xbacklight -inc 10
+definekey top C-F9 exec xbacklight -dec 10
+definekey top C-F10 exec xbacklight -inc 10
 
+addhook quit exec killall dzen2
+addhook restart exec pkill pipewire && pkill wireplumber 
+addhook restart exec pkill redshift
+
+set padding 0 17 0 0
+exec conky | dzen2 -ta c -e 'sigusr1=hide;sigusr2=unhide' -h '16' -fn 'Hack'
 # startup
 startup_message off
 exec /usr/bin/pipewire
-exec /usr/bin/pipewire-pulse
+#exec /usr/bin/pipewire-pulse
 exec /usr/bin/wireplumber
-#exec picom -b --animations --animation-window-mass 0.5 --animation-for-open-window zoom --animation-stiffness 350
-exec xcompmgr -fcD 5
-exec /usr/bin/rpws init 3 -k
-exec mpd
+exec xcompmgr -fD 5
+exec /usr/bin/rpws init 4 -k
 exec redshift -l 30.00:-90.00 -t 3500:3500 -m randr
 exec xsetroot -cursor_name left_ptr
 exec dunst
-exec xwallpaper --zoom ~/Pictures/a.jpg
+exec xwallpaper --zoom ~/Pictures/c.jpg
 exec urxvtd

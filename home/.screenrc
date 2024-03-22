@@ -1,0 +1,51 @@
+#gives twoline status bar, with the current window highlighted
+hardstatus alwayslastline
+hardstatus string '%{= kG}[%(G)%H%? %1`?%{g}][%= %{= kw}%-w%{+b yk} %n*%t%?(%u)%?%{-}%+w %=%{g}][%{C}%m/%d %{W}%C%A%{g}]'
+
+# scrollback buffer
+defscrollback 5000
+
+startup_message off
+
+# 256 colors
+attrcolor b ".I"
+termcapinfo xterm 'Co#256:AP=\E[48;5;$dm:AF=\E[38;5;%dm'
+defbce on
+
+mousetrack off
+
+# default windows
+screen -t Shell1	1 bash
+screen -t Shell2	2 bash
+select 0
+bind c screen 1 
+bind - select 10
+
+bind s splt
+
+# layouts
+layout autosave on
+layout new one
+select 1
+layout new two
+select 1
+splt
+resize -v +8
+focus down
+select 4
+focus up
+layout new three
+select 1
+split
+resize -v +7
+focus down
+select 3
+split -v
+resize -h +10
+focus right
+select 4
+focus up
+
+layout attach one
+layout select one
+term screen-256color

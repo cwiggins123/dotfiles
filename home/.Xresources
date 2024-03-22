@@ -1,5 +1,5 @@
-*.faceName: Hack Nerd Font Mono:pixelsize=22:antialias=true
-URxvt.font: xft:Hack Nerd Font Mono:pixelsize=22:antialias=true, xft:Symbola:pixelsize=22:antialias=true
+*.faceName: Hack:pixelsize=18:antialias=true
+URxvt.font: xft:Hack:pixelsize=18:antialias=true
 XTerm.selectToClipboard: true
 URxvt.scrollBar:  false
 XTerm.highlightSelection: true
@@ -17,41 +17,6 @@ URxvt.url-select.underline: true
 URxvt.resize-font.smaller: C-j
 URxvt.resize-font.bigger: C-k
 
-!! srcery
-! special
-*foreground:   #fce8c3
-*background:   #1c1b19
-URxvt.background: [90]#1c1b19
-*cursorColor:  #fbb829
-
-! black
-*color0:       #1c1b19
-*color8:       #918175
-
-! red
-*color1:       #ef2f27
-*color9:       #f75341
-
-! green
-*color2:       #519f50
-*color10:      #98bc37
-
-! yellow
-*color3:       #fbb829
-*color11:      #fed06e
-
-! blue
-*color4:       #2c78bf
-*color12:      #68a8e4
-
-! magenta
-*color5:       #e02c6d
-*color13:      #ff5c8f
-
-! cyan
-*color6:       #0aaeb3
-*color14:      #2be4d0
-
-! white
-*color7:       #baa67f
-*color15:      #fce8c3
+URxvt.background: [80]#000000
+*.foreground:grey
+*.background: black
